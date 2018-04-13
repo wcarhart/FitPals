@@ -1,0 +1,589 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		725FD391208152D8001F0337 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725FD390208152D8001F0337 /* AppDelegate.swift */; };
+		725FD393208152D8001F0337 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725FD392208152D8001F0337 /* ViewController.swift */; };
+		725FD396208152D8001F0337 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 725FD394208152D8001F0337 /* Main.storyboard */; };
+		725FD398208152DB001F0337 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 725FD397208152DB001F0337 /* Assets.xcassets */; };
+		725FD39B208152DB001F0337 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 725FD399208152DB001F0337 /* LaunchScreen.storyboard */; };
+		725FD3A6208152DB001F0337 /* FitPalsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725FD3A5208152DB001F0337 /* FitPalsTests.swift */; };
+		725FD3B1208152DB001F0337 /* FitPalsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725FD3B0208152DB001F0337 /* FitPalsUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		725FD3A2208152DB001F0337 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 725FD385208152D8001F0337 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 725FD38C208152D8001F0337;
+			remoteInfo = FitPals;
+		};
+		725FD3AD208152DB001F0337 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 725FD385208152D8001F0337 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 725FD38C208152D8001F0337;
+			remoteInfo = FitPals;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		725FD38D208152D8001F0337 /* FitPals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitPals.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		725FD390208152D8001F0337 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		725FD392208152D8001F0337 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		725FD395208152D8001F0337 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		725FD397208152DB001F0337 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		725FD39A208152DB001F0337 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		725FD39C208152DB001F0337 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		725FD3A1208152DB001F0337 /* FitPalsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitPalsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		725FD3A5208152DB001F0337 /* FitPalsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitPalsTests.swift; sourceTree = "<group>"; };
+		725FD3A7208152DB001F0337 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		725FD3AC208152DB001F0337 /* FitPalsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitPalsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		725FD3B0208152DB001F0337 /* FitPalsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitPalsUITests.swift; sourceTree = "<group>"; };
+		725FD3B2208152DB001F0337 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		725FD38A208152D8001F0337 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		725FD39E208152DB001F0337 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		725FD3A9208152DB001F0337 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		725FD384208152D8001F0337 = {
+			isa = PBXGroup;
+			children = (
+				725FD38F208152D8001F0337 /* FitPals */,
+				725FD3A4208152DB001F0337 /* FitPalsTests */,
+				725FD3AF208152DB001F0337 /* FitPalsUITests */,
+				725FD38E208152D8001F0337 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		725FD38E208152D8001F0337 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				725FD38D208152D8001F0337 /* FitPals.app */,
+				725FD3A1208152DB001F0337 /* FitPalsTests.xctest */,
+				725FD3AC208152DB001F0337 /* FitPalsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		725FD38F208152D8001F0337 /* FitPals */ = {
+			isa = PBXGroup;
+			children = (
+				725FD390208152D8001F0337 /* AppDelegate.swift */,
+				725FD392208152D8001F0337 /* ViewController.swift */,
+				725FD394208152D8001F0337 /* Main.storyboard */,
+				725FD397208152DB001F0337 /* Assets.xcassets */,
+				725FD399208152DB001F0337 /* LaunchScreen.storyboard */,
+				725FD39C208152DB001F0337 /* Info.plist */,
+			);
+			path = FitPals;
+			sourceTree = "<group>";
+		};
+		725FD3A4208152DB001F0337 /* FitPalsTests */ = {
+			isa = PBXGroup;
+			children = (
+				725FD3A5208152DB001F0337 /* FitPalsTests.swift */,
+				725FD3A7208152DB001F0337 /* Info.plist */,
+			);
+			path = FitPalsTests;
+			sourceTree = "<group>";
+		};
+		725FD3AF208152DB001F0337 /* FitPalsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				725FD3B0208152DB001F0337 /* FitPalsUITests.swift */,
+				725FD3B2208152DB001F0337 /* Info.plist */,
+			);
+			path = FitPalsUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		725FD38C208152D8001F0337 /* FitPals */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 725FD3B5208152DB001F0337 /* Build configuration list for PBXNativeTarget "FitPals" */;
+			buildPhases = (
+				725FD389208152D8001F0337 /* Sources */,
+				725FD38A208152D8001F0337 /* Frameworks */,
+				725FD38B208152D8001F0337 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FitPals;
+			productName = FitPals;
+			productReference = 725FD38D208152D8001F0337 /* FitPals.app */;
+			productType = "com.apple.product-type.application";
+		};
+		725FD3A0208152DB001F0337 /* FitPalsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 725FD3B8208152DB001F0337 /* Build configuration list for PBXNativeTarget "FitPalsTests" */;
+			buildPhases = (
+				725FD39D208152DB001F0337 /* Sources */,
+				725FD39E208152DB001F0337 /* Frameworks */,
+				725FD39F208152DB001F0337 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				725FD3A3208152DB001F0337 /* PBXTargetDependency */,
+			);
+			name = FitPalsTests;
+			productName = FitPalsTests;
+			productReference = 725FD3A1208152DB001F0337 /* FitPalsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		725FD3AB208152DB001F0337 /* FitPalsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 725FD3BB208152DB001F0337 /* Build configuration list for PBXNativeTarget "FitPalsUITests" */;
+			buildPhases = (
+				725FD3A8208152DB001F0337 /* Sources */,
+				725FD3A9208152DB001F0337 /* Frameworks */,
+				725FD3AA208152DB001F0337 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				725FD3AE208152DB001F0337 /* PBXTargetDependency */,
+			);
+			name = FitPalsUITests;
+			productName = FitPalsUITests;
+			productReference = 725FD3AC208152DB001F0337 /* FitPalsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		725FD385208152D8001F0337 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "Will Carhart";
+				TargetAttributes = {
+					725FD38C208152D8001F0337 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					725FD3A0208152DB001F0337 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 725FD38C208152D8001F0337;
+					};
+					725FD3AB208152DB001F0337 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 725FD38C208152D8001F0337;
+					};
+				};
+			};
+			buildConfigurationList = 725FD388208152D8001F0337 /* Build configuration list for PBXProject "FitPals" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 725FD384208152D8001F0337;
+			productRefGroup = 725FD38E208152D8001F0337 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				725FD38C208152D8001F0337 /* FitPals */,
+				725FD3A0208152DB001F0337 /* FitPalsTests */,
+				725FD3AB208152DB001F0337 /* FitPalsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		725FD38B208152D8001F0337 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				725FD39B208152DB001F0337 /* LaunchScreen.storyboard in Resources */,
+				725FD398208152DB001F0337 /* Assets.xcassets in Resources */,
+				725FD396208152D8001F0337 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		725FD39F208152DB001F0337 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		725FD3AA208152DB001F0337 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		725FD389208152D8001F0337 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				725FD393208152D8001F0337 /* ViewController.swift in Sources */,
+				725FD391208152D8001F0337 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		725FD39D208152DB001F0337 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				725FD3A6208152DB001F0337 /* FitPalsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		725FD3A8208152DB001F0337 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				725FD3B1208152DB001F0337 /* FitPalsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		725FD3A3208152DB001F0337 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 725FD38C208152D8001F0337 /* FitPals */;
+			targetProxy = 725FD3A2208152DB001F0337 /* PBXContainerItemProxy */;
+		};
+		725FD3AE208152DB001F0337 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 725FD38C208152D8001F0337 /* FitPals */;
+			targetProxy = 725FD3AD208152DB001F0337 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		725FD394208152D8001F0337 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				725FD395208152D8001F0337 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		725FD399208152DB001F0337 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				725FD39A208152DB001F0337 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		725FD3B3208152DB001F0337 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		725FD3B4208152DB001F0337 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		725FD3B6208152DB001F0337 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E255S56V67;
+				INFOPLIST_FILE = FitPals/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = edu.sandiego.FitPals;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		725FD3B7208152DB001F0337 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E255S56V67;
+				INFOPLIST_FILE = FitPals/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = edu.sandiego.FitPals;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		725FD3B9208152DB001F0337 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E255S56V67;
+				INFOPLIST_FILE = FitPalsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = edu.sandiego.FitPalsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FitPals.app/FitPals";
+			};
+			name = Debug;
+		};
+		725FD3BA208152DB001F0337 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E255S56V67;
+				INFOPLIST_FILE = FitPalsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = edu.sandiego.FitPalsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FitPals.app/FitPals";
+			};
+			name = Release;
+		};
+		725FD3BC208152DB001F0337 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E255S56V67;
+				INFOPLIST_FILE = FitPalsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = edu.sandiego.FitPalsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FitPals;
+			};
+			name = Debug;
+		};
+		725FD3BD208152DB001F0337 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E255S56V67;
+				INFOPLIST_FILE = FitPalsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = edu.sandiego.FitPalsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FitPals;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		725FD388208152D8001F0337 /* Build configuration list for PBXProject "FitPals" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				725FD3B3208152DB001F0337 /* Debug */,
+				725FD3B4208152DB001F0337 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		725FD3B5208152DB001F0337 /* Build configuration list for PBXNativeTarget "FitPals" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				725FD3B6208152DB001F0337 /* Debug */,
+				725FD3B7208152DB001F0337 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		725FD3B8208152DB001F0337 /* Build configuration list for PBXNativeTarget "FitPalsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				725FD3B9208152DB001F0337 /* Debug */,
+				725FD3BA208152DB001F0337 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		725FD3BB208152DB001F0337 /* Build configuration list for PBXNativeTarget "FitPalsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				725FD3BC208152DB001F0337 /* Debug */,
+				725FD3BD208152DB001F0337 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 725FD385208152D8001F0337 /* Project object */;
+}
