@@ -8,12 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		725FD391208152D8001F0337 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725FD390208152D8001F0337 /* AppDelegate.swift */; };
-		725FD393208152D8001F0337 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725FD392208152D8001F0337 /* ViewController.swift */; };
 		725FD396208152D8001F0337 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 725FD394208152D8001F0337 /* Main.storyboard */; };
 		725FD398208152DB001F0337 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 725FD397208152DB001F0337 /* Assets.xcassets */; };
 		725FD39B208152DB001F0337 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 725FD399208152DB001F0337 /* LaunchScreen.storyboard */; };
 		725FD3A6208152DB001F0337 /* FitPalsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725FD3A5208152DB001F0337 /* FitPalsTests.swift */; };
 		725FD3B1208152DB001F0337 /* FitPalsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725FD3B0208152DB001F0337 /* FitPalsUITests.swift */; };
+		72FE2F62208F98E300EC0064 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FE2F61208F98E300EC0064 /* ProfileTableViewController.swift */; };
+		72FE2F64208F992200EC0064 /* MarketCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FE2F63208F992200EC0064 /* MarketCollectionViewController.swift */; };
+		72FE2F66208F998800EC0064 /* DiscoverCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FE2F65208F998800EC0064 /* DiscoverCollectionViewController.swift */; };
+		72FE2F68208F99C000EC0064 /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FE2F67208F99C000EC0064 /* FeedTableViewController.swift */; };
+		72FE2F6A208F99FA00EC0064 /* GroupsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FE2F69208F99FA00EC0064 /* GroupsCollectionViewController.swift */; };
+		72FE2F6D208F9A6C00EC0064 /* GroupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FE2F6C208F9A6C00EC0064 /* GroupTableViewController.swift */; };
+		72FE2F6F208F9AD600EC0064 /* ProductTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FE2F6E208F9AD600EC0064 /* ProductTableViewController.swift */; };
+		72FE2F71208F9C5900EC0064 /* PurchaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FE2F70208F9C5900EC0064 /* PurchaseTableViewController.swift */; };
+		72FE2F78208F9D8500EC0064 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FE2F77208F9D8500EC0064 /* User.swift */; };
+		72FE2F7A208F9E2500EC0064 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FE2F79208F9E2500EC0064 /* Post.swift */; };
+		72FE2F7C208F9EF000EC0064 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FE2F7B208F9EF000EC0064 /* Workout.swift */; };
+		72FE2F7E208F9F2000EC0064 /* DietPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FE2F7D208F9F2000EC0064 /* DietPlan.swift */; };
+		72FE2F80208F9F4400EC0064 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FE2F7F208F9F4400EC0064 /* Product.swift */; };
+		72FE2F82208F9F6F00EC0064 /* GroupEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FE2F81208F9F6F00EC0064 /* GroupEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +49,6 @@
 /* Begin PBXFileReference section */
 		725FD38D208152D8001F0337 /* FitPals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitPals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		725FD390208152D8001F0337 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		725FD392208152D8001F0337 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		725FD395208152D8001F0337 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		725FD397208152DB001F0337 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		725FD39A208152DB001F0337 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +59,20 @@
 		725FD3AC208152DB001F0337 /* FitPalsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitPalsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		725FD3B0208152DB001F0337 /* FitPalsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitPalsUITests.swift; sourceTree = "<group>"; };
 		725FD3B2208152DB001F0337 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72FE2F61208F98E300EC0064 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
+		72FE2F63208F992200EC0064 /* MarketCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketCollectionViewController.swift; sourceTree = "<group>"; };
+		72FE2F65208F998800EC0064 /* DiscoverCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverCollectionViewController.swift; sourceTree = "<group>"; };
+		72FE2F67208F99C000EC0064 /* FeedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewController.swift; sourceTree = "<group>"; };
+		72FE2F69208F99FA00EC0064 /* GroupsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsCollectionViewController.swift; sourceTree = "<group>"; };
+		72FE2F6C208F9A6C00EC0064 /* GroupTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTableViewController.swift; sourceTree = "<group>"; };
+		72FE2F6E208F9AD600EC0064 /* ProductTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewController.swift; sourceTree = "<group>"; };
+		72FE2F70208F9C5900EC0064 /* PurchaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseTableViewController.swift; sourceTree = "<group>"; };
+		72FE2F77208F9D8500EC0064 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		72FE2F79208F9E2500EC0064 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		72FE2F7B208F9EF000EC0064 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
+		72FE2F7D208F9F2000EC0064 /* DietPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietPlan.swift; sourceTree = "<group>"; };
+		72FE2F7F208F9F4400EC0064 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		72FE2F81208F9F6F00EC0064 /* GroupEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,11 +123,10 @@
 		725FD38F208152D8001F0337 /* FitPals */ = {
 			isa = PBXGroup;
 			children = (
-				725FD390208152D8001F0337 /* AppDelegate.swift */,
-				725FD392208152D8001F0337 /* ViewController.swift */,
-				725FD394208152D8001F0337 /* Main.storyboard */,
+				72FE2F5E208F988000EC0064 /* Model */,
+				72FE2F5F208F988B00EC0064 /* View */,
+				72FE2F60208F989300EC0064 /* Controller */,
 				725FD397208152DB001F0337 /* Assets.xcassets */,
-				725FD399208152DB001F0337 /* LaunchScreen.storyboard */,
 				725FD39C208152DB001F0337 /* Info.plist */,
 			);
 			path = FitPals;
@@ -125,6 +150,84 @@
 			path = FitPalsUITests;
 			sourceTree = "<group>";
 		};
+		72FE2F5E208F988000EC0064 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				72FE2F77208F9D8500EC0064 /* User.swift */,
+				72FE2F79208F9E2500EC0064 /* Post.swift */,
+				72FE2F7B208F9EF000EC0064 /* Workout.swift */,
+				72FE2F7D208F9F2000EC0064 /* DietPlan.swift */,
+				72FE2F7F208F9F4400EC0064 /* Product.swift */,
+				72FE2F81208F9F6F00EC0064 /* GroupEntity.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		72FE2F5F208F988B00EC0064 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				725FD394208152D8001F0337 /* Main.storyboard */,
+				725FD399208152DB001F0337 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		72FE2F60208F989300EC0064 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				725FD390208152D8001F0337 /* AppDelegate.swift */,
+				72FE2F76208F9CFB00EC0064 /* Feed */,
+				72FE2F72208F9C7D00EC0064 /* Market */,
+				72FE2F75208F9CD300EC0064 /* ExploreDiscover */,
+				72FE2F74208F9CC300EC0064 /* Profile */,
+				72FE2F73208F9CA000EC0064 /* Groups */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		72FE2F72208F9C7D00EC0064 /* Market */ = {
+			isa = PBXGroup;
+			children = (
+				72FE2F63208F992200EC0064 /* MarketCollectionViewController.swift */,
+				72FE2F6E208F9AD600EC0064 /* ProductTableViewController.swift */,
+				72FE2F70208F9C5900EC0064 /* PurchaseTableViewController.swift */,
+			);
+			path = Market;
+			sourceTree = "<group>";
+		};
+		72FE2F73208F9CA000EC0064 /* Groups */ = {
+			isa = PBXGroup;
+			children = (
+				72FE2F69208F99FA00EC0064 /* GroupsCollectionViewController.swift */,
+				72FE2F6C208F9A6C00EC0064 /* GroupTableViewController.swift */,
+			);
+			path = Groups;
+			sourceTree = "<group>";
+		};
+		72FE2F74208F9CC300EC0064 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				72FE2F61208F98E300EC0064 /* ProfileTableViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		72FE2F75208F9CD300EC0064 /* ExploreDiscover */ = {
+			isa = PBXGroup;
+			children = (
+				72FE2F65208F998800EC0064 /* DiscoverCollectionViewController.swift */,
+			);
+			path = ExploreDiscover;
+			sourceTree = "<group>";
+		};
+		72FE2F76208F9CFB00EC0064 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				72FE2F67208F99C000EC0064 /* FeedTableViewController.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +238,7 @@
 				725FD389208152D8001F0337 /* Sources */,
 				725FD38A208152D8001F0337 /* Frameworks */,
 				725FD38B208152D8001F0337 /* Resources */,
+				72FE2F83208FA13100EC0064 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -251,13 +355,42 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		72FE2F83208FA13100EC0064 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "TAGS=\"TODO:|FIXME:|DEBUG:\"\necho \"searching ${SRCROOT} for ${TAGS}\"\nfind \"${SRCROOT}\" \\( -name \"*.swift\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		725FD389208152D8001F0337 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				725FD393208152D8001F0337 /* ViewController.swift in Sources */,
+				72FE2F6D208F9A6C00EC0064 /* GroupTableViewController.swift in Sources */,
+				72FE2F7A208F9E2500EC0064 /* Post.swift in Sources */,
+				72FE2F62208F98E300EC0064 /* ProfileTableViewController.swift in Sources */,
 				725FD391208152D8001F0337 /* AppDelegate.swift in Sources */,
+				72FE2F6A208F99FA00EC0064 /* GroupsCollectionViewController.swift in Sources */,
+				72FE2F68208F99C000EC0064 /* FeedTableViewController.swift in Sources */,
+				72FE2F64208F992200EC0064 /* MarketCollectionViewController.swift in Sources */,
+				72FE2F82208F9F6F00EC0064 /* GroupEntity.swift in Sources */,
+				72FE2F6F208F9AD600EC0064 /* ProductTableViewController.swift in Sources */,
+				72FE2F66208F998800EC0064 /* DiscoverCollectionViewController.swift in Sources */,
+				72FE2F78208F9D8500EC0064 /* User.swift in Sources */,
+				72FE2F7E208F9F2000EC0064 /* DietPlan.swift in Sources */,
+				72FE2F71208F9C5900EC0064 /* PurchaseTableViewController.swift in Sources */,
+				72FE2F7C208F9EF000EC0064 /* Workout.swift in Sources */,
+				72FE2F80208F9F4400EC0064 /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
