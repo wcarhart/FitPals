@@ -14,6 +14,9 @@
 		725FD39B208152DB001F0337 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 725FD399208152DB001F0337 /* LaunchScreen.storyboard */; };
 		725FD3A6208152DB001F0337 /* FitPalsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725FD3A5208152DB001F0337 /* FitPalsTests.swift */; };
 		725FD3B1208152DB001F0337 /* FitPalsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725FD3B0208152DB001F0337 /* FitPalsUITests.swift */; };
+		988418992BAB33A6E1FB0B30 /* Pods_FitPalsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37908EA131EF477A3BD41F5F /* Pods_FitPalsTests.framework */; };
+		9C53B61757E58836D8E48011 /* Pods_FitPals.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A9BEEE4965B98476256022E /* Pods_FitPals.framework */; };
+		AC02C542735FAC1688CBAA2A /* Pods_FitPalsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 762930B61BCDECD15B217C19 /* Pods_FitPalsUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1796D24AA0DC848EFC8ABE7A /* Pods-FitPalsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitPalsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FitPalsTests/Pods-FitPalsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1C5486638D4E630D2548AAA4 /* Pods-FitPalsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitPalsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FitPalsUITests/Pods-FitPalsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		37908EA131EF477A3BD41F5F /* Pods_FitPalsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FitPalsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		39BF7428CF0913ED60139973 /* Pods-FitPals.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitPals.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FitPals/Pods-FitPals.debug.xcconfig"; sourceTree = "<group>"; };
+		3A9BEEE4965B98476256022E /* Pods_FitPals.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FitPals.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		462905DEBCCE21E723BE8480 /* Pods-FitPalsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitPalsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FitPalsUITests/Pods-FitPalsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5CBD4C49DBBCE82E50FD4AD7 /* Pods-FitPals.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitPals.release.xcconfig"; path = "Pods/Target Support Files/Pods-FitPals/Pods-FitPals.release.xcconfig"; sourceTree = "<group>"; };
 		725FD38D208152D8001F0337 /* FitPals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitPals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		725FD390208152D8001F0337 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		725FD392208152D8001F0337 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +57,8 @@
 		725FD3AC208152DB001F0337 /* FitPalsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitPalsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		725FD3B0208152DB001F0337 /* FitPalsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitPalsUITests.swift; sourceTree = "<group>"; };
 		725FD3B2208152DB001F0337 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		762930B61BCDECD15B217C19 /* Pods_FitPalsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FitPalsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C013A5203753538B06DAE207 /* Pods-FitPalsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitPalsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FitPalsTests/Pods-FitPalsTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C53B61757E58836D8E48011 /* Pods_FitPals.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				988418992BAB33A6E1FB0B30 /* Pods_FitPalsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +82,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC02C542735FAC1688CBAA2A /* Pods_FitPalsUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7049F3601E2DC0E238C98D55 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				39BF7428CF0913ED60139973 /* Pods-FitPals.debug.xcconfig */,
+				5CBD4C49DBBCE82E50FD4AD7 /* Pods-FitPals.release.xcconfig */,
+				1796D24AA0DC848EFC8ABE7A /* Pods-FitPalsTests.debug.xcconfig */,
+				C013A5203753538B06DAE207 /* Pods-FitPalsTests.release.xcconfig */,
+				1C5486638D4E630D2548AAA4 /* Pods-FitPalsUITests.debug.xcconfig */,
+				462905DEBCCE21E723BE8480 /* Pods-FitPalsUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		725FD384208152D8001F0337 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +109,8 @@
 				725FD3A4208152DB001F0337 /* FitPalsTests */,
 				725FD3AF208152DB001F0337 /* FitPalsUITests */,
 				725FD38E208152D8001F0337 /* Products */,
+				7049F3601E2DC0E238C98D55 /* Pods */,
+				E980B8AED89BADB4F09FDA1A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +155,16 @@
 			path = FitPalsUITests;
 			sourceTree = "<group>";
 		};
+		E980B8AED89BADB4F09FDA1A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3A9BEEE4965B98476256022E /* Pods_FitPals.framework */,
+				37908EA131EF477A3BD41F5F /* Pods_FitPalsTests.framework */,
+				762930B61BCDECD15B217C19 /* Pods_FitPalsUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +172,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 725FD3B5208152DB001F0337 /* Build configuration list for PBXNativeTarget "FitPals" */;
 			buildPhases = (
+				FE5ABBE75C2BE4606E265D66 /* [CP] Check Pods Manifest.lock */,
 				725FD389208152D8001F0337 /* Sources */,
 				725FD38A208152D8001F0337 /* Frameworks */,
 				725FD38B208152D8001F0337 /* Resources */,
+				B95F575DEFD21C2E72FAFDAA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,6 +191,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 725FD3B8208152DB001F0337 /* Build configuration list for PBXNativeTarget "FitPalsTests" */;
 			buildPhases = (
+				575C3EF48A19F0DAC310CE84 /* [CP] Check Pods Manifest.lock */,
 				725FD39D208152DB001F0337 /* Sources */,
 				725FD39E208152DB001F0337 /* Frameworks */,
 				725FD39F208152DB001F0337 /* Resources */,
@@ -167,6 +210,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 725FD3BB208152DB001F0337 /* Build configuration list for PBXNativeTarget "FitPalsUITests" */;
 			buildPhases = (
+				C892CA0D40498E7276B75E4B /* [CP] Check Pods Manifest.lock */,
 				725FD3A8208152DB001F0337 /* Sources */,
 				725FD3A9208152DB001F0337 /* Frameworks */,
 				725FD3AA208152DB001F0337 /* Resources */,
@@ -250,6 +294,95 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		575C3EF48A19F0DAC310CE84 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FitPalsTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B95F575DEFD21C2E72FAFDAA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FitPals/Pods-FitPals-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftDate/SwiftDate.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftDate.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FitPals/Pods-FitPals-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C892CA0D40498E7276B75E4B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FitPalsUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE5ABBE75C2BE4606E265D66 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FitPals-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		725FD389208152D8001F0337 /* Sources */ = {
@@ -428,15 +561,13 @@
 		};
 		725FD3B6208152DB001F0337 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39BF7428CF0913ED60139973 /* Pods-FitPals.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E255S56V67;
 				INFOPLIST_FILE = FitPals/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.sandiego.FitPals;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -446,15 +577,13 @@
 		};
 		725FD3B7208152DB001F0337 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5CBD4C49DBBCE82E50FD4AD7 /* Pods-FitPals.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E255S56V67;
 				INFOPLIST_FILE = FitPals/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.sandiego.FitPals;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -464,17 +593,14 @@
 		};
 		725FD3B9208152DB001F0337 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1796D24AA0DC848EFC8ABE7A /* Pods-FitPalsTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E255S56V67;
 				INFOPLIST_FILE = FitPalsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.sandiego.FitPalsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -485,17 +611,14 @@
 		};
 		725FD3BA208152DB001F0337 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C013A5203753538B06DAE207 /* Pods-FitPalsTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E255S56V67;
 				INFOPLIST_FILE = FitPalsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.sandiego.FitPalsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -506,16 +629,13 @@
 		};
 		725FD3BC208152DB001F0337 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C5486638D4E630D2548AAA4 /* Pods-FitPalsUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E255S56V67;
 				INFOPLIST_FILE = FitPalsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.sandiego.FitPalsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -526,16 +646,13 @@
 		};
 		725FD3BD208152DB001F0337 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 462905DEBCCE21E723BE8480 /* Pods-FitPalsUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E255S56V67;
 				INFOPLIST_FILE = FitPalsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.sandiego.FitPalsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
