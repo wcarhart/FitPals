@@ -10,7 +10,7 @@ import UIKit
 
 class PurchaseViewController: UIViewController {
     
-    var cart : [Product] = []
+    var cart : [Product] = [Product(temp: "test")]
     @IBOutlet weak var cartTableView: UITableView!
     
 
@@ -30,8 +30,12 @@ class PurchaseViewController: UIViewController {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        // your cell coding
-        return UITableViewCell()
+        var cell: CartTableViewCell! = tableView.dequeueReusableCell(withIdentifier: "CartTableViewCell") as? CartTableViewCell
+        if cell == nil {
+            tableView.register(UINib(nibName: "CartTableViewCell", bundle: nil), forCellReuseIdentifier: "CartTableViewCell")
+            cell = tableView.dequeueReusableCell(withIdentifier: "CartTableViewCell") as? CartTableViewCell
+        }
+        return cell
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {

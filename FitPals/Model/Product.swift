@@ -10,4 +10,5 @@ import Foundation
 
 struct Product {
     // TODO: define instance variables for this data structure
+    var temp : String
 }

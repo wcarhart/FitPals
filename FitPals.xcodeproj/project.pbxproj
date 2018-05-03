@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0406C7B8879BEC302D23C137 /* Pods_FitPalsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2F1D484409F20666FBF3B68 /* Pods_FitPalsTests.framework */; };
 		20C2C42C209ACE2500FBE88E /* PurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C2C42B209ACE2500FBE88E /* PurchaseViewController.swift */; };
+		20C2C42F209ADB7200FBE88E /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C2C42D209ADB7200FBE88E /* CartTableViewCell.swift */; };
+		20C2C430209ADB7200FBE88E /* CartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20C2C42E209ADB7200FBE88E /* CartTableViewCell.xib */; };
 		725FD391208152D8001F0337 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725FD390208152D8001F0337 /* AppDelegate.swift */; };
 		725FD396208152D8001F0337 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 725FD394208152D8001F0337 /* Main.storyboard */; };
 		725FD398208152DB001F0337 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 725FD397208152DB001F0337 /* Assets.xcassets */; };
@@ -53,6 +55,8 @@
 /* Begin PBXFileReference section */
 		18B74369EB9CDC1DAA619699 /* Pods-FitPals.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitPals.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FitPals/Pods-FitPals.debug.xcconfig"; sourceTree = "<group>"; };
 		20C2C42B209ACE2500FBE88E /* PurchaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PurchaseViewController.swift; path = FitPals/Controller/Market/PurchaseViewController.swift; sourceTree = SOURCE_ROOT; };
+		20C2C42D209ADB7200FBE88E /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
+		20C2C42E209ADB7200FBE88E /* CartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartTableViewCell.xib; sourceTree = "<group>"; };
 		5C841B8893FDD1733BA3285E /* Pods_FitPalsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FitPalsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		725FD38D208152D8001F0337 /* FitPals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitPals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		725FD390208152D8001F0337 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -231,6 +235,8 @@
 			isa = PBXGroup;
 			children = (
 				20C2C42B209ACE2500FBE88E /* PurchaseViewController.swift */,
+				20C2C42D209ADB7200FBE88E /* CartTableViewCell.swift */,
+				20C2C42E209ADB7200FBE88E /* CartTableViewCell.xib */,
 				72FE2F63208F992200EC0064 /* MarketCollectionViewController.swift */,
 				72FE2F6E208F9AD600EC0064 /* ProductTableViewController.swift */,
 				72FE2F70208F9C5900EC0064 /* PurchaseTableViewController.swift */,
@@ -383,6 +389,7 @@
 				725FD39B208152DB001F0337 /* LaunchScreen.storyboard in Resources */,
 				725FD398208152DB001F0337 /* Assets.xcassets in Resources */,
 				725FD396208152D8001F0337 /* Main.storyboard in Resources */,
+				20C2C430209ADB7200FBE88E /* CartTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,6 +528,7 @@
 				72FE2F6A208F99FA00EC0064 /* GroupsCollectionViewController.swift in Sources */,
 				72FE2F68208F99C000EC0064 /* FeedTableViewController.swift in Sources */,
 				72FE2F64208F992200EC0064 /* MarketCollectionViewController.swift in Sources */,
+				20C2C42F209ADB7200FBE88E /* CartTableViewCell.swift in Sources */,
 				72FE2F82208F9F6F00EC0064 /* GroupEntity.swift in Sources */,
 				72FE2F6F208F9AD600EC0064 /* ProductTableViewController.swift in Sources */,
 				72FE2F66208F998800EC0064 /* DiscoverCollectionViewController.swift in Sources */,
