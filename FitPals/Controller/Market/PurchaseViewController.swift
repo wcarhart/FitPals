@@ -8,15 +8,15 @@
 
 import UIKit
 
-class PurchaseViewController: UIViewController {
+class PurchaseViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var cart : [Product] = [Product(temp: "test")]
-    @IBOutlet weak var cartTableView: UITableView!
     
+    @IBOutlet weak var cartTableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        cartTableView.rowHeight = 200
         // Do any additional setup after loading the view.
     }
 
@@ -25,20 +25,28 @@ class PurchaseViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return cart.count // your number of cell here
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return cart.count+3 // your number of cell here
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell: CartTableViewCell! = tableView.dequeueReusableCell(withIdentifier: "CartTableViewCell") as? CartTableViewCell
-        if cell == nil {
-            tableView.register(UINib(nibName: "CartTableViewCell", bundle: nil), forCellReuseIdentifier: "CartTableViewCell")
-            cell = tableView.dequeueReusableCell(withIdentifier: "CartTableViewCell") as? CartTableViewCell
-        }
-        return cell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let index = indexPath as IndexPath
+            switch index {
+                default:
+                    var cell: CartTableViewCell! = tableView.dequeueReusableCell(withIdentifier: "CartTableCell") as? CartTableViewCell
+                    if cell == nil {
+                        tableView.register(UINib(nibName: "CartTableViewCell", bundle: nil), forCellReuseIdentifier: "CartTableCell")
+                        cell = tableView.dequeueReusableCell(withIdentifier: "CartTableCell") as? CartTableViewCell
+                    }
+                return cell
+                }
+    }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 200
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    private func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: IndexPath) {
         // cell selected code here
     }
     
