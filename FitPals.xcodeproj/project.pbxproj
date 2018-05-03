@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0406C7B8879BEC302D23C137 /* Pods_FitPalsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2F1D484409F20666FBF3B68 /* Pods_FitPalsTests.framework */; };
+		20C2C42C209ACE2500FBE88E /* PurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C2C42B209ACE2500FBE88E /* PurchaseViewController.swift */; };
 		725FD391208152D8001F0337 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725FD390208152D8001F0337 /* AppDelegate.swift */; };
 		725FD396208152D8001F0337 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 725FD394208152D8001F0337 /* Main.storyboard */; };
 		725FD398208152DB001F0337 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 725FD397208152DB001F0337 /* Assets.xcassets */; };
@@ -51,6 +52,7 @@
 
 /* Begin PBXFileReference section */
 		18B74369EB9CDC1DAA619699 /* Pods-FitPals.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitPals.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FitPals/Pods-FitPals.debug.xcconfig"; sourceTree = "<group>"; };
+		20C2C42B209ACE2500FBE88E /* PurchaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PurchaseViewController.swift; path = FitPals/Controller/Market/PurchaseViewController.swift; sourceTree = SOURCE_ROOT; };
 		5C841B8893FDD1733BA3285E /* Pods_FitPalsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FitPalsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		725FD38D208152D8001F0337 /* FitPals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitPals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		725FD390208152D8001F0337 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 		72FE2F72208F9C7D00EC0064 /* Market */ = {
 			isa = PBXGroup;
 			children = (
+				20C2C42B209ACE2500FBE88E /* PurchaseViewController.swift */,
 				72FE2F63208F992200EC0064 /* MarketCollectionViewController.swift */,
 				72FE2F6E208F9AD600EC0064 /* ProductTableViewController.swift */,
 				72FE2F70208F9C5900EC0064 /* PurchaseTableViewController.swift */,
@@ -511,6 +514,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				72FE2F6D208F9A6C00EC0064 /* GroupTableViewController.swift in Sources */,
+				20C2C42C209ACE2500FBE88E /* PurchaseViewController.swift in Sources */,
 				72FE2F7A208F9E2500EC0064 /* Post.swift in Sources */,
 				72FE2F62208F98E300EC0064 /* ProfileTableViewController.swift in Sources */,
 				725FD391208152D8001F0337 /* AppDelegate.swift in Sources */,
@@ -701,7 +705,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E255S56V67;
 				INFOPLIST_FILE = FitPals/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = edu.sandiego.FitPals;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -717,7 +724,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E255S56V67;
 				INFOPLIST_FILE = FitPals/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = edu.sandiego.FitPals;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -734,7 +744,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E255S56V67;
 				INFOPLIST_FILE = FitPalsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = edu.sandiego.FitPalsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -752,7 +766,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E255S56V67;
 				INFOPLIST_FILE = FitPalsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = edu.sandiego.FitPalsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -769,7 +787,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E255S56V67;
 				INFOPLIST_FILE = FitPalsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = edu.sandiego.FitPalsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -786,7 +808,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E255S56V67;
 				INFOPLIST_FILE = FitPalsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = edu.sandiego.FitPalsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
