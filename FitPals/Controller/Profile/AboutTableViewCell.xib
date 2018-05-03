@@ -12,12 +12,31 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="AboutTableViewCell" customModule="FitPals" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AboutTableCell" id="KGk-i7-Jjw" customClass="AboutTableViewCell" customModule="FitPals" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="176"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="175.5"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="u4z-w8-9gW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="175.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <string key="text">About Me:
+Name
+Age
+Workout Level
+Diet Level</string>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="u4z-w8-9gW" secondAttribute="trailing" id="DS5-Yu-LU2"/>
+                    <constraint firstItem="u4z-w8-9gW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Rq9-2T-WbP"/>
+                    <constraint firstAttribute="bottom" secondItem="u4z-w8-9gW" secondAttribute="bottom" id="mUc-Hi-Iv6"/>
+                    <constraint firstItem="u4z-w8-9gW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="zfC-cK-z6X"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
         </tableViewCell>
