@@ -10,6 +10,10 @@ import UIKit
 
 class ProfileTableViewCell: UITableViewCell {
 
+//    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+//        
+//    }
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
