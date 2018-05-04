@@ -10,6 +10,8 @@ import UIKit
 
 class ProfileTableViewController: UITableViewController {
 
+    let defaultRowHeight : CGFloat = 44
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,25 +29,48 @@ class ProfileTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
+//    override func numberOfSections(in tableView: UITableView) -> Int {
+//        // #warning Incomplete implementation, return the number of sections
+//        return 0
+//    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 5
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
+        switch indexPath {
+        case [0,0]:
+            var cell: ProfileTableViewCell! = tableView.dequeueReusableCell(withIdentifier: "ProfileTableCell") as? ProfileTableViewCell
+            if cell == nil {
+                tableView.register(UINib(nibName: "ProfileTableViewCell", bundle: nil), forCellReuseIdentifier: "ProfileTableCell")
+                cell = tableView.dequeueReusableCell(withIdentifier: "ProfileTableCell") as? ProfileTableViewCell
+            }
+            return cell
+        case [0,1]:
+            var cell: AboutTableViewCell! = tableView.dequeueReusableCell(withIdentifier: "AboutTableCell") as? AboutTableViewCell
+            if cell == nil {
+                tableView.register(UINib(nibName: "AboutTableViewCell", bundle: nil), forCellReuseIdentifier: "AboutTableCell")
+                cell = tableView.dequeueReusableCell(withIdentifier: "AboutTableCell") as? AboutTableViewCell
+            }
+            return cell
+        default:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ProfilePostCell", for: indexPath)
+            return cell
+        }
     }
-    */
+    
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch indexPath {
+        case [0,0], [0,1]:
+            return(176) //height of first and second cell (Profile picture and info Sections)
+        default:
+            return(defaultRowHeight)
+        }
+    }
 
     /*
     // Override to support conditional editing of the table view.
