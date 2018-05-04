@@ -18,6 +18,9 @@
 		725FD39B208152DB001F0337 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 725FD399208152DB001F0337 /* LaunchScreen.storyboard */; };
 		725FD3A6208152DB001F0337 /* FitPalsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725FD3A5208152DB001F0337 /* FitPalsTests.swift */; };
 		725FD3B1208152DB001F0337 /* FitPalsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725FD3B0208152DB001F0337 /* FitPalsUITests.swift */; };
+		72659B38209CDCD30057C3B0 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72659B36209CDCD30057C3B0 /* PostTableViewCell.swift */; };
+		72659B39209CDCD30057C3B0 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72659B37209CDCD30057C3B0 /* PostTableViewCell.xib */; };
+		72659B3B209CE3600057C3B0 /* Credits.txt in Resources */ = {isa = PBXBuildFile; fileRef = 72659B3A209CE3600057C3B0 /* Credits.txt */; };
 		72FE2F62208F98E300EC0064 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FE2F61208F98E300EC0064 /* ProfileTableViewController.swift */; };
 		72FE2F64208F992200EC0064 /* MarketCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FE2F63208F992200EC0064 /* MarketCollectionViewController.swift */; };
 		72FE2F66208F998800EC0064 /* DiscoverCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FE2F65208F998800EC0064 /* DiscoverCollectionViewController.swift */; };
@@ -72,6 +75,9 @@
 		725FD3AC208152DB001F0337 /* FitPalsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitPalsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		725FD3B0208152DB001F0337 /* FitPalsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitPalsUITests.swift; sourceTree = "<group>"; };
 		725FD3B2208152DB001F0337 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72659B36209CDCD30057C3B0 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		72659B37209CDCD30057C3B0 /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
+		72659B3A209CE3600057C3B0 /* Credits.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Credits.txt; sourceTree = "<group>"; };
 		72FE2F61208F98E300EC0064 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		72FE2F63208F992200EC0064 /* MarketCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketCollectionViewController.swift; sourceTree = "<group>"; };
 		72FE2F65208F998800EC0064 /* DiscoverCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverCollectionViewController.swift; sourceTree = "<group>"; };
@@ -176,6 +182,7 @@
 				72FE2F60208F989300EC0064 /* Controller */,
 				725FD397208152DB001F0337 /* Assets.xcassets */,
 				725FD39C208152DB001F0337 /* Info.plist */,
+				72659B3A209CE3600057C3B0 /* Credits.txt */,
 			);
 			path = FitPals;
 			sourceTree = "<group>";
@@ -216,6 +223,8 @@
 			children = (
 				725FD394208152D8001F0337 /* Main.storyboard */,
 				725FD399208152DB001F0337 /* LaunchScreen.storyboard */,
+				72659B36209CDCD30057C3B0 /* PostTableViewCell.swift */,
+				72659B37209CDCD30057C3B0 /* PostTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -392,7 +401,9 @@
 				725FD39B208152DB001F0337 /* LaunchScreen.storyboard in Resources */,
 				725FD398208152DB001F0337 /* Assets.xcassets in Resources */,
 				20C2C42A209A62DD00FBE88E /* AboutTableViewCell.xib in Resources */,
+				72659B39209CDCD30057C3B0 /* PostTableViewCell.xib in Resources */,
 				725FD396208152D8001F0337 /* Main.storyboard in Resources */,
+				72659B3B209CE3600057C3B0 /* Credits.txt in Resources */,
 				20C2C426209A602600FBE88E /* ProfileTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -541,6 +552,7 @@
 				72FE2F71208F9C5900EC0064 /* PurchaseTableViewController.swift in Sources */,
 				72FE2F7C208F9EF000EC0064 /* Workout.swift in Sources */,
 				72FE2F80208F9F4400EC0064 /* Product.swift in Sources */,
+				72659B38209CDCD30057C3B0 /* PostTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

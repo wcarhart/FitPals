@@ -9,43 +9,50 @@
 import UIKit
 
 class FeedTableViewController: UITableViewController {
+    
+    var testUser = User(named: "Will Carhart")
+    
+    var testPosts: [Post]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        testPosts = [
+            Post(owner: testUser, workout: nil, pictures: nil, dietPlan: nil, text: "test post 0")!,
+            Post(owner: testUser, workout: nil, pictures: nil, dietPlan: nil, text: "test post 1")!,
+            Post(owner: testUser, workout: nil, pictures: nil, dietPlan: nil, text: "test post 2")!
+        ]
+        testUser.addPosts(testPosts)
+        testUser.picture = #imageLiteral(resourceName: "demo_image")
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
+    
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return testPosts.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
+        var cell: PostTableViewCell! = tableView.dequeueReusableCell(withIdentifier: "PostCell") as? PostTableViewCell
+        
+        if cell == nil {
+            tableView.register(UINib(nibName: "PostTableViewCell", bundle: nil), forCellReuseIdentifier: "PostCell")
+            cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as? PostTableViewCell
+        }
+        
+        let post = testPosts[indexPath.row]
+        
+        cell.profileNameLabel?.text = post.owner.name
+        let today = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMM dd, yyyy"
+        cell.postDateLabel?.text = dateFormatter.string(from: today)
+        cell.postContentLabel?.text = post.text
+        cell.postScoreLabel?.text = String(post.score)
+        cell.profileIcon.image = #imageLiteral(resourceName: "demo_image") //post.owner.picture
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
