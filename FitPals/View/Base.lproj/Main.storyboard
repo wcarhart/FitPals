@@ -66,7 +66,6 @@
                                         </imageView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vah-Ye-DoA">
                                             <rect key="frame" x="8" y="8" width="169" height="169"/>
-                                            <state key="normal" title="Button"/>
                                             <connections>
                                                 <action selector="marketButtonPressed:" destination="gFM-Wy-iiJ" eventType="touchUpInside" id="6RS-0h-95G"/>
                                                 <segue destination="vco-Ry-yrR" kind="show" identifier="marketToProductSegue" id="n7p-IQ-aWE"/>
