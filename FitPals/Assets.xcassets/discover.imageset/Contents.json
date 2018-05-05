@@ -2,7 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "discover.png",
+      "filename" : "discover_selected.png",
       "scale" : "1x"
     },
     {

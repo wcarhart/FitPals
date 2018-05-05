@@ -60,13 +60,65 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var registerConfirmPasswordTextField: UITextField!
     @IBOutlet weak var registerButton: UIButton!
     
+    // colors
+    let gradient = CAGradientLayer()
+    var gradientSet = [[CGColor]]()
+    var currentGradient: Int = 0
+    
+    let gradientOne = FlatOrange().cgColor
+    let gradientTwo = FlatMagentaDark().cgColor
+    let gradientThree = FlatRed().cgColor
+    let gradientFour = FlatGreenDark().cgColor
+    let gradientFive = FlatGray().cgColor
+    let gradientSix = FlatYellowDark().cgColor
+    let gradientSeven = FlatPowderBlue().cgColor
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
         
-        parentView.backgroundColor = GradientColor(.topToBottom, frame: parentView.frame, colors: [FlatOrange(), FlatMagentaDark()])
-        contentView.backgroundColor = GradientColor(.topToBottom, frame: parentView.frame, colors: [FlatOrange(), FlatMagentaDark()])
         loginBubbleView.backgroundColor = FlatWhite()
+        //parentView.backgroundColor = GradientColor(.topToBottom, frame: parentView.frame, colors: [FlatOrange(), FlatMagentaDark()])
+        //contentView.backgroundColor = GradientColor(.topToBottom, frame: parentView.frame, colors: [FlatOrange(), FlatMagentaDark()])
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        gradientSet.append([gradientOne, gradientTwo])
+        gradientSet.append([gradientTwo, gradientThree])
+        gradientSet.append([gradientThree, gradientFour])
+        gradientSet.append([gradientFour, gradientFive])
+        gradientSet.append([gradientFive, gradientSix])
+        gradientSet.append([gradientSix, gradientSeven])
+        gradientSet.append([gradientSeven, gradientOne])
+        
+        gradient.frame = parentView.bounds
+        gradient.colors = gradientSet[currentGradient]
+        gradient.startPoint = CGPoint(x: 0, y: 0)
+        gradient.endPoint = CGPoint(x: 1, y: 1)
+        gradient.drawsAsynchronously = true
+        
+        contentView.layer.addSublayer(gradient)
+        contentView.addSubview(loginBubbleView)
+        
+        animateGradient()
+    }
+    
+    func animateGradient() {
+        if currentGradient < gradientSet.count - 1 {
+            currentGradient += 1
+        } else {
+            currentGradient = 0
+        }
+        
+        let gradientChangeAnimation = CABasicAnimation(keyPath: "colors")
+        gradientChangeAnimation.duration = 2.0
+        gradientChangeAnimation.toValue = gradientSet[currentGradient]
+        gradientChangeAnimation.fillMode = kCAFillModeForwards
+        gradientChangeAnimation.isRemovedOnCompletion = false
+        gradientChangeAnimation.delegate = self
+        gradient.add(gradientChangeAnimation, forKey: "colorChange")
     }
     
     func updateUI() {
@@ -303,7 +355,7 @@ class LoginViewController: UIViewController {
         } else {
             HUD.show(.progress)
             Auth.auth().createUser(withEmail: registerEmailTextField.text!, password: registerPasswordTextField.text!) { (user, error) in
-                if let user = user {
+                if user != nil {
                     let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
                     changeRequest?.displayName = "\(self.registerFirstNameTextField.text!) \(self.registerLastNameTextField.text!)"
                     changeRequest?.commitChanges(completion: { (error) in
@@ -325,4 +377,11 @@ class LoginViewController: UIViewController {
         }
     }
     
+}
+
+extension LoginViewController: CAAnimationDelegate {
+    func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
+        gradient.colors = gradientSet[currentGradient]
+        animateGradient()
+    }
 }

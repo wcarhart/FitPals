@@ -21,6 +21,7 @@
 		72659B38209CDCD30057C3B0 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72659B36209CDCD30057C3B0 /* PostTableViewCell.swift */; };
 		72659B39209CDCD30057C3B0 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72659B37209CDCD30057C3B0 /* PostTableViewCell.xib */; };
 		72659B3B209CE3600057C3B0 /* Credits.txt in Resources */ = {isa = PBXBuildFile; fileRef = 72659B3A209CE3600057C3B0 /* Credits.txt */; };
+		727D83E1209E4DC700DB020E /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727D83E0209E4DC700DB020E /* FeedViewController.swift */; };
 		72E122E3209D34FE00060AB8 /* TestUserSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E122E2209D34FE00060AB8 /* TestUserSingleton.swift */; };
 		72E122E5209D9A0400060AB8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 72E122E4209D9A0400060AB8 /* GoogleService-Info.plist */; };
 		72E122E7209E201200060AB8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E122E6209E201200060AB8 /* LoginViewController.swift */; };
@@ -81,6 +82,7 @@
 		72659B36209CDCD30057C3B0 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		72659B37209CDCD30057C3B0 /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
 		72659B3A209CE3600057C3B0 /* Credits.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Credits.txt; sourceTree = "<group>"; };
+		727D83E0209E4DC700DB020E /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		72E122E2209D34FE00060AB8 /* TestUserSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUserSingleton.swift; sourceTree = "<group>"; };
 		72E122E4209D9A0400060AB8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		72E122E6209E201200060AB8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -294,6 +296,7 @@
 			isa = PBXGroup;
 			children = (
 				72FE2F67208F99C000EC0064 /* FeedTableViewController.swift */,
+				727D83E0209E4DC700DB020E /* FeedViewController.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -619,6 +622,7 @@
 				20C2C429209A62DD00FBE88E /* AboutTableViewCell.swift in Sources */,
 				20C2C425209A602600FBE88E /* ProfileTableViewCell.swift in Sources */,
 				72FE2F66208F998800EC0064 /* DiscoverCollectionViewController.swift in Sources */,
+				727D83E1209E4DC700DB020E /* FeedViewController.swift in Sources */,
 				72FE2F78208F9D8500EC0064 /* User.swift in Sources */,
 				72FE2F7E208F9F2000EC0064 /* DietPlan.swift in Sources */,
 				72FE2F71208F9C5900EC0064 /* PurchaseTableViewController.swift in Sources */,
@@ -802,7 +806,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E255S56V67;
 				INFOPLIST_FILE = FitPals/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = edu.sandiego.FitPals;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -818,7 +825,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E255S56V67;
 				INFOPLIST_FILE = FitPals/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = edu.sandiego.FitPals;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -835,7 +845,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E255S56V67;
 				INFOPLIST_FILE = FitPalsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = edu.sandiego.FitPalsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -853,7 +867,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E255S56V67;
 				INFOPLIST_FILE = FitPalsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = edu.sandiego.FitPalsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -870,7 +888,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E255S56V67;
 				INFOPLIST_FILE = FitPalsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = edu.sandiego.FitPalsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -887,7 +909,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E255S56V67;
 				INFOPLIST_FILE = FitPalsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = edu.sandiego.FitPalsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
