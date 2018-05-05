@@ -45,7 +45,7 @@ class PostTableViewCell: UITableViewCell {
     }
 
     @IBAction func profileTapped(_ sender: UIButton) {
-        print("Going to \(profileNameLabel.text ?? "nil")'s profile page")
+        print("LOG: profile")
     }
     
     @IBAction func upvoteButtonPressed(_ sender: UIButton) {
@@ -55,10 +55,12 @@ class PostTableViewCell: UITableViewCell {
             if result {
                 DispatchQueue.main.async {
                     self.upvoteButton.imageView?.image = #imageLiteral(resourceName: "upvote_selected")
+                    self.downvoteButton.imageView?.image = #imageLiteral(resourceName: "downvote")
                 }
             } else {
                 DispatchQueue.main.async {
                     self.upvoteButton.imageView?.image = #imageLiteral(resourceName: "upvote")
+                    self.downvoteButton.imageView?.image = #imageLiteral(resourceName: "downvote")
                 }
             }
         } else {
@@ -87,10 +89,12 @@ class PostTableViewCell: UITableViewCell {
             if !result {
                 DispatchQueue.main.async {
                     self.downvoteButton.imageView?.image = #imageLiteral(resourceName: "downvote_selected")
+                    self.upvoteButton.imageView?.image = #imageLiteral(resourceName: "upvote")
                 }
             } else {
                 DispatchQueue.main.async {
                     self.downvoteButton.imageView?.image = #imageLiteral(resourceName: "downvote")
+                    self.upvoteButton.imageView?.image = #imageLiteral(resourceName: "upvote")
                 }
             }
         } else {
@@ -109,7 +113,7 @@ class PostTableViewCell: UITableViewCell {
         }
         self.postScoreLabel.text = String(TestUserSingleton.shared.user.posts[index].score)
         
-        print("LOG: dwonvote")
+        print("LOG: downvote")
     }
     
     @IBAction func commentButtonDown(_ sender: UIButton) {
@@ -121,7 +125,7 @@ class PostTableViewCell: UITableViewCell {
     }
     
     @IBAction func commentButtonPressed(_ sender: UIButton) {
-        print("Commenting")
+        print("LOG: comment")
     }
     
     @IBAction func shareButtonDown(_ sender: UIButton) {
@@ -133,7 +137,7 @@ class PostTableViewCell: UITableViewCell {
     }
     
     @IBAction func shareButtonPressed(_ sender: UIButton) {
-        print("Sharing")
+        print("LOG: share")
     }
     
     
