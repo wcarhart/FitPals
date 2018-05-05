@@ -27,6 +27,7 @@ target 'FitPals' do
   
   # Color Management
   pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
+  pod 'TextFieldEffects'
 
   target 'FitPalsTests' do
     inherit! :search_paths

@@ -10,6 +10,7 @@ import UIKit
 import ChameleonFramework
 import FirebaseAuth
 import PKHUD
+import TextFieldEffects
 
 // TODO: get third party auth working
 //import FirebaseAutUI
@@ -47,17 +48,17 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var registerTabButton: UIButton!
     
     // login outlets
-    @IBOutlet weak var loginEmailTextField: UITextField!
-    @IBOutlet weak var loginPasswordTextField: UITextField!
+    @IBOutlet weak var loginEmailTextField: KaedeTextField!
+    @IBOutlet weak var loginPasswordTextField: KaedeTextField!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var loginMessageLabel: UILabel!
     
     // register outlets
-    @IBOutlet weak var registerFirstNameTextField: UITextField!
-    @IBOutlet weak var registerLastNameTextField: UITextField!
-    @IBOutlet weak var registerEmailTextField: UITextField!
-    @IBOutlet weak var registerPasswordTextField: UITextField!
-    @IBOutlet weak var registerConfirmPasswordTextField: UITextField!
+    @IBOutlet weak var registerConfirmPasswordTextField: KaedeTextField!
+    @IBOutlet weak var registerPasswordTextField: KaedeTextField!
+    @IBOutlet weak var registerEmailTextField: KaedeTextField!
+    @IBOutlet weak var registerLastNameTextField: KaedeTextField!
+    @IBOutlet weak var registerFirstNameTextField: KaedeTextField!
     @IBOutlet weak var registerButton: UIButton!
     
     // colors
@@ -75,11 +76,22 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateUI()
-        
         loginBubbleView.backgroundColor = FlatWhite()
-        //parentView.backgroundColor = GradientColor(.topToBottom, frame: parentView.frame, colors: [FlatOrange(), FlatMagentaDark()])
-        //contentView.backgroundColor = GradientColor(.topToBottom, frame: parentView.frame, colors: [FlatOrange(), FlatMagentaDark()])
+        prepareTextFields()
+        updateUI()
+    }
+    
+    func prepareTextFields() {
+        // login
+        loginEmailTextField.backgroundColor = FlatWhiteDark()
+        loginPasswordTextField.backgroundColor = FlatWhiteDark()
+        
+        // register
+        registerFirstNameTextField.backgroundColor = FlatWhiteDark()
+        registerLastNameTextField.backgroundColor = FlatWhiteDark()
+        registerEmailTextField.backgroundColor = FlatWhiteDark()
+        registerPasswordTextField.backgroundColor = FlatWhiteDark()
+        registerConfirmPasswordTextField.backgroundColor = FlatWhiteDark()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -194,13 +206,13 @@ class LoginViewController: UIViewController {
         if !validLoginButton {
             if !validLoginEmail {
                 UIView.animate(withDuration: 0.1, animations: {
-                    self.loginEmailTextField.transform = CGAffineTransform(rotationAngle: .pi / 10)
+                    self.loginEmailTextField.transform = CGAffineTransform(rotationAngle: .pi / 50)
                 }) { (_) in
                     UIView.animate(withDuration: 0.1, animations: {
-                        self.loginEmailTextField.transform = CGAffineTransform(rotationAngle: .pi / -10)
+                        self.loginEmailTextField.transform = CGAffineTransform(rotationAngle: .pi / -50)
                     }) { (_) in
                         UIView.animate(withDuration: 0.1, animations: {
-                            self.loginEmailTextField.transform = CGAffineTransform(rotationAngle: .pi / 10)
+                            self.loginEmailTextField.transform = CGAffineTransform(rotationAngle: .pi / 50)
                         }) { (_) in
                             UIView.animate(withDuration: 0.1) {
                                 self.loginEmailTextField.transform = CGAffineTransform.identity
@@ -210,13 +222,13 @@ class LoginViewController: UIViewController {
                 }
             } else {
                 UIView.animate(withDuration: 0.1, animations: {
-                    self.loginPasswordTextField.transform = CGAffineTransform(rotationAngle: .pi / 10)
+                    self.loginPasswordTextField.transform = CGAffineTransform(rotationAngle: .pi / 50)
                 }) { (_) in
                     UIView.animate(withDuration: 0.1, animations: {
-                        self.loginPasswordTextField.transform = CGAffineTransform(rotationAngle: .pi / -10)
+                        self.loginPasswordTextField.transform = CGAffineTransform(rotationAngle: .pi / -50)
                     }) { (_) in
                         UIView.animate(withDuration: 0.1, animations: {
-                            self.loginPasswordTextField.transform = CGAffineTransform(rotationAngle: .pi / 10)
+                            self.loginPasswordTextField.transform = CGAffineTransform(rotationAngle: .pi / 50)
                         }) { (_) in
                             UIView.animate(withDuration: 0.1) {
                                 self.loginPasswordTextField.transform = CGAffineTransform.identity
@@ -273,13 +285,13 @@ class LoginViewController: UIViewController {
         if !validRegisterButton {
             if !validRegisterFirstName {
                 UIView.animate(withDuration: 0.1, animations: {
-                    self.registerFirstNameTextField.transform = CGAffineTransform(rotationAngle: .pi / 10)
+                    self.registerFirstNameTextField.transform = CGAffineTransform(rotationAngle: .pi / 50)
                 }) { (_) in
                     UIView.animate(withDuration: 0.1, animations: {
-                        self.registerFirstNameTextField.transform = CGAffineTransform(rotationAngle: .pi / -10)
+                        self.registerFirstNameTextField.transform = CGAffineTransform(rotationAngle: .pi / -50)
                     }) { (_) in
                         UIView.animate(withDuration: 0.1, animations: {
-                            self.registerFirstNameTextField.transform = CGAffineTransform(rotationAngle: .pi / 10)
+                            self.registerFirstNameTextField.transform = CGAffineTransform(rotationAngle: .pi / 50)
                         }) { (_) in
                             UIView.animate(withDuration: 0.1) {
                                 self.registerFirstNameTextField.transform = CGAffineTransform.identity
@@ -289,13 +301,13 @@ class LoginViewController: UIViewController {
                 }
             } else if !validRegisterLastName {
                 UIView.animate(withDuration: 0.1, animations: {
-                    self.registerLastNameTextField.transform = CGAffineTransform(rotationAngle: .pi / 10)
+                    self.registerLastNameTextField.transform = CGAffineTransform(rotationAngle: .pi / 50)
                 }) { (_) in
                     UIView.animate(withDuration: 0.1, animations: {
-                        self.registerLastNameTextField.transform = CGAffineTransform(rotationAngle: .pi / -10)
+                        self.registerLastNameTextField.transform = CGAffineTransform(rotationAngle: .pi / -50)
                     }) { (_) in
                         UIView.animate(withDuration: 0.1, animations: {
-                            self.registerLastNameTextField.transform = CGAffineTransform(rotationAngle: .pi / 10)
+                            self.registerLastNameTextField.transform = CGAffineTransform(rotationAngle: .pi / 50)
                         }) { (_) in
                             UIView.animate(withDuration: 0.1) {
                                 self.registerLastNameTextField.transform = CGAffineTransform.identity
@@ -305,13 +317,13 @@ class LoginViewController: UIViewController {
                 }
             } else if !validRegisterEmail {
                 UIView.animate(withDuration: 0.1, animations: {
-                    self.registerEmailTextField.transform = CGAffineTransform(rotationAngle: .pi / 10)
+                    self.registerEmailTextField.transform = CGAffineTransform(rotationAngle: .pi / 50)
                 }) { (_) in
                     UIView.animate(withDuration: 0.1, animations: {
-                        self.registerEmailTextField.transform = CGAffineTransform(rotationAngle: .pi / -10)
+                        self.registerEmailTextField.transform = CGAffineTransform(rotationAngle: .pi / -50)
                     }) { (_) in
                         UIView.animate(withDuration: 0.1, animations: {
-                            self.registerEmailTextField.transform = CGAffineTransform(rotationAngle: .pi / 10)
+                            self.registerEmailTextField.transform = CGAffineTransform(rotationAngle: .pi / 50)
                         }) { (_) in
                             UIView.animate(withDuration: 0.1) {
                                 self.registerEmailTextField.transform = CGAffineTransform.identity
@@ -321,13 +333,13 @@ class LoginViewController: UIViewController {
                 }
             } else if !validRegisterPassword {
                 UIView.animate(withDuration: 0.1, animations: {
-                    self.registerPasswordTextField.transform = CGAffineTransform(rotationAngle: .pi / 10)
+                    self.registerPasswordTextField.transform = CGAffineTransform(rotationAngle: .pi / 50)
                 }) { (_) in
                     UIView.animate(withDuration: 0.1, animations: {
-                        self.registerPasswordTextField.transform = CGAffineTransform(rotationAngle: .pi / -10)
+                        self.registerPasswordTextField.transform = CGAffineTransform(rotationAngle: .pi / -50)
                     }) { (_) in
                         UIView.animate(withDuration: 0.1, animations: {
-                            self.registerPasswordTextField.transform = CGAffineTransform(rotationAngle: .pi / 10)
+                            self.registerPasswordTextField.transform = CGAffineTransform(rotationAngle: .pi / 50)
                         }) { (_) in
                             UIView.animate(withDuration: 0.1) {
                                 self.registerPasswordTextField.transform = CGAffineTransform.identity
@@ -337,13 +349,13 @@ class LoginViewController: UIViewController {
                 }
             } else {
                 UIView.animate(withDuration: 0.1, animations: {
-                    self.registerConfirmPasswordTextField.transform = CGAffineTransform(rotationAngle: .pi / 10)
+                    self.registerConfirmPasswordTextField.transform = CGAffineTransform(rotationAngle: .pi / 50)
                 }) { (_) in
                     UIView.animate(withDuration: 0.1, animations: {
-                        self.registerConfirmPasswordTextField.transform = CGAffineTransform(rotationAngle: .pi / -10)
+                        self.registerConfirmPasswordTextField.transform = CGAffineTransform(rotationAngle: .pi / -50)
                     }) { (_) in
                         UIView.animate(withDuration: 0.1, animations: {
-                            self.registerConfirmPasswordTextField.transform = CGAffineTransform(rotationAngle: .pi / 10)
+                            self.registerConfirmPasswordTextField.transform = CGAffineTransform(rotationAngle: .pi / 50)
                         }) { (_) in
                             UIView.animate(withDuration: 0.1) {
                                 self.registerConfirmPasswordTextField.transform = CGAffineTransform.identity
