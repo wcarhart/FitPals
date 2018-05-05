@@ -10,7 +10,12 @@ import Foundation
 import UIKit
 
 struct Post {
-    var owner: User
+    // user id of post owner
+    var owner: Int32
+    
+    // unique identification for user
+    // ~4 billion possibilities
+    var id: Int32
     
     var workout: Workout?
     var pictures: [String]? // stores as urls
@@ -21,19 +26,29 @@ struct Post {
     
     var text: String?
     var shares: Int
-    var score: Int
     
-    init?(owner: User, workout: Workout?, pictures: [String]?, dietPlan: DietPlan?, text: String?) {
+    // list of users who have voted on this post
+    // key = user id
+    // value = voteResult: true = upvote, false = downvote
+    var votes: [Int32: Bool]
+    
+    var score: Int {
+        return votes.reduce(0) { $0 + ($1.value ? 1 : -1) }
+    }
+    
+    init?(owner: Int32, id: Int32, workout: Workout?, pictures: [String]?, dietPlan: DietPlan?, text: String?) {
         if workout == nil && pictures == nil && dietPlan == nil && text == nil {
             return nil
         }
         
         self.owner = owner
+        self.id = id
         self.workout = workout
         self.pictures = pictures
         self.dietPlan = dietPlan
         self.text = text
+        
         self.shares = 0
-        self.score = 0
+        self.votes = [:]
     }
 }

@@ -11,35 +11,47 @@ import UIKit
 
 struct User {
     var name: String
-    var picture: UIImage?
+    var picture: String?
     var posts: [Post]
     var products: [Product]
     var connections: [User]
     
-    init() {
-        self.name = ""
+    // unique identification for user
+    // ~4 billion possibilities
+    var id: Int32
+    
+    // ids of posts this user has voted for
+    // key = post id
+    // key = voteResult: true = upvote, false = downvote
+    var votes: [Int32: Bool]
+    
+    init(name: String, picture: String?, id: Int32) {
+        self.name = name
+        self.picture = picture
         self.posts = []
         self.products = []
         self.connections = []
+        self.id = id
+        self.votes = [:]
     }
     
-    init(named name: String) {
+    init(name: String, picture: String?, id: Int32, posts: [Post]) {
         self.name = name
-        self.posts = []
-        self.products = []
-        self.connections = []
-    }
-    
-    init(name: String, posts: [Post], products: [Product], connections: [User]) {
-        self.name = name
+        self.picture = picture
         self.posts = posts
-        self.products = products
-        self.connections = connections
+        self.products = []
+        self.connections = []
+        self.id = id
+        self.votes = [:]
     }
     
     mutating func addPosts(_ posts: [Post]) {
         for post in posts {
             self.posts.append(post)
         }
+    }
+    
+    mutating func setPhoto(named name: String) {
+        self.picture = name
     }
 }
