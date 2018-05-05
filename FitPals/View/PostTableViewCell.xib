@@ -105,20 +105,20 @@
                                         <rect key="frame" x="0.0" y="180.5" width="288" height="50"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RPy-h7-2yN" userLabel="Vote View (left)">
-                                                <rect key="frame" x="0.0" y="0.0" width="96" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="115" height="50"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Y7-p3-n3b" userLabel="Top">
-                                                        <rect key="frame" x="0.0" y="0.0" width="96" height="16.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="115" height="16.5"/>
                                                         <color key="backgroundColor" red="1" green="1" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DVk-QW-upZ" userLabel="Content (mid)">
-                                                        <rect key="frame" x="0.0" y="16.5" width="96" height="17"/>
+                                                        <rect key="frame" x="0.0" y="16.5" width="115" height="17"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wst-um-K8W" userLabel="Upvote View (left)">
-                                                                <rect key="frame" x="0.0" y="0.0" width="32" height="17"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="38.5" height="17"/>
                                                                 <subviews>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mfW-bv-iOr">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="32" height="17"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="38.5" height="17"/>
                                                                         <state key="normal" image="upvote"/>
                                                                         <connections>
                                                                             <action selector="upvoteButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="NZh-1u-lIj"/>
@@ -134,10 +134,10 @@
                                                                 </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gei-63-S5k" userLabel="Score View (mid)">
-                                                                <rect key="frame" x="32" y="0.0" width="32" height="17"/>
+                                                                <rect key="frame" x="38.5" y="0.0" width="38.5" height="17"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nOK-6j-4GK">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="32" height="17"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="38.5" height="17"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -152,10 +152,10 @@
                                                                 </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jma-QL-cc9" userLabel="Downvote View (right)">
-                                                                <rect key="frame" x="64" y="0.0" width="32" height="17"/>
+                                                                <rect key="frame" x="77" y="0.0" width="38" height="17"/>
                                                                 <subviews>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yTZ-nb-mgt">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="32" height="17"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="38" height="17"/>
                                                                         <state key="normal" image="downvote"/>
                                                                         <connections>
                                                                             <action selector="downvoteButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="jde-Px-ljZ"/>
@@ -188,7 +188,7 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TF7-aA-i1U" userLabel="Bot">
-                                                        <rect key="frame" x="0.0" y="33.5" width="96" height="16.5"/>
+                                                        <rect key="frame" x="0.0" y="33.5" width="115" height="16.5"/>
                                                         <color key="backgroundColor" red="1" green="1" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                 </subviews>
@@ -209,10 +209,10 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AQE-eV-JeJ" userLabel="Comment View (mid)">
-                                                <rect key="frame" x="96" y="0.0" width="96" height="50"/>
+                                                <rect key="frame" x="115" y="0.0" width="86.5" height="50"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gtR-QK-5Nw">
-                                                        <rect key="frame" x="0.0" y="0.0" width="96" height="50"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="86.5" height="50"/>
                                                         <state key="normal" image="comment_hollow"/>
                                                         <connections>
                                                             <action selector="commentButtonDown:" destination="KGk-i7-Jjw" eventType="touchDown" id="JNQ-PN-21n"/>
@@ -230,10 +230,10 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="02X-Qq-fT0" userLabel="Share View (right)">
-                                                <rect key="frame" x="192" y="0.0" width="96" height="50"/>
+                                                <rect key="frame" x="201.5" y="0.0" width="86.5" height="50"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OzE-RU-le0">
-                                                        <rect key="frame" x="0.0" y="0.0" width="96" height="50"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="86.5" height="50"/>
                                                         <state key="normal" image="share_hollow"/>
                                                         <connections>
                                                             <action selector="shareButtonDown:" destination="KGk-i7-Jjw" eventType="touchDown" id="PuK-II-k3I"/>
@@ -257,8 +257,8 @@
                                             <constraint firstAttribute="bottom" secondItem="AQE-eV-JeJ" secondAttribute="bottom" id="AxA-I2-rJH"/>
                                             <constraint firstItem="AQE-eV-JeJ" firstAttribute="top" secondItem="7vH-DX-CbW" secondAttribute="top" id="IHs-R2-IA6"/>
                                             <constraint firstAttribute="height" constant="50" id="Qe1-2m-Bcu"/>
-                                            <constraint firstItem="02X-Qq-fT0" firstAttribute="width" secondItem="7vH-DX-CbW" secondAttribute="width" multiplier="1:3" id="TPC-ht-abr"/>
-                                            <constraint firstItem="RPy-h7-2yN" firstAttribute="width" secondItem="7vH-DX-CbW" secondAttribute="width" multiplier="1:3" id="ZAI-8d-Nus"/>
+                                            <constraint firstItem="02X-Qq-fT0" firstAttribute="width" secondItem="7vH-DX-CbW" secondAttribute="width" multiplier="3:10" id="TPC-ht-abr"/>
+                                            <constraint firstItem="RPy-h7-2yN" firstAttribute="width" secondItem="7vH-DX-CbW" secondAttribute="width" multiplier="2:5" id="ZAI-8d-Nus"/>
                                             <constraint firstItem="RPy-h7-2yN" firstAttribute="leading" secondItem="7vH-DX-CbW" secondAttribute="leading" id="aRx-nb-NUB"/>
                                             <constraint firstItem="RPy-h7-2yN" firstAttribute="top" secondItem="7vH-DX-CbW" secondAttribute="top" id="fcP-G5-jHB"/>
                                             <constraint firstAttribute="bottom" secondItem="02X-Qq-fT0" secondAttribute="bottom" id="fl2-zb-e6q"/>

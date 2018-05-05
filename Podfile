@@ -6,10 +6,11 @@ target 'FitPals' do
   use_frameworks!
 
   # Pods for FitPals
-  # database
+  # Firebase (database, cloud storage, authentication)
   pod 'Firebase/Database'
   pod 'Firebase/Core'
   pod 'Firebase/Storage'
+  pod 'FirebaseUI'
   
   # Date/Time Management
   pod 'SwiftDate', '~> 4.5.1'
@@ -24,7 +25,7 @@ target 'FitPals' do
   # Map Annotations
   pod 'MapViewPlus'
   
-  # Colors
+  # Color Management
   pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
 
   target 'FitPalsTests' do
