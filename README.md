@@ -18,5 +18,7 @@ pod install
 The Firebase database can be accessed [here](www.firebase.google.com).
 
 Login credentials:
+
   *Email:* fitpalsdatabase@gmail.com
+  
   *Password:* comp494s18
