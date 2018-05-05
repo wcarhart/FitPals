@@ -8,6 +8,11 @@
 
 import UIKit
 import ChameleonFramework
+import FirebaseAuth
+import PKHUD
+
+// TODO: get third party auth working
+//import FirebaseAutUI
 
 class LoginViewController: UIViewController {
     
@@ -82,6 +87,8 @@ class LoginViewController: UIViewController {
             registerEmailTextField.isHidden = true
             registerPasswordTextField.isHidden = true
             registerConfirmPasswordTextField.isHidden = true
+            registerButton.isHidden = true
+            
         } else {
             // update colors
             loginTabView.backgroundColor = FlatWhiteDark()
@@ -99,6 +106,7 @@ class LoginViewController: UIViewController {
             registerEmailTextField.isHidden = false
             registerPasswordTextField.isHidden = false
             registerConfirmPasswordTextField.isHidden = false
+            registerButton.isHidden = false
         }
     }
     
@@ -116,12 +124,11 @@ class LoginViewController: UIViewController {
     // login actions
     @IBAction func loginEmailTextFieldChanged(_ sender: UITextField) {
         guard let text = loginEmailTextField.text else { return }
-        validLoginEmail = isValidEmail(text) ? true: false
+        validLoginEmail = isValidEmail(text) ? true : false
     }
     
     func isValidEmail(_ string: String) -> Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-        
         let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailTest.evaluate(with: string)
     }
@@ -132,7 +139,6 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {
-        print("login button pressed")
         if !validLoginButton {
             if !validLoginEmail {
                 UIView.animate(withDuration: 0.1, animations: {
@@ -168,27 +174,155 @@ class LoginViewController: UIViewController {
                 }
             }
         } else {
-            // TODO: log in with Firebase
+            HUD.show(.progress)
+            Auth.auth().signIn(withEmail: loginEmailTextField.text!, password: loginPasswordTextField.text!) { (user, error) in
+                if let user = user {
+                    print("LOG: \(user.displayName!) successfully authenticated")
+                    HUD.flash(.success, delay: 1.0) { finished in
+                        self.performSegue(withIdentifier: "authenticationSuccessful", sender: nil)
+                    }
+                } else {
+                    HUD.flash(.error, delay: 1.0)
+                    print(error?.localizedDescription)
+                }
+            }
+            
         }
     }
     
     // register actions
     @IBAction func registerFirstNameTextFieldChanged(_ sender: UITextField) {
+        guard let text = registerFirstNameTextField.text else { return }
+        validRegisterFirstName = text.count >= 1 ? true : false
     }
     
     @IBAction func registerLastNameTextFieldChanged(_ sender: UITextField) {
+        guard let text = registerLastNameTextField.text else { return }
+        validRegisterLastName = text.count >= 1 ? true : false
     }
     
     @IBAction func registerEmailTextFieldChanged(_ sender: UITextField) {
+        guard let text = registerEmailTextField.text else { return }
+        validRegisterEmail = isValidEmail(text) ? true : false
     }
     
     @IBAction func registerPasswordTextFieldChanged(_ sender: UITextField) {
+        guard let text = registerPasswordTextField.text else { return }
+        validRegisterPassword = text.count >= 8 ? true : false
     }
     
     @IBAction func registerConfirmPasswordTextFieldChanged(_ sender: UITextField) {
+        guard let passwordText = registerPasswordTextField.text else { return }
+        guard let confirmText = registerConfirmPasswordTextField.text else { return }
+        validRegisterConfirmPassword = passwordText == confirmText ? true : false
     }
     
     @IBAction func createAccountButtonPressed(_ sender: UIButton) {
+        if !validRegisterButton {
+            if !validRegisterFirstName {
+                UIView.animate(withDuration: 0.1, animations: {
+                    self.registerFirstNameTextField.transform = CGAffineTransform(rotationAngle: .pi / 10)
+                }) { (_) in
+                    UIView.animate(withDuration: 0.1, animations: {
+                        self.registerFirstNameTextField.transform = CGAffineTransform(rotationAngle: .pi / -10)
+                    }) { (_) in
+                        UIView.animate(withDuration: 0.1, animations: {
+                            self.registerFirstNameTextField.transform = CGAffineTransform(rotationAngle: .pi / 10)
+                        }) { (_) in
+                            UIView.animate(withDuration: 0.1) {
+                                self.registerFirstNameTextField.transform = CGAffineTransform.identity
+                            }
+                        }
+                    }
+                }
+            } else if !validRegisterLastName {
+                UIView.animate(withDuration: 0.1, animations: {
+                    self.registerLastNameTextField.transform = CGAffineTransform(rotationAngle: .pi / 10)
+                }) { (_) in
+                    UIView.animate(withDuration: 0.1, animations: {
+                        self.registerLastNameTextField.transform = CGAffineTransform(rotationAngle: .pi / -10)
+                    }) { (_) in
+                        UIView.animate(withDuration: 0.1, animations: {
+                            self.registerLastNameTextField.transform = CGAffineTransform(rotationAngle: .pi / 10)
+                        }) { (_) in
+                            UIView.animate(withDuration: 0.1) {
+                                self.registerLastNameTextField.transform = CGAffineTransform.identity
+                            }
+                        }
+                    }
+                }
+            } else if !validRegisterEmail {
+                UIView.animate(withDuration: 0.1, animations: {
+                    self.registerEmailTextField.transform = CGAffineTransform(rotationAngle: .pi / 10)
+                }) { (_) in
+                    UIView.animate(withDuration: 0.1, animations: {
+                        self.registerEmailTextField.transform = CGAffineTransform(rotationAngle: .pi / -10)
+                    }) { (_) in
+                        UIView.animate(withDuration: 0.1, animations: {
+                            self.registerEmailTextField.transform = CGAffineTransform(rotationAngle: .pi / 10)
+                        }) { (_) in
+                            UIView.animate(withDuration: 0.1) {
+                                self.registerEmailTextField.transform = CGAffineTransform.identity
+                            }
+                        }
+                    }
+                }
+            } else if !validRegisterPassword {
+                UIView.animate(withDuration: 0.1, animations: {
+                    self.registerPasswordTextField.transform = CGAffineTransform(rotationAngle: .pi / 10)
+                }) { (_) in
+                    UIView.animate(withDuration: 0.1, animations: {
+                        self.registerPasswordTextField.transform = CGAffineTransform(rotationAngle: .pi / -10)
+                    }) { (_) in
+                        UIView.animate(withDuration: 0.1, animations: {
+                            self.registerPasswordTextField.transform = CGAffineTransform(rotationAngle: .pi / 10)
+                        }) { (_) in
+                            UIView.animate(withDuration: 0.1) {
+                                self.registerPasswordTextField.transform = CGAffineTransform.identity
+                            }
+                        }
+                    }
+                }
+            } else {
+                UIView.animate(withDuration: 0.1, animations: {
+                    self.registerConfirmPasswordTextField.transform = CGAffineTransform(rotationAngle: .pi / 10)
+                }) { (_) in
+                    UIView.animate(withDuration: 0.1, animations: {
+                        self.registerConfirmPasswordTextField.transform = CGAffineTransform(rotationAngle: .pi / -10)
+                    }) { (_) in
+                        UIView.animate(withDuration: 0.1, animations: {
+                            self.registerConfirmPasswordTextField.transform = CGAffineTransform(rotationAngle: .pi / 10)
+                        }) { (_) in
+                            UIView.animate(withDuration: 0.1) {
+                                self.registerConfirmPasswordTextField.transform = CGAffineTransform.identity
+                            }
+                        }
+                    }
+                }
+            }
+        } else {
+            HUD.show(.progress)
+            Auth.auth().createUser(withEmail: registerEmailTextField.text!, password: registerPasswordTextField.text!) { (user, error) in
+                if let user = user {
+                    let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+                    changeRequest?.displayName = "\(self.registerFirstNameTextField.text!) \(self.registerLastNameTextField.text!)"
+                    changeRequest?.commitChanges(completion: { (error) in
+                        if let error = error {
+                            print(error.localizedDescription)
+                        }
+                    })
+                    
+                    print("LOG: Account for \(self.registerFirstNameTextField.text!) \(self.registerLastNameTextField.text!) created successfully")
+                    
+                    HUD.flash(.success, delay: 1.0) { finished in
+                        self.performSegue(withIdentifier: "authenticationSuccessful", sender: nil)
+                    }
+                } else {
+                    HUD.flash(.error, delay: 1.0)
+                    print(error?.localizedDescription)
+                }
+            }
+        }
     }
     
 }

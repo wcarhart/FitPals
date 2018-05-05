@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Feed-->
+        <!--Feed Table View Controller-->
         <scene sceneID="gAm-OP-CxQ">
             <objects>
                 <tableViewController id="tAh-qC-crR" customClass="FeedTableViewController" customModule="FitPals" customModuleProvider="target" sceneMemberID="viewController">
@@ -34,13 +34,15 @@
                             <outlet property="delegate" destination="tAh-qC-crR" id="fE5-xQ-EAw"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Feed" id="Ylq-j9-BYj"/>
+                    <tabBarItem key="tabBarItem" title="" image="feed" selectedImage="feed_selected" id="Ylq-j9-BYj">
+                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-10"/>
+                    </tabBarItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t2n-4H-MOS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1510" y="519"/>
         </scene>
-        <!--Market-->
+        <!--Market Collection View Controller-->
         <scene sceneID="mM9-y4-nGg">
             <objects>
                 <collectionViewController id="gFM-Wy-iiJ" customClass="MarketCollectionViewController" customModule="FitPals" customModuleProvider="target" sceneMemberID="viewController">
@@ -72,7 +74,9 @@
                             <outlet property="delegate" destination="gFM-Wy-iiJ" id="bZa-RC-vL8"/>
                         </connections>
                     </collectionView>
-                    <tabBarItem key="tabBarItem" title="Market" id="Z3H-jc-sw6"/>
+                    <tabBarItem key="tabBarItem" title="" image="market" selectedImage="market_selected" id="Z3H-jc-sw6">
+                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-10"/>
+                    </tabBarItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v0V-pv-gGu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -134,7 +138,7 @@
             </objects>
             <point key="canvasLocation" x="-711" y="1997"/>
         </scene>
-        <!--Discover-->
+        <!--Discover Collection View Controller-->
         <scene sceneID="yN8-Ps-N8L">
             <objects>
                 <collectionViewController id="d1H-Wn-c1e" customClass="DiscoverCollectionViewController" customModule="FitPals" customModuleProvider="target" sceneMemberID="viewController">
@@ -163,13 +167,15 @@
                             <outlet property="delegate" destination="d1H-Wn-c1e" id="KUb-CK-zlp"/>
                         </connections>
                     </collectionView>
-                    <tabBarItem key="tabBarItem" title="Discover" id="1yV-Iq-Xs0"/>
+                    <tabBarItem key="tabBarItem" title="" image="discover" selectedImage="discover_selected" id="1yV-Iq-Xs0">
+                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-10"/>
+                    </tabBarItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tDk-gK-Ajv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="106" y="519"/>
         </scene>
-        <!--Profile-->
+        <!--Profile Table View Controller-->
         <scene sceneID="shO-8Y-H3o">
             <objects>
                 <tableViewController id="DAa-bI-JFf" customClass="ProfileTableViewController" customModule="FitPals" customModuleProvider="target" sceneMemberID="viewController">
@@ -192,13 +198,15 @@
                             <outlet property="delegate" destination="DAa-bI-JFf" id="yNN-tS-NNn"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Profile" id="1dH-a6-f8a"/>
+                    <tabBarItem key="tabBarItem" title="" image="profile" selectedImage="profile_selected" id="1dH-a6-f8a">
+                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-10"/>
+                    </tabBarItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QNj-sK-fwG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="945" y="519"/>
         </scene>
-        <!--Groups-->
+        <!--Groups Collection View Controller-->
         <scene sceneID="Wav-yR-Qmi">
             <objects>
                 <collectionViewController id="8C8-cS-aU3" customClass="GroupsCollectionViewController" customModule="FitPals" customModuleProvider="target" sceneMemberID="viewController">
@@ -230,7 +238,9 @@
                             <outlet property="delegate" destination="8C8-cS-aU3" id="HLd-c2-BOO"/>
                         </connections>
                     </collectionView>
-                    <tabBarItem key="tabBarItem" title="Groups" id="ACF-8u-NY9"/>
+                    <tabBarItem key="tabBarItem" title="" image="groups" selectedImage="groups_selected" id="ACF-8u-NY9">
+                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-10"/>
+                    </tabBarItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O9g-A3-DgL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -434,7 +444,7 @@
                                                         </constraints>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                         <connections>
                                                             <action selector="registerPasswordTextFieldChanged:" destination="MmE-0c-v1A" eventType="editingChanged" id="anz-iQ-dJ4"/>
                                                         </connections>
@@ -446,7 +456,7 @@
                                                         </constraints>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                         <connections>
                                                             <action selector="registerConfirmPasswordTextFieldChanged:" destination="MmE-0c-v1A" eventType="editingChanged" id="ZIj-e9-AgR"/>
                                                         </connections>
@@ -526,7 +536,7 @@
                         <outlet property="registerPasswordTextField" destination="UUl-vF-uTq" id="t7W-WX-qY5"/>
                         <outlet property="registerTabButton" destination="IqD-ST-5z2" id="0Z5-ry-TC6"/>
                         <outlet property="registerTabView" destination="gRy-EK-jRG" id="Ylf-6m-oKh"/>
-                        <segue destination="7GX-DO-eLP" kind="show" identifier="loginSegue" id="zGJ-q2-eaW"/>
+                        <segue destination="7GX-DO-eLP" kind="show" identifier="authenticationSuccessful" id="zGJ-q2-eaW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3x7-WA-r55" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -556,6 +566,16 @@
         </scene>
     </scenes>
     <resources>
+        <image name="discover" width="24" height="24"/>
+        <image name="discover_selected" width="24" height="24"/>
+        <image name="feed" width="24" height="24"/>
+        <image name="feed_selected" width="24" height="24"/>
+        <image name="groups" width="24" height="24"/>
+        <image name="groups_selected" width="24" height="24"/>
         <image name="login" width="64" height="64"/>
+        <image name="market" width="24" height="24"/>
+        <image name="market_selected" width="24" height="24"/>
+        <image name="profile" width="24" height="24"/>
+        <image name="profile_selected" width="24" height="24"/>
     </resources>
 </document>

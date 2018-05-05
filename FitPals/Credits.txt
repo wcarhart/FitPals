@@ -5,4 +5,5 @@ Icons made by:
  - Dave Gandy
  - Freepik
  - Nice and Serious
+ - Smashicons
 from www.flaticon.com

@@ -16,7 +16,7 @@ target 'FitPals' do
   pod 'SwiftDate', '~> 4.5.1'
   
   # Progress HUD
-  pod 'SVProgressHUD'
+  pod 'PKHUD', '~> 5.0'
   
   # Networking & Parsing
   pod 'SwiftyJSON'
