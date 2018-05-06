@@ -18,12 +18,15 @@ class ImageDisplayer: UIView {
     // 1 image
     @IBOutlet weak var oneImage0: UIImageView!
     @IBOutlet weak var oneImageButton0: UIButton!
+    @IBOutlet weak var oneImageCancelButton0: UIButton!
     
     // 2 images
     @IBOutlet weak var twoImages0: UIImageView!
     @IBOutlet weak var twoImages1: UIImageView!
     @IBOutlet weak var twoImagesButton0: UIButton!
     @IBOutlet weak var twoImagesButton1: UIButton!
+    @IBOutlet weak var twoImagesCancelButton0: UIButton!
+    @IBOutlet weak var twoImagesCancelButton1: UIButton!
     
     // 3 images
     @IBOutlet weak var threeImages0: UIImageView!
@@ -32,6 +35,9 @@ class ImageDisplayer: UIView {
     @IBOutlet weak var threeImagesButton0: UIButton!
     @IBOutlet weak var threeImagesButton1: UIButton!
     @IBOutlet weak var threeImagesButton2: UIButton!
+    @IBOutlet weak var threeImagesCancelButton0: UIButton!
+    @IBOutlet weak var threeImagesCancelButton1: UIButton!
+    @IBOutlet weak var threeImagesCancelButton2: UIButton!
     
     // 3+ images
     @IBOutlet weak var threePlusImages0: UIImageView!
@@ -43,6 +49,9 @@ class ImageDisplayer: UIView {
     @IBOutlet weak var threePlusImagesButton2: UIButton!
     @IBOutlet weak var threePlusImagesButton3: UIButton!
     @IBOutlet weak var threePlusExtraView: UIView!
+    @IBOutlet weak var threePlusImagesCancelButton0: UIButton!
+    @IBOutlet weak var threePlusImagesCancelButton1: UIButton!
+    @IBOutlet weak var threePlusImagesCancelButton2: UIButton!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
