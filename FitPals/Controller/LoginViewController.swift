@@ -7,10 +7,15 @@
 //
 
 import UIKit
+
+// UI
 import ChameleonFramework
-import FirebaseAuth
 import PKHUD
 import TextFieldEffects
+
+// core
+import FirebaseAuth
+import Firebase
 
 // TODO: get third party auth working
 //import FirebaseAutUI
@@ -79,6 +84,7 @@ class LoginViewController: UIViewController {
         loginBubbleView.backgroundColor = FlatWhite()
         prepareTextFields()
         updateUI()
+        print("View did load")
     }
     
     func prepareTextFields() {
@@ -282,6 +288,12 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func createAccountButtonPressed(_ sender: UIButton) {
+        
+        let db = Firestore.firestore()
+        let settings = db.settings
+        settings.areTimestampsInSnapshotsEnabled = true
+        db.settings = settings
+        
         if !validRegisterButton {
             if !validRegisterFirstName {
                 UIView.animate(withDuration: 0.1, animations: {
@@ -367,7 +379,7 @@ class LoginViewController: UIViewController {
         } else {
             HUD.show(.progress)
             Auth.auth().createUser(withEmail: registerEmailTextField.text!, password: registerPasswordTextField.text!) { (user, error) in
-                if user != nil {
+                if let user = user {
                     let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
                     changeRequest?.displayName = "\(self.registerFirstNameTextField.text!) \(self.registerLastNameTextField.text!)"
                     changeRequest?.commitChanges(completion: { (error) in
@@ -376,14 +388,60 @@ class LoginViewController: UIViewController {
                         }
                     })
                     
-                    print("LOG: Account for \(self.registerFirstNameTextField.text!) \(self.registerLastNameTextField.text!) created successfully")
+                    let fullName = "\(self.registerFirstNameTextField.text!) \(self.registerLastNameTextField.text!)"
+                    
+                    // initialize new record in Firestore
+                    db.collection("users").document("\(user.uid)").setData([
+                        "name": "\(fullName)",
+                        "profile": "",
+                        "cover": ""
+                    ]) { err in
+                        if let err = err {
+                            print("ERROR: Could not write to document, with error \(err)")
+                        } else {
+                            print("LOG: initialized name and picture for user \(user.uid)")
+                        }
+                    }
+                    db.collection("users").document("\(user.uid)").collection("posts").addDocument(data: [:]) { err in
+                        if let err = err {
+                            print("ERROR: Could not write to document, with error \(err)")
+                        } else {
+                            print("LOG: initialized posts for user \(user.uid)")
+                        }
+                    }
+                    db.collection("users").document("\(user.uid)").collection("products").addDocument(data: [:]) { err in
+                        if let err = err {
+                            print("ERROR: Could not write to document, with error \(err)")
+                        } else {
+                            print("LOG: initialized products for user \(user.uid)")
+                        }
+                    }
+                    db.collection("users").document("\(user.uid)").collection("connections").addDocument(data: [:]) { err in
+                        if let err = err {
+                            print("ERROR: Could not write to document, with error \(err)")
+                        } else {
+                            print("LOG: initialized connections for user \(user.uid)")
+                        }
+                    }
+                    db.collection("users").document("\(user.uid)").collection("votes").addDocument(data: [:]) { err in
+                        if let err = err {
+                            print("ERROR: Could not write to document, with error \(err)")
+                        } else {
+                            print("LOG: initialized votes for user \(user.uid)")
+                        }
+                    }
+                    
+                    print("LOG: Account for \(fullName) created successfully")
                     
                     HUD.flash(.success, delay: 1.0) { finished in
-                        self.performSegue(withIdentifier: "authenticationSuccessful", sender: nil)
+                        //self.performSegue(withIdentifier: "authenticationSuccessful", sender: nil)
+                        print("LOG: would perform segue here")
                     }
                 } else {
                     HUD.flash(.error, delay: 1.0)
-                    print(error?.localizedDescription)
+                    if let error = error {
+                        print(error.localizedDescription)
+                    }
                 }
             }
         }

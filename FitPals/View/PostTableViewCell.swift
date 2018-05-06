@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ChameleonFramework
 
 protocol PostTableViewCellDelegate {
     func upvote(postId: Int32)
@@ -33,9 +34,15 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var commentButton: UIButton!
     @IBOutlet weak var shareButton: UIButton!
     
+    // views (for coloring)
+    @IBOutlet weak var paddingView: UIView!
+    @IBOutlet weak var contentContainer: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.contentView.backgroundColor = FlatWhiteDark()
+        paddingView.backgroundColor = FlatSand()
+        contentContainer.backgroundColor = FlatSand()
     }
     
     override func layoutSubviews() {

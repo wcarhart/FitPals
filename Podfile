@@ -7,10 +7,9 @@ target 'FitPals' do
 
   # Pods for FitPals
   # Firebase (database, cloud storage, authentication)
-  pod 'Firebase/Database'
   pod 'Firebase/Core'
   pod 'Firebase/Storage'
-  pod 'FirebaseUI'
+  pod 'Firebase/Firestore'
   
   # Date/Time Management
   pod 'SwiftDate', '~> 4.5.1'

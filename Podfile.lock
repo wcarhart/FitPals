@@ -159,6 +159,7 @@ DEPENDENCIES:
   - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`)
   - Firebase/Core
   - Firebase/Database
+  - Firebase/Firestore
   - Firebase/Storage
   - FirebaseUI
   - MapViewPlus
@@ -250,6 +251,6 @@ SPEC CHECKSUMS:
   TwitterCore: 644d59e75abccb26cf0a9050d2c4dea0e5412241
   TwitterKit: a2e60ddcedbf54091eac6f27685ca7a87681e1d7
 
-PODFILE CHECKSUM: 55be7fb2693ed4a66da9be6eddef3f0cda25ce05
+PODFILE CHECKSUM: c968083db28e9622b394d558dc7c13215779cccb
 
 COCOAPODS: 1.5.0

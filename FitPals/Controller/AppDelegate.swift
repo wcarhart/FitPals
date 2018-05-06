@@ -8,20 +8,17 @@
 
 import UIKit
 import Firebase
-import FirebaseAuthUI
+import FirebaseAuth
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, FUIAuthDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         // configure Firebase
         FirebaseApp.configure()
-        let authUI = FUIAuth.defaultAuthUI()
-        authUI?.delegate = self
         
         // TODO: disable this for product build
         UserDefaults.standard.setValue(false, forKey: "_UIConstraintBasedLayoutLogUnsatisfiable")

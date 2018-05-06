@@ -66,7 +66,6 @@
                                                         </subviews>
                                                     </stackView>
                                                 </subviews>
-                                                <color key="backgroundColor" red="1" green="1" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstItem="Drb-iq-z4G" firstAttribute="top" secondItem="Dad-P4-dWi" secondAttribute="top" id="KnB-kh-saH"/>
                                                     <constraint firstAttribute="trailing" secondItem="Drb-iq-z4G" secondAttribute="trailing" id="R8j-Lm-fPz"/>
@@ -81,7 +80,6 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" red="1" green="1" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="Dad-P4-dWi" secondAttribute="bottom" id="2MU-Xv-u89"/>
                                             <constraint firstAttribute="trailing" secondItem="Dad-P4-dWi" secondAttribute="trailing" id="Pye-10-iUM"/>
@@ -99,7 +97,6 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O8I-xJ-YQ2" userLabel="Post Content View (mid)">
                                         <rect key="frame" x="0.0" y="50" width="288" height="130.5"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7vH-DX-CbW" userLabel="Post Details View (bot)">
                                         <rect key="frame" x="0.0" y="180.5" width="288" height="50"/>
@@ -109,7 +106,6 @@
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Y7-p3-n3b" userLabel="Top">
                                                         <rect key="frame" x="0.0" y="0.0" width="115" height="16.5"/>
-                                                        <color key="backgroundColor" red="1" green="1" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DVk-QW-upZ" userLabel="Content (mid)">
                                                         <rect key="frame" x="0.0" y="16.5" width="115" height="17"/>
@@ -125,7 +121,6 @@
                                                                         </connections>
                                                                     </button>
                                                                 </subviews>
-                                                                <color key="backgroundColor" red="1" green="1" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <constraints>
                                                                     <constraint firstItem="mfW-bv-iOr" firstAttribute="leading" secondItem="wst-um-K8W" secondAttribute="leading" id="1UI-8N-b0B"/>
                                                                     <constraint firstAttribute="bottom" secondItem="mfW-bv-iOr" secondAttribute="bottom" id="VR6-RO-I7B"/>
@@ -143,7 +138,6 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
-                                                                <color key="backgroundColor" red="1" green="1" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="trailing" secondItem="nOK-6j-4GK" secondAttribute="trailing" id="OtJ-vW-5am"/>
                                                                     <constraint firstAttribute="bottom" secondItem="nOK-6j-4GK" secondAttribute="bottom" id="Rhr-2F-1ib"/>
@@ -162,7 +156,6 @@
                                                                         </connections>
                                                                     </button>
                                                                 </subviews>
-                                                                <color key="backgroundColor" red="1" green="1" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <constraints>
                                                                     <constraint firstItem="yTZ-nb-mgt" firstAttribute="top" secondItem="Jma-QL-cc9" secondAttribute="top" id="856-0J-nXa"/>
                                                                     <constraint firstItem="yTZ-nb-mgt" firstAttribute="leading" secondItem="Jma-QL-cc9" secondAttribute="leading" id="NoJ-H3-aQM"/>
@@ -171,7 +164,6 @@
                                                                 </constraints>
                                                             </view>
                                                         </subviews>
-                                                        <color key="backgroundColor" red="1" green="1" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstItem="wst-um-K8W" firstAttribute="width" secondItem="DVk-QW-upZ" secondAttribute="width" multiplier="1:3" id="13G-4i-ups"/>
                                                             <constraint firstAttribute="trailing" secondItem="Jma-QL-cc9" secondAttribute="trailing" id="8di-pk-2oZ"/>
@@ -189,10 +181,8 @@
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TF7-aA-i1U" userLabel="Bot">
                                                         <rect key="frame" x="0.0" y="33.5" width="115" height="16.5"/>
-                                                        <color key="backgroundColor" red="1" green="1" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                 </subviews>
-                                                <color key="backgroundColor" red="1" green="1" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="DVk-QW-upZ" secondAttribute="trailing" id="6Xi-kO-dPc"/>
                                                     <constraint firstAttribute="trailing" secondItem="TF7-aA-i1U" secondAttribute="trailing" id="SLD-jy-HNg"/>
@@ -221,7 +211,6 @@
                                                         </connections>
                                                     </button>
                                                 </subviews>
-                                                <color key="backgroundColor" red="1" green="1" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="gtR-QK-5Nw" secondAttribute="trailing" id="DD5-pe-eSf"/>
                                                     <constraint firstItem="gtR-QK-5Nw" firstAttribute="leading" secondItem="AQE-eV-JeJ" secondAttribute="leading" id="L5h-MP-MFD"/>
@@ -242,7 +231,6 @@
                                                         </connections>
                                                     </button>
                                                 </subviews>
-                                                <color key="backgroundColor" red="1" green="1" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstItem="OzE-RU-le0" firstAttribute="leading" secondItem="02X-Qq-fT0" secondAttribute="leading" id="26A-Uo-cAC"/>
                                                     <constraint firstAttribute="trailing" secondItem="OzE-RU-le0" secondAttribute="trailing" id="abp-a2-jaC"/>
@@ -251,7 +239,6 @@
                                                 </constraints>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" red="1" green="1" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="RPy-h7-2yN" secondAttribute="bottom" id="5ia-pe-BMO"/>
                                             <constraint firstAttribute="bottom" secondItem="AQE-eV-JeJ" secondAttribute="bottom" id="AxA-I2-rJH"/>
@@ -269,7 +256,6 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="1" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="7vH-DX-CbW" firstAttribute="leading" secondItem="t1c-uS-PqI" secondAttribute="leading" id="6Xl-zu-nkN"/>
                                     <constraint firstItem="7vH-DX-CbW" firstAttribute="top" secondItem="O8I-xJ-YQ2" secondAttribute="bottom" id="GMH-Lo-q9B"/>
@@ -284,7 +270,6 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="t1c-uS-PqI" firstAttribute="top" secondItem="z8x-Ni-wcS" secondAttribute="top" constant="8" id="8pr-4X-HjD"/>
                             <constraint firstItem="t1c-uS-PqI" firstAttribute="leading" secondItem="z8x-Ni-wcS" secondAttribute="leading" constant="8" id="HgV-zS-uQB"/>
@@ -303,7 +288,9 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="commentButton" destination="gtR-QK-5Nw" id="LCw-UT-MYa"/>
+                <outlet property="contentContainer" destination="t1c-uS-PqI" id="ovN-mA-BOb"/>
                 <outlet property="downvoteButton" destination="yTZ-nb-mgt" id="yhx-Q7-Rb6"/>
+                <outlet property="paddingView" destination="z8x-Ni-wcS" id="Eyd-mk-m0x"/>
                 <outlet property="postContentView" destination="O8I-xJ-YQ2" id="VFV-xf-smw"/>
                 <outlet property="postDateLabel" destination="e7R-hL-B1J" id="pAb-da-dLu"/>
                 <outlet property="postScoreLabel" destination="nOK-6j-4GK" id="PW8-rF-fKk"/>

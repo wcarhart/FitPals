@@ -7,23 +7,66 @@
 //
 
 import UIKit
+import ChameleonFramework
+import FirebaseAuth
+import Firebase
+import PKHUD
 
 class FeedViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var headerHeight: NSLayoutConstraint!
+    @IBOutlet weak var headerHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var headerView: UIView!
     
-    let maxHeaderHeight: CGFloat = 88
-    let minHeaderHeight: CGFloat = 44
+    // for TableView and ScrollView delegates
+    let maxHeaderHeight: CGFloat = 108
+    let minHeaderHeight: CGFloat = 64
+    var previousScrollOffset: CGFloat = 0
+    
+    // for TableView source
+    var numberOfPosts: Int = 0
     
     override func viewDidLoad() {
+        HUD.show(.progress)
         super.viewDidLoad()
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        headerView.backgroundColor = FlatWhite()
+        self.view.backgroundColor = FlatWhiteDark()
+        self.tableView.backgroundColor = FlatWhiteDark()
+        
+        getPosts()
+    }
+    
+    func getPosts() {
+        let db = Firestore.firestore()
+        let settings = db.settings
+        settings.areTimestampsInSnapshotsEnabled = true
+        db.settings = settings
+        
+        let uid = Auth.auth().currentUser?.uid
+        if let uid = uid {
+            db.collection("users").document("\(uid)").collection("posts").getDocuments { (querySnapshot, error) in
+                if let error = error {
+                    print("ERROR: Could not retrieve documents, \(error)")
+                } else {
+                    var count = 0
+                    for document in querySnapshot!.documents {
+                        count += 1
+                        self.numberOfPosts += 1
+                        print("\(document.documentID) => \(document.data())");
+                    }
+                    
+                    print("Count = \(count)");
+                }
+                self.tableView.reloadData()
+                HUD.hide()
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        headerHeight.constant = maxHeaderHeight
+        headerHeightConstraint.constant = maxHeaderHeight
     }
 
 }
@@ -31,7 +74,12 @@ class FeedViewController: UIViewController {
 extension FeedViewController: UITableViewDataSource, UITableViewDelegate, PostTableViewCellDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return TestUserSingleton.shared.user.posts.count
+        //return TestUserSingleton.shared.user.posts.count
+        return self.numberOfPosts
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.backgroundColor = UIColor.clear
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -47,10 +95,9 @@ extension FeedViewController: UITableViewDataSource, UITableViewDelegate, PostTa
         cell.postId = post.id
         
         cell.profileNameLabel?.text = TestUserSingleton.shared.user.name
-        let today = Date()
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MMM dd, yyyy"
-        cell.postDateLabel?.text = dateFormatter.string(from: today)
+        cell.postDateLabel?.text = dateFormatter.string(from: post.date)
         
         // set content for post...
         let contentHeight = configureContent(for: post)
@@ -66,8 +113,74 @@ extension FeedViewController: UITableViewDataSource, UITableViewDelegate, PostTa
         return cell
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: IndexPath) {
-        // cell selected code here
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let scrollDiff = scrollView.contentOffset.y - self.previousScrollOffset
+        
+        let absoluteTop: CGFloat = 0;
+        let absoluteBottom: CGFloat = scrollView.contentSize.height - scrollView.frame.size.height;
+        
+        let isScrollingDown = scrollDiff > 0 && scrollView.contentOffset.y > absoluteTop
+        let isScrollingUp = scrollDiff < 0 && scrollView.contentOffset.y < absoluteBottom
+        
+        var newHeight = self.headerHeightConstraint.constant
+        if isScrollingDown {
+            newHeight = max(self.minHeaderHeight, self.headerHeightConstraint.constant - abs(scrollDiff))
+        } else if isScrollingUp {
+            newHeight = min(self.maxHeaderHeight, self.headerHeightConstraint.constant + abs(scrollDiff))
+        }
+        
+        if newHeight != self.headerHeightConstraint.constant {
+            self.headerHeightConstraint.constant = newHeight
+            self.setScrollPosition(position: self.previousScrollOffset)
+        }
+        
+        
+        self.previousScrollOffset = scrollView.contentOffset.y
+    }
+    
+    func setScrollPosition(position: CGFloat) {
+        self.tableView.contentOffset = CGPoint(x: self.tableView.contentOffset.x, y: position)
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        scrollViewDidStopScrolling()
+    }
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        scrollViewDidStopScrolling()
+    }
+    
+    func scrollViewDidStopScrolling() {
+        let range = self.maxHeaderHeight - self.minHeaderHeight
+        let midPoint = self.minHeaderHeight + (range / 2)
+        
+        if self.headerHeightConstraint.constant > midPoint {
+            expandHeader()
+        } else {
+            collapseHeader()
+        }
+    }
+    
+    func collapseHeader() {
+        self.view.layoutIfNeeded()
+        UIView.animate(withDuration: 0.2, animations: {
+            self.headerHeightConstraint.constant = self.minHeaderHeight
+            // Manipulate UI elements within the header here
+            self.view.layoutIfNeeded()
+        })
+    }
+    
+    func expandHeader() {
+        self.view.layoutIfNeeded()
+        UIView.animate(withDuration: 0.2, animations: {
+            self.headerHeightConstraint.constant = self.maxHeaderHeight
+            // Manipulate UI elements within the header here
+            self.view.layoutIfNeeded()
+        })
     }
     
     func configureContent(for post: Post) -> CGFloat {

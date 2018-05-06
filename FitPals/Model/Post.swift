@@ -27,6 +27,8 @@ struct Post {
     var text: String?
     var shares: Int
     
+    let date: Date
+    
     // list of users who have voted on this post
     // key = user id
     // value = voteResult: true = upvote, false = downvote
@@ -36,7 +38,7 @@ struct Post {
         return votes.reduce(0) { $0 + ($1.value ? 1 : -1) }
     }
     
-    init?(owner: Int32, id: Int32, workout: Workout?, pictures: [String]?, dietPlan: DietPlan?, text: String?) {
+    init?(owner: Int32, id: Int32, workout: Workout?, pictures: [String]?, dietPlan: DietPlan?, text: String?, date: Date) {
         if workout == nil && pictures == nil && dietPlan == nil && text == nil {
             return nil
         }
@@ -50,5 +52,7 @@ struct Post {
         
         self.shares = 0
         self.votes = [:]
+        
+        self.date = date
     }
 }
