@@ -10,7 +10,7 @@ import UIKit
 import ChameleonFramework
 
 protocol ComposeMenuDelegate {
-    func updateParent()
+    func updateParent(with postType: PostType)
 }
 
 class ComposeMenuController: NSObject {
@@ -78,22 +78,29 @@ class ComposeMenuController: NSObject {
     
     @objc func addTextPost() {
         print("LOG: add text post")
+        hideComposeMenu()
+        delegate?.updateParent(with: .text)
     }
     
     @objc func addWorkoutPost() {
         print("LOG: add workout post")
+        hideComposeMenu()
+        delegate?.updateParent(with: .workout)
     }
     
     @objc func addDietPost() {
         print("LOG: add diet post")
+        hideComposeMenu()
+        delegate?.updateParent(with: .diet)
     }
     
     @objc func addImagePost() {
         print("LOG: add image post")
+        hideComposeMenu()
+        delegate?.updateParent(with: .image)
     }
     
     @objc func hideComposeMenu() {
-        delegate?.updateParent()
         
         UIView.animate(withDuration: 0.5) {
             self.background.alpha = 0

@@ -121,6 +121,8 @@ class LoginViewController: UIViewController {
         contentView.addSubview(loginBubbleView)
         
         animateGradient()
+        
+        // TODO: need to turn off animation when view disappears
     }
     
     func animateGradient() {
@@ -446,7 +448,6 @@ class LoginViewController: UIViewController {
             }
         }
     }
-    
 }
 
 extension LoginViewController: CAAnimationDelegate {

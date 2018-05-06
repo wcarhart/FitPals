@@ -12,7 +12,7 @@ import FirebaseAuth
 import Firebase
 import PKHUD
 
-class FeedViewController: UIViewController {
+class FeedViewController: UIViewController, ComposeMenuDelegate {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var headerHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var headerView: UIView!
@@ -24,6 +24,8 @@ class FeedViewController: UIViewController {
     
     // for TableView source
     var numberOfPosts: Int = 0
+    
+    var newPostType: PostType!
     
     override func viewDidLoad() {
         HUD.show(.progress)
@@ -71,7 +73,22 @@ class FeedViewController: UIViewController {
 
     var composeMenuController = ComposeMenuController()
     @IBAction func composeButtonPressed(_ sender: UIButton) {
+        composeMenuController.delegate = self
         composeMenuController.showComposeMenu()
+    }
+    
+    func updateParent(with postType: PostType) {
+        self.newPostType = postType
+        performSegue(withIdentifier: "createNewPost", sender: nil)
+    }
+    
+    @IBAction func unwindToFeed(segue: UIStoryboardSegue) {
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destination = segue.destination as? CreateNewPostViewController else { return }
+        destination.postType = self.newPostType
     }
     
 }

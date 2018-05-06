@@ -10,6 +10,7 @@ target 'FitPals' do
   pod 'Firebase/Core'
   pod 'Firebase/Storage'
   pod 'Firebase/Firestore'
+  pod 'Firebase/Auth'
   
   # Date/Time Management
   pod 'SwiftDate', '~> 4.5.1'
@@ -24,7 +25,10 @@ target 'FitPals' do
   # Map Annotations
   pod 'MapViewPlus'
   
-  # Color Management
+  # Image Management
+  pod 'ImagePicker'
+  
+  # Color Management + UI
   pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
   pod 'TextFieldEffects'
 
