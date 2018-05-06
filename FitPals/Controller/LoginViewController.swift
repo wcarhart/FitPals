@@ -84,7 +84,6 @@ class LoginViewController: UIViewController {
         loginBubbleView.backgroundColor = FlatWhite()
         prepareTextFields()
         updateUI()
-        print("View did load")
     }
     
     func prepareTextFields() {

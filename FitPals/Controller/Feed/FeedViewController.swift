@@ -13,6 +13,7 @@ import Firebase
 import PKHUD
 
 class FeedViewController: UIViewController, ComposeMenuDelegate {
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var headerHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var headerView: UIView!
@@ -32,9 +33,10 @@ class FeedViewController: UIViewController, ComposeMenuDelegate {
         super.viewDidLoad()
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        headerView.backgroundColor = FlatWhite()
-        self.view.backgroundColor = FlatWhiteDark()
-        self.tableView.backgroundColor = FlatWhiteDark()
+        
+        // TODO: optimize this for foldable header in scroll view (messes up colors)
+        headerView.backgroundColor = FlatWhiteDark()
+        self.tableView.backgroundColor = GradientColor(.topToBottom, frame: self.view.frame, colors: [RandomFlatColor(), RandomFlatColor()])
         
         getPosts()
     }
@@ -173,7 +175,14 @@ extension FeedViewController: UITableViewDataSource, UITableViewDelegate, PostTa
     }
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        scrollViewDidStopScrolling()
+        // TODO: this is buggy, maybe it's only like this on the simulator?
+        
+        switch scrollView.panGestureRecognizer.state {
+        case .ended:
+            scrollViewDidStopScrolling()
+        default:
+            break
+        }
     }
     
     func scrollViewDidStopScrolling() {
@@ -237,8 +246,8 @@ extension FeedViewController: UITableViewDataSource, UITableViewDelegate, PostTa
             TestUserSingleton.shared.user.posts[index].votes[TestUserSingleton.shared.user.id] = nil
         }
         
-        print("Post #\(postId) now has a score of \(TestUserSingleton.shared.user.posts[index].score)")
-        print("User #\(TestUserSingleton.shared.user.id) has now voted for:")
+        print("LOG: Post #\(postId) now has a score of \(TestUserSingleton.shared.user.posts[index].score)")
+        print("LOG: User #\(TestUserSingleton.shared.user.id) has now voted for:")
         for post in TestUserSingleton.shared.user.votes {
             print("  Post #\(post.key): \(post.value ? "upvote": "downvote")")
         }
@@ -270,8 +279,8 @@ extension FeedViewController: UITableViewDataSource, UITableViewDelegate, PostTa
             TestUserSingleton.shared.user.posts[index].votes[TestUserSingleton.shared.user.id] = nil
         }
         
-        print("Post #\(postId) now has a score of \(TestUserSingleton.shared.user.posts[index].score)")
-        print("User #\(TestUserSingleton.shared.user.id) has now voted for:")
+        print("LOG: Post #\(postId) now has a score of \(TestUserSingleton.shared.user.posts[index].score)")
+        print("LOG: User #\(TestUserSingleton.shared.user.id) has now voted for:")
         for post in TestUserSingleton.shared.user.votes {
             print("  Post #\(post.key): \(post.value ? "upvote" : "downvote")")
         }

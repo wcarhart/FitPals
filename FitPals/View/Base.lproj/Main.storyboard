@@ -207,6 +207,9 @@
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WKW-Cd-DDI" customClass="YoshikoTextField" customModule="TextFieldEffects">
                                                         <rect key="frame" x="0.0" y="0.0" width="359" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="RzL-Bz-Qtf"/>
+                                                        </constraints>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="19"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -215,13 +218,13 @@
                                                         <rect key="frame" x="0.0" y="38" width="359" height="1"/>
                                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="1" id="Xth-Yp-vdl"/>
+                                                            <constraint firstAttribute="height" constant="1" id="kDt-9o-37n"/>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pS4-fD-dIw" userLabel="Image Picker Button View">
                                                         <rect key="frame" x="0.0" y="47" width="359" height="100"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ify-Mu-N0P">
+                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ify-Mu-N0P">
                                                                 <rect key="frame" x="0.0" y="0.0" width="359" height="100"/>
                                                                 <state key="normal" title="Add Photos">
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -235,21 +238,28 @@
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
-                                                            <constraint firstItem="ify-Mu-N0P" firstAttribute="leading" secondItem="pS4-fD-dIw" secondAttribute="leading" id="65c-Jw-b0t"/>
-                                                            <constraint firstItem="ify-Mu-N0P" firstAttribute="top" secondItem="pS4-fD-dIw" secondAttribute="top" id="JDi-Wv-u1A"/>
-                                                            <constraint firstAttribute="height" constant="100" id="cZP-kE-Ysm"/>
-                                                            <constraint firstAttribute="bottom" secondItem="ify-Mu-N0P" secondAttribute="bottom" id="qa9-Tw-AdX"/>
-                                                            <constraint firstAttribute="trailing" secondItem="ify-Mu-N0P" secondAttribute="trailing" id="sf6-x0-suX"/>
+                                                            <constraint firstItem="ify-Mu-N0P" firstAttribute="top" secondItem="pS4-fD-dIw" secondAttribute="top" id="GbI-gV-GBZ"/>
+                                                            <constraint firstAttribute="height" constant="100" id="a1Q-vW-XaD"/>
+                                                            <constraint firstAttribute="trailing" secondItem="ify-Mu-N0P" secondAttribute="trailing" id="fOi-Yk-z7l"/>
+                                                            <constraint firstAttribute="bottom" secondItem="ify-Mu-N0P" secondAttribute="bottom" id="iAC-YB-dj9"/>
+                                                            <constraint firstItem="ify-Mu-N0P" firstAttribute="leading" secondItem="pS4-fD-dIw" secondAttribute="leading" id="v31-cj-718"/>
                                                         </constraints>
                                                     </view>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wyx-dc-6EN">
-                                                        <rect key="frame" x="0.0" y="155" width="359" height="411.5"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dZs-m6-KVh" customClass="ImageDisplayer" customModule="FitPals" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="155" width="359" height="200"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="200" id="1Ip-1F-sjF"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Post Content" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wyx-dc-6EN">
+                                                        <rect key="frame" x="0.0" y="355" width="359" height="211.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     </textView>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Post Content" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oG1-aY-P9y">
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Post Content" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oG1-aY-P9y">
                                                         <rect key="frame" x="0.0" y="47" width="359" height="519.5"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -257,23 +267,22 @@
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="trailing" secondItem="sZv-v6-nkW" secondAttribute="trailing" id="0Lh-99-6t1"/>
-                                                    <constraint firstItem="wyx-dc-6EN" firstAttribute="top" secondItem="pS4-fD-dIw" secondAttribute="bottom" constant="8" id="1Q5-qv-fQY"/>
-                                                    <constraint firstAttribute="trailing" secondItem="wyx-dc-6EN" secondAttribute="trailing" id="2i7-WU-Fcl"/>
-                                                    <constraint firstItem="sZv-v6-nkW" firstAttribute="leading" secondItem="80m-M2-GxA" secondAttribute="leading" id="55J-hu-ocO"/>
-                                                    <constraint firstItem="wyx-dc-6EN" firstAttribute="leading" secondItem="80m-M2-GxA" secondAttribute="leading" id="68z-8e-e9n"/>
-                                                    <constraint firstAttribute="trailing" secondItem="WKW-Cd-DDI" secondAttribute="trailing" id="ARa-xa-Tl7"/>
-                                                    <constraint firstAttribute="trailing" secondItem="oG1-aY-P9y" secondAttribute="trailing" id="CPp-yc-qrv"/>
-                                                    <constraint firstItem="pS4-fD-dIw" firstAttribute="leading" secondItem="80m-M2-GxA" secondAttribute="leading" id="XRA-Xe-Thj"/>
-                                                    <constraint firstAttribute="bottom" secondItem="oG1-aY-P9y" secondAttribute="bottom" id="YS3-8G-day"/>
-                                                    <constraint firstAttribute="trailing" secondItem="pS4-fD-dIw" secondAttribute="trailing" id="aLU-TS-VaU"/>
-                                                    <constraint firstItem="sZv-v6-nkW" firstAttribute="top" secondItem="WKW-Cd-DDI" secondAttribute="bottom" constant="8" id="hRs-gv-S6z"/>
-                                                    <constraint firstItem="pS4-fD-dIw" firstAttribute="top" secondItem="sZv-v6-nkW" secondAttribute="bottom" constant="8" id="ijr-XS-Ff4"/>
-                                                    <constraint firstItem="WKW-Cd-DDI" firstAttribute="leading" secondItem="80m-M2-GxA" secondAttribute="leading" id="mXP-9N-CfM"/>
-                                                    <constraint firstItem="WKW-Cd-DDI" firstAttribute="top" secondItem="80m-M2-GxA" secondAttribute="top" id="qhy-53-VHq"/>
-                                                    <constraint firstItem="oG1-aY-P9y" firstAttribute="top" secondItem="sZv-v6-nkW" secondAttribute="bottom" constant="8" id="rb3-wK-cxt"/>
-                                                    <constraint firstAttribute="bottom" secondItem="wyx-dc-6EN" secondAttribute="bottom" id="s7T-8Z-A2G"/>
-                                                    <constraint firstItem="oG1-aY-P9y" firstAttribute="leading" secondItem="80m-M2-GxA" secondAttribute="leading" id="uAh-zE-F0C"/>
+                                                    <constraint firstAttribute="trailing" secondItem="pS4-fD-dIw" secondAttribute="trailing" id="0Yf-Zk-L8q"/>
+                                                    <constraint firstItem="pS4-fD-dIw" firstAttribute="leading" secondItem="80m-M2-GxA" secondAttribute="leading" id="19g-kD-9lJ"/>
+                                                    <constraint firstItem="WKW-Cd-DDI" firstAttribute="leading" secondItem="80m-M2-GxA" secondAttribute="leading" id="ECb-ML-yjP"/>
+                                                    <constraint firstItem="pS4-fD-dIw" firstAttribute="top" secondItem="sZv-v6-nkW" secondAttribute="bottom" constant="8" id="Eay-xe-4YL"/>
+                                                    <constraint firstItem="dZs-m6-KVh" firstAttribute="leading" secondItem="80m-M2-GxA" secondAttribute="leading" id="KAi-11-W7K"/>
+                                                    <constraint firstAttribute="trailing" secondItem="wyx-dc-6EN" secondAttribute="trailing" id="Phw-Lb-OIt"/>
+                                                    <constraint firstAttribute="trailing" secondItem="sZv-v6-nkW" secondAttribute="trailing" id="bTy-eD-afY"/>
+                                                    <constraint firstItem="wyx-dc-6EN" firstAttribute="leading" secondItem="80m-M2-GxA" secondAttribute="leading" id="ddv-4N-Z6u"/>
+                                                    <constraint firstItem="sZv-v6-nkW" firstAttribute="top" secondItem="WKW-Cd-DDI" secondAttribute="bottom" constant="8" id="f23-KM-z4R"/>
+                                                    <constraint firstAttribute="bottom" secondItem="wyx-dc-6EN" secondAttribute="bottom" id="huz-ot-hJN"/>
+                                                    <constraint firstItem="dZs-m6-KVh" firstAttribute="top" secondItem="pS4-fD-dIw" secondAttribute="bottom" constant="8" id="iwB-H0-PEE"/>
+                                                    <constraint firstItem="sZv-v6-nkW" firstAttribute="leading" secondItem="80m-M2-GxA" secondAttribute="leading" id="msb-lI-elR"/>
+                                                    <constraint firstItem="WKW-Cd-DDI" firstAttribute="top" secondItem="80m-M2-GxA" secondAttribute="top" id="obq-Xc-v95"/>
+                                                    <constraint firstItem="wyx-dc-6EN" firstAttribute="top" secondItem="dZs-m6-KVh" secondAttribute="bottom" id="oey-30-zAz"/>
+                                                    <constraint firstAttribute="trailing" secondItem="WKW-Cd-DDI" secondAttribute="trailing" id="qg9-QX-EwS"/>
+                                                    <constraint firstAttribute="trailing" secondItem="dZs-m6-KVh" secondAttribute="trailing" id="rbo-iV-aye"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -315,6 +324,8 @@
                     <connections>
                         <outlet property="bannerView" destination="4lj-NG-jOl" id="tM7-2W-SZM"/>
                         <outlet property="headerView" destination="p7M-ij-ciB" id="e0O-cF-v6Z"/>
+                        <outlet property="imageDisplayer" destination="dZs-m6-KVh" id="fEB-IT-aQU"/>
+                        <outlet property="imageDisplayerHeightConstraint" destination="1Ip-1F-sjF" id="uoE-yV-pcO"/>
                         <outlet property="imagePostAddPhotosButton" destination="ify-Mu-N0P" id="eiw-hb-jt9"/>
                         <outlet property="imagePostTextView" destination="wyx-dc-6EN" id="VEm-nK-dFn"/>
                         <outlet property="postTitleTextField" destination="WKW-Cd-DDI" id="VAV-Y7-hhx"/>

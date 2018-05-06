@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>For adding user location to posts and pictures.</string>
 	<key>NSCameraUsageDescription</key>
 	<string>To take photos using the camera to upload user content.</string>
 	<key>NSPhotoLibraryUsageDescription</key>

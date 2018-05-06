@@ -40,9 +40,9 @@ class PostTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.contentView.backgroundColor = FlatWhiteDark()
-        paddingView.backgroundColor = FlatSand()
-        contentContainer.backgroundColor = FlatSand()
+        //self.contentView.backgroundColor = FlatWhiteDark()
+        paddingView.backgroundColor = FlatWhite()
+        contentContainer.backgroundColor = FlatWhite()
     }
     
     override func layoutSubviews() {

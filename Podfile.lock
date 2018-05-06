@@ -1,5 +1,4 @@
 PODS:
-  - Alamofire (4.7.2)
   - BoringSSL (10.0.2):
     - BoringSSL/Implementation (= 10.0.2)
     - BoringSSL/Interface (= 10.0.2)
@@ -75,10 +74,7 @@ PODS:
     - gRPC-RxLibrary (= 1.11.0)
   - GTMSessionFetcher/Core (1.1.15)
   - ImagePicker (3.0.0)
-  - Kingfisher (4.6.4)
   - leveldb-library (1.20)
-  - MapViewPlus (0.1.2):
-    - Kingfisher (~> 4.6.3)
   - nanopb (0.3.8):
     - nanopb/decode (= 0.3.8)
     - nanopb/encode (= 0.3.8)
@@ -86,27 +82,22 @@ PODS:
   - nanopb/encode (0.3.8)
   - PKHUD (5.0.0)
   - Protobuf (3.5.0)
-  - SwiftDate (4.5.1)
-  - SwiftyJSON (4.1.0)
+  - SwiftPhotoGallery (3.3.1)
   - TextFieldEffects (1.4.0)
 
 DEPENDENCIES:
-  - Alamofire
   - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`)
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Firestore
   - Firebase/Storage
   - ImagePicker
-  - MapViewPlus
   - PKHUD (~> 5.0)
-  - SwiftDate (~> 4.5.1)
-  - SwiftyJSON
+  - SwiftPhotoGallery
   - TextFieldEffects
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
-    - Alamofire
     - BoringSSL
     - Firebase
     - FirebaseAnalytics
@@ -122,14 +113,11 @@ SPEC REPOS:
     - gRPC-RxLibrary
     - GTMSessionFetcher
     - ImagePicker
-    - Kingfisher
     - leveldb-library
-    - MapViewPlus
     - nanopb
     - PKHUD
     - Protobuf
-    - SwiftDate
-    - SwiftyJSON
+    - SwiftPhotoGallery
     - TextFieldEffects
 
 EXTERNAL SOURCES:
@@ -142,7 +130,6 @@ CHECKOUT OPTIONS:
     :git: https://github.com/ViccAlexander/Chameleon.git
 
 SPEC CHECKSUMS:
-  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
   BoringSSL: 60dd24df4af296bf41d78e5841dbb95d75f88c0d
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   Firebase: 5ec5e863d269d82d66b4bf56856726f8fb8f0fb3
@@ -159,16 +146,13 @@ SPEC CHECKSUMS:
   gRPC-RxLibrary: 26d53d1b1f306befd4ad4e15bd6de27839a82481
   GTMSessionFetcher: 5fa5b80fd20e439ef5f545fb2cb3ca6c6714caa2
   ImagePicker: 973953c25960fe04729a7082a56194321c6762d2
-  Kingfisher: 68498a706e46c2a050b0c9572f100e5db407f6e0
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
-  MapViewPlus: 4e448279f98297f007cb16904a244a525b3c9d5e
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   PKHUD: 3c001512c6e002091184197a8de7a20420786e3b
   Protobuf: 8a9838fba8dae3389230e1b7f8c104aa32389c03
-  SwiftDate: 7b56d42a221f582047287deb256b23fc5ed49a60
-  SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
+  SwiftPhotoGallery: 4b8eb285d41268bee6d49a37759cd07e5d1d3183
   TextFieldEffects: 4ee41b5216e674d55fb6ac25107bf1af7629176f
 
-PODFILE CHECKSUM: 332a65b394fa595999fa1bc7027b68c1607200fd
+PODFILE CHECKSUM: 39a535c1d4d3fad3556338a31c6ef9c49e67373f
 
 COCOAPODS: 1.5.0
