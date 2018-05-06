@@ -30,6 +30,9 @@
                                                 <state key="normal" image="add">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="composeButtonPressed:" destination="sBQ-Vk-qPw" eventType="touchUpInside" id="egz-0I-dxz"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>

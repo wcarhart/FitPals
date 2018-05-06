@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ComposeMenu" customModule="FitPals" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="Q0z-kT-pNr"/>
+                <outlet property="dietPostButton" destination="AC4-ZI-dej" id="IgU-eF-CnI"/>
+                <outlet property="imagePostButton" destination="7Hj-nX-VmR" id="maQ-40-6VC"/>
+                <outlet property="textPostButton" destination="yeP-vi-hj8" id="BXf-YL-bp2"/>
+                <outlet property="workoutPostButton" destination="x69-Dv-HQA" id="LVn-Kp-cow"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="350"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zH6-EZ-oz9" userLabel="Top Left">
+                    <rect key="frame" x="0.0" y="0.0" width="187.5" height="175"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yeP-vi-hj8">
+                            <rect key="frame" x="29" y="22.5" width="130" height="130"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="130" id="e2r-SD-MYa"/>
+                                <constraint firstAttribute="width" constant="130" id="gEZ-MT-5iH"/>
+                            </constraints>
+                            <state key="normal" image="textPost"/>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="yeP-vi-hj8" firstAttribute="centerX" secondItem="zH6-EZ-oz9" secondAttribute="centerX" id="E7E-Ls-k0X"/>
+                        <constraint firstItem="yeP-vi-hj8" firstAttribute="centerY" secondItem="zH6-EZ-oz9" secondAttribute="centerY" id="xRq-CY-iuK"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EiM-HX-N8d" userLabel="Top Right">
+                    <rect key="frame" x="187.5" y="0.0" width="187.5" height="175"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x69-Dv-HQA">
+                            <rect key="frame" x="29" y="22.5" width="130" height="130"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="130" id="85G-8U-Oeo"/>
+                                <constraint firstAttribute="height" constant="130" id="GJ0-Gx-wCI"/>
+                            </constraints>
+                            <state key="normal" image="workoutPost"/>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="x69-Dv-HQA" firstAttribute="centerY" secondItem="EiM-HX-N8d" secondAttribute="centerY" id="MPx-3Q-cb7"/>
+                        <constraint firstItem="x69-Dv-HQA" firstAttribute="centerX" secondItem="EiM-HX-N8d" secondAttribute="centerX" id="jda-Vq-YMM"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7oJ-gC-LVA" userLabel="Bottom Left">
+                    <rect key="frame" x="0.0" y="175" width="187.5" height="175"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AC4-ZI-dej">
+                            <rect key="frame" x="29" y="22.5" width="130" height="130"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="130" id="SLF-Dx-sxk"/>
+                                <constraint firstAttribute="width" constant="130" id="tP8-QQ-dl0"/>
+                            </constraints>
+                            <state key="normal" image="dietPost"/>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="AC4-ZI-dej" firstAttribute="centerX" secondItem="7oJ-gC-LVA" secondAttribute="centerX" id="0K0-Qg-o03"/>
+                        <constraint firstItem="AC4-ZI-dej" firstAttribute="centerY" secondItem="7oJ-gC-LVA" secondAttribute="centerY" id="h5v-7u-JDz"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iv9-yB-off" userLabel="Bottom Right">
+                    <rect key="frame" x="187.5" y="175" width="187.5" height="175"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Hj-nX-VmR">
+                            <rect key="frame" x="29" y="22.5" width="130" height="130"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="130" id="IPv-IA-Ni2"/>
+                                <constraint firstAttribute="width" constant="130" id="S7o-QB-Q3k"/>
+                            </constraints>
+                            <state key="normal" image="imagePost"/>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="7Hj-nX-VmR" firstAttribute="centerY" secondItem="iv9-yB-off" secondAttribute="centerY" id="2Xy-sv-5Ew"/>
+                        <constraint firstItem="7Hj-nX-VmR" firstAttribute="centerX" secondItem="iv9-yB-off" secondAttribute="centerX" id="DoV-zI-Ilt"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="iv9-yB-off" firstAttribute="height" secondItem="vUN-kp-3ea" secondAttribute="height" multiplier="1:2" id="2vA-jb-TN2"/>
+                <constraint firstItem="zH6-EZ-oz9" firstAttribute="height" secondItem="vUN-kp-3ea" secondAttribute="height" multiplier="1:2" id="5qM-a6-uz3"/>
+                <constraint firstItem="zH6-EZ-oz9" firstAttribute="width" secondItem="vUN-kp-3ea" secondAttribute="width" multiplier="1:2" id="IoA-GR-FUH"/>
+                <constraint firstItem="zH6-EZ-oz9" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="IxN-yZ-wdE"/>
+                <constraint firstItem="7oJ-gC-LVA" firstAttribute="width" secondItem="vUN-kp-3ea" secondAttribute="width" multiplier="1:2" id="M22-SJ-HGn"/>
+                <constraint firstItem="EiM-HX-N8d" firstAttribute="height" secondItem="vUN-kp-3ea" secondAttribute="height" multiplier="1:2" id="VPB-Ah-wPN"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="iv9-yB-off" secondAttribute="trailing" id="WXV-lg-Mkj"/>
+                <constraint firstItem="7oJ-gC-LVA" firstAttribute="height" secondItem="vUN-kp-3ea" secondAttribute="height" multiplier="1:2" id="Wfq-Ap-Ufj"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="iv9-yB-off" secondAttribute="bottom" id="gU4-L4-IKm"/>
+                <constraint firstItem="EiM-HX-N8d" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="ju4-oA-V7S"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="7oJ-gC-LVA" secondAttribute="bottom" id="mTj-YL-gRd"/>
+                <constraint firstItem="zH6-EZ-oz9" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="oeO-wz-75x"/>
+                <constraint firstItem="7oJ-gC-LVA" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="oes-pl-ze1"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="EiM-HX-N8d" secondAttribute="trailing" id="pWI-qb-D3m"/>
+                <constraint firstItem="EiM-HX-N8d" firstAttribute="width" secondItem="vUN-kp-3ea" secondAttribute="width" multiplier="1:2" id="tFU-0l-vnR"/>
+                <constraint firstItem="iv9-yB-off" firstAttribute="width" secondItem="vUN-kp-3ea" secondAttribute="width" multiplier="1:2" id="tW6-PV-aQ6"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="dietPost" width="64" height="64"/>
+        <image name="imagePost" width="64" height="64"/>
+        <image name="textPost" width="64" height="64"/>
+        <image name="workoutPost" width="64" height="64"/>
+    </resources>
+</document>

@@ -12,6 +12,9 @@
 		20C2C426209A602600FBE88E /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20C2C424209A602600FBE88E /* ProfileTableViewCell.xib */; };
 		20C2C429209A62DD00FBE88E /* AboutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C2C427209A62DD00FBE88E /* AboutTableViewCell.swift */; };
 		20C2C42A209A62DD00FBE88E /* AboutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20C2C428209A62DD00FBE88E /* AboutTableViewCell.xib */; };
+		721C75C1209EA7FD0025606A /* ComposeMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 721C75C0209EA7FD0025606A /* ComposeMenu.xib */; };
+		721C75C5209EAFBF0025606A /* ComposeMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721C75C4209EAFBF0025606A /* ComposeMenuController.swift */; };
+		721C75C7209EB01F0025606A /* ComposeMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721C75C6209EB01F0025606A /* ComposeMenu.swift */; };
 		725FD391208152D8001F0337 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725FD390208152D8001F0337 /* AppDelegate.swift */; };
 		725FD396208152D8001F0337 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 725FD394208152D8001F0337 /* Main.storyboard */; };
 		725FD398208152DB001F0337 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 725FD397208152DB001F0337 /* Assets.xcassets */; };
@@ -66,6 +69,9 @@
 		20C2C427209A62DD00FBE88E /* AboutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTableViewCell.swift; sourceTree = "<group>"; };
 		20C2C428209A62DD00FBE88E /* AboutTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutTableViewCell.xib; sourceTree = "<group>"; };
 		5C841B8893FDD1733BA3285E /* Pods_FitPalsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FitPalsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		721C75C0209EA7FD0025606A /* ComposeMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ComposeMenu.xib; sourceTree = "<group>"; };
+		721C75C4209EAFBF0025606A /* ComposeMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeMenuController.swift; sourceTree = "<group>"; };
+		721C75C6209EB01F0025606A /* ComposeMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeMenu.swift; sourceTree = "<group>"; };
 		725FD38D208152D8001F0337 /* FitPals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitPals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		725FD390208152D8001F0337 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		725FD395208152D8001F0337 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -294,6 +300,9 @@
 			isa = PBXGroup;
 			children = (
 				727D83E0209E4DC700DB020E /* FeedViewController.swift */,
+				721C75C0209EA7FD0025606A /* ComposeMenu.xib */,
+				721C75C4209EAFBF0025606A /* ComposeMenuController.swift */,
+				721C75C6209EB01F0025606A /* ComposeMenu.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -415,6 +424,7 @@
 				72659B39209CDCD30057C3B0 /* PostTableViewCell.xib in Resources */,
 				725FD396208152D8001F0337 /* Main.storyboard in Resources */,
 				72659B3B209CE3600057C3B0 /* Credits.txt in Resources */,
+				721C75C1209EA7FD0025606A /* ComposeMenu.xib in Resources */,
 				20C2C426209A602600FBE88E /* ProfileTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -611,6 +621,7 @@
 				72FE2F6D208F9A6C00EC0064 /* GroupTableViewController.swift in Sources */,
 				72FE2F7A208F9E2500EC0064 /* Post.swift in Sources */,
 				72FE2F62208F98E300EC0064 /* ProfileTableViewController.swift in Sources */,
+				721C75C7209EB01F0025606A /* ComposeMenu.swift in Sources */,
 				725FD391208152D8001F0337 /* AppDelegate.swift in Sources */,
 				72FE2F6A208F99FA00EC0064 /* GroupsCollectionViewController.swift in Sources */,
 				72FE2F64208F992200EC0064 /* MarketCollectionViewController.swift in Sources */,
@@ -627,6 +638,7 @@
 				72E122E3209D34FE00060AB8 /* TestUserSingleton.swift in Sources */,
 				72FE2F7C208F9EF000EC0064 /* Workout.swift in Sources */,
 				72FE2F80208F9F4400EC0064 /* Product.swift in Sources */,
+				721C75C5209EAFBF0025606A /* ComposeMenuController.swift in Sources */,
 				72659B38209CDCD30057C3B0 /* PostTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

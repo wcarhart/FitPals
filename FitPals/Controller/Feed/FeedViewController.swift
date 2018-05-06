@@ -69,6 +69,11 @@ class FeedViewController: UIViewController {
         headerHeightConstraint.constant = maxHeaderHeight
     }
 
+    var composeMenuController = ComposeMenuController()
+    @IBAction func composeButtonPressed(_ sender: UIButton) {
+        composeMenuController.showComposeMenu()
+    }
+    
 }
 
 extension FeedViewController: UITableViewDataSource, UITableViewDelegate, PostTableViewCellDelegate {

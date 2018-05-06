@@ -6,4 +6,5 @@ Icons made by:
  - Freepik
  - Nice and Serious
  - Smashicons
+ - Designmodo
 from www.flaticon.com
