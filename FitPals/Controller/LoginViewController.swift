@@ -88,6 +88,9 @@ class LoginViewController: UIViewController {
     }
     
     func prepareTextFields() {
+        
+        // TODO: Replace this programmatically so they look better
+        
         // login
         loginEmailTextField.backgroundColor = FlatWhiteDark()
         loginPasswordTextField.backgroundColor = FlatWhiteDark()
