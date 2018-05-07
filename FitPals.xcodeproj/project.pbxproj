@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0406C7B8879BEC302D23C137 /* Pods_FitPalsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2F1D484409F20666FBF3B68 /* Pods_FitPalsTests.framework */; };
+		2081B75E209FEB3A001F993D /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2081B758209FEB38001F993D /* CartTableViewCell.swift */; };
+		2081B75F209FEB3A001F993D /* PurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2081B759209FEB38001F993D /* PurchaseViewController.swift */; };
+		2081B760209FEB3A001F993D /* ProductTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2081B75A209FEB39001F993D /* ProductTableViewController.swift */; };
+		2081B762209FEB3A001F993D /* CartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2081B75C209FEB3A001F993D /* CartTableViewCell.xib */; };
 		20C2C425209A602600FBE88E /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C2C423209A602600FBE88E /* ProfileTableViewCell.swift */; };
 		20C2C426209A602600FBE88E /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20C2C424209A602600FBE88E /* ProfileTableViewCell.xib */; };
 		20C2C429209A62DD00FBE88E /* AboutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C2C427209A62DD00FBE88E /* AboutTableViewCell.swift */; };
@@ -27,7 +31,6 @@
 		72FE2F68208F99C000EC0064 /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FE2F67208F99C000EC0064 /* FeedTableViewController.swift */; };
 		72FE2F6A208F99FA00EC0064 /* GroupsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FE2F69208F99FA00EC0064 /* GroupsCollectionViewController.swift */; };
 		72FE2F6D208F9A6C00EC0064 /* GroupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FE2F6C208F9A6C00EC0064 /* GroupTableViewController.swift */; };
-		72FE2F6F208F9AD600EC0064 /* ProductTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FE2F6E208F9AD600EC0064 /* ProductTableViewController.swift */; };
 		72FE2F71208F9C5900EC0064 /* PurchaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FE2F70208F9C5900EC0064 /* PurchaseTableViewController.swift */; };
 		72FE2F78208F9D8500EC0064 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FE2F77208F9D8500EC0064 /* User.swift */; };
 		72FE2F7A208F9E2500EC0064 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FE2F79208F9E2500EC0064 /* Post.swift */; };
@@ -59,6 +62,10 @@
 
 /* Begin PBXFileReference section */
 		18B74369EB9CDC1DAA619699 /* Pods-FitPals.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitPals.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FitPals/Pods-FitPals.debug.xcconfig"; sourceTree = "<group>"; };
+		2081B758209FEB38001F993D /* CartTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
+		2081B759209FEB38001F993D /* PurchaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseViewController.swift; sourceTree = "<group>"; };
+		2081B75A209FEB39001F993D /* ProductTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProductTableViewController.swift; path = ../../../../temporary/temporary/temporary/ProductTableViewController.swift; sourceTree = "<group>"; };
+		2081B75C209FEB3A001F993D /* CartTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CartTableViewCell.xib; sourceTree = "<group>"; };
 		20C2C423209A602600FBE88E /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		20C2C424209A602600FBE88E /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
 		20C2C427209A62DD00FBE88E /* AboutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTableViewCell.swift; sourceTree = "<group>"; };
@@ -85,7 +92,6 @@
 		72FE2F67208F99C000EC0064 /* FeedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewController.swift; sourceTree = "<group>"; };
 		72FE2F69208F99FA00EC0064 /* GroupsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsCollectionViewController.swift; sourceTree = "<group>"; };
 		72FE2F6C208F9A6C00EC0064 /* GroupTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTableViewController.swift; sourceTree = "<group>"; };
-		72FE2F6E208F9AD600EC0064 /* ProductTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewController.swift; sourceTree = "<group>"; };
 		72FE2F70208F9C5900EC0064 /* PurchaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseTableViewController.swift; sourceTree = "<group>"; };
 		72FE2F77208F9D8500EC0064 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		72FE2F79208F9E2500EC0064 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
@@ -248,8 +254,11 @@
 			isa = PBXGroup;
 			children = (
 				72FE2F63208F992200EC0064 /* MarketCollectionViewController.swift */,
+				2081B758209FEB38001F993D /* CartTableViewCell.swift */,
+				2081B75C209FEB3A001F993D /* CartTableViewCell.xib */,
+				2081B75A209FEB39001F993D /* ProductTableViewController.swift */,
+				2081B759209FEB38001F993D /* PurchaseViewController.swift */,
 				8BB2D5B3209CF3B700ED5855 /* MarketCollectionViewCell.swift */,
-				72FE2F6E208F9AD600EC0064 /* ProductTableViewController.swift */,
 				72FE2F70208F9C5900EC0064 /* PurchaseTableViewController.swift */,
 			);
 			path = Market;
@@ -404,6 +413,7 @@
 				725FD39B208152DB001F0337 /* LaunchScreen.storyboard in Resources */,
 				725FD398208152DB001F0337 /* Assets.xcassets in Resources */,
 				20C2C42A209A62DD00FBE88E /* AboutTableViewCell.xib in Resources */,
+				2081B762209FEB3A001F993D /* CartTableViewCell.xib in Resources */,
 				72659B39209CDCD30057C3B0 /* PostTableViewCell.xib in Resources */,
 				725FD396208152D8001F0337 /* Main.storyboard in Resources */,
 				72659B3B209CE3600057C3B0 /* Credits.txt in Resources */,
@@ -545,15 +555,17 @@
 				8BB2D5B4209CF3B700ED5855 /* MarketCollectionViewCell.swift in Sources */,
 				72FE2F6A208F99FA00EC0064 /* GroupsCollectionViewController.swift in Sources */,
 				72FE2F68208F99C000EC0064 /* FeedTableViewController.swift in Sources */,
+				2081B75E209FEB3A001F993D /* CartTableViewCell.swift in Sources */,
 				72FE2F64208F992200EC0064 /* MarketCollectionViewController.swift in Sources */,
 				72FE2F82208F9F6F00EC0064 /* GroupEntity.swift in Sources */,
-				72FE2F6F208F9AD600EC0064 /* ProductTableViewController.swift in Sources */,
 				20C2C429209A62DD00FBE88E /* AboutTableViewCell.swift in Sources */,
 				20C2C425209A602600FBE88E /* ProfileTableViewCell.swift in Sources */,
 				72FE2F66208F998800EC0064 /* DiscoverCollectionViewController.swift in Sources */,
 				72FE2F78208F9D8500EC0064 /* User.swift in Sources */,
 				72FE2F7E208F9F2000EC0064 /* DietPlan.swift in Sources */,
+				2081B760209FEB3A001F993D /* ProductTableViewController.swift in Sources */,
 				72FE2F71208F9C5900EC0064 /* PurchaseTableViewController.swift in Sources */,
+				2081B75F209FEB3A001F993D /* PurchaseViewController.swift in Sources */,
 				72FE2F7C208F9EF000EC0064 /* Workout.swift in Sources */,
 				72FE2F80208F9F4400EC0064 /* Product.swift in Sources */,
 				72659B38209CDCD30057C3B0 /* PostTableViewCell.swift in Sources */,
