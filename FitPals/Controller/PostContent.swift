@@ -93,13 +93,16 @@ class PostContent: UIView {
         } else if count == 8 {
             self.useFourImages = false
         } else {
-            fatalError("ERROR: parameter of call to 'setNumberOfImages()' must be either 4 or 8")
+            print("ERROR: parameter of call to 'setNumberOfImages()' must be either 4 or 8")
+            fatalError()
         }
+        updatePostType()
     }
     
     func calculateHeight() -> CGFloat {
         guard let postType = self.postType else {
-            fatalError("ERROR: did not set postType for PostContent view. You must call the 'setPostType(to:)' method before using this class")
+            print("ERROR: did not set postType for PostContent view. You must call the 'setPostType(to:)' method before using this class")
+            fatalError()
         }
         
         // starts at 20 to account for padding (10 on each side, so 10x2 for top and bottom)
@@ -125,7 +128,10 @@ class PostContent: UIView {
                 height += 20
                 height += 22.0 * CGFloat(countLabelLines(label: self.fourImagesLabel))
             } else {
-                height += 160.0
+                
+                // TODO: height not calculating correctly
+                height += self.eightImagesTop0Image.bounds.height * 2
+                height += 20
                 height += 22.0 * CGFloat(countLabelLines(label: self.eightImagesLabel))
             }
         }
@@ -144,7 +150,8 @@ class PostContent: UIView {
     
     private func updatePostType() {
         guard let postType = self.postType else {
-            fatalError("ERROR: did not set postType for PostContent view. You must call the 'setPostType(to:)' method before using this class")
+            print("ERROR: did not set postType for PostContent view. You must call the 'setPostType(to:)' method before using this class")
+            fatalError()
         }
         
         self.textPostView.isHidden = true
@@ -163,6 +170,7 @@ class PostContent: UIView {
             self.textPostLabel.textAlignment = .left
             self.textPostLabel.numberOfLines = 0
             self.textPostLabel.textColor = FlatBlackDark()
+            self.textPostLabel.text = ""
         case .workout:
             print("LOG: workout post detected in PostContent")
             self.workoutPostView.isHidden = false
@@ -178,13 +186,34 @@ class PostContent: UIView {
                 self.fourImagesLabel.textAlignment = .left
                 self.fourImagesLabel.numberOfLines = 0
                 self.fourImagesLabel.textColor = FlatBlackDark()
+                self.fourImagesLabel.text = ""
             } else {
                 self.eightImagesView.isHidden = false
                 self.eightImagesLabel.sizeToFit()
                 self.eightImagesLabel.textAlignment = .left
                 self.eightImagesLabel.numberOfLines = 0
                 self.eightImagesLabel.textColor = FlatBlackDark()
+                self.eightImagesLabel.text = ""
             }
+        }
+    }
+    
+    func setImages(with images: [UIImage]) {
+        guard images.count > 0 else { print("WARNING: can not configure images with empty image array"); return}
+        if useFourImages {
+            self.fourImagesTopLeftImage.image = images[0]
+            self.fourImagesTopRightImage.image = images.count >= 2 ? images[1] : nil
+            self.fourImagesBottomLeftImage.image = images.count >= 3 ? images[2] : nil
+            self.fourImagesBottomRightImage.image = images.count >= 4 ? images[3] : nil
+        } else {
+            self.eightImagesTop0Image.image = images[0]
+            self.eightImagesTop1Image.image = images.count >= 2 ? images[1] : nil
+            self.eightImagesTop2Image.image = images.count >= 3 ? images[2] : nil
+            self.eightImagesTop3Image.image = images.count >= 4 ? images[3] : nil
+            self.eightImagesBottom0Image.image = images.count >= 5 ? images[4] : nil
+            self.eightImagesBottom1Image.image = images.count >= 6 ? images[5] : nil
+            self.eightImagesBottom2Image.image = images.count >= 7 ? images[6] : nil
+            self.eightImagesBottom3Image.image = images.count >= 8 ? images[7] : nil
         }
     }
 

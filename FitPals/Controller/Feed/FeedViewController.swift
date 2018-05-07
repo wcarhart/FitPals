@@ -181,20 +181,33 @@ extension FeedViewController: UITableViewDataSource {
          *
          *  YOU MUST CALL THE setPostType(to:) METHOD WHEN CONFIGURING THE CELL
          *  YOU MUST ALSO CALL THE setNumberOfImages(to:) METHOD IF IMAGE POST
-         *      -> this must be done BEFORE call to setPostType(to:)
+         *
          */
         
-        // here is a simple example of how to use this implementation:
-        cell.postContentCustomizableView.setNumberOfImages(to: 4)
+        // here is are a few simple example of how to use this implementation:
+        
+        // four images model
         cell.postContentCustomizableView.setPostType(to: .image)
+        cell.postContentCustomizableView.setNumberOfImages(to: 4)
         cell.postContentCustomizableView.fourImagesTopLeftImage.image = #imageLiteral(resourceName: "workout_demo_1")
         cell.postContentCustomizableView.fourImagesTopRightImage.image = #imageLiteral(resourceName: "workout_demo_2")
         cell.postContentCustomizableView.fourImagesBottomLeftImage.image = #imageLiteral(resourceName: "workout_demo_3")
         cell.postContentCustomizableView.fourImagesBottomRightImage.image = #imageLiteral(resourceName: "workout_demo_4")
         cell.postContentCustomizableView.fourImagesLabel.text = "Check out these cool pictures from my workout!"
         
+        // eight images model
+//        cell.postContentCustomizableView.setPostType(to: .image)
+//        cell.postContentCustomizableView.setNumberOfImages(to: 8)
+//        cell.postContentCustomizableView.setImages(with: [#imageLiteral(resourceName: "workout_demo_1"), #imageLiteral(resourceName: "workout_demo_2"), #imageLiteral(resourceName: "workout_demo_3"), #imageLiteral(resourceName: "workout_demo_4")])
+        
+        
+        // text model
+//        cell.postContentCustomizableView.setPostType(to: .text)
+//        cell.postContentCustomizableView.textPostLabel.text = "I can't believe the gym is closed today!"
+        
         // TODO: will need to be implemented for non-static content
         // i.e. text only, pictures only, pictures + text, workouts only, etc.
+        //cell.postScoreLabel.text = post.score
         
         // this will be used to draw the cell height
         print("LOG: returned cell height of \(cell.postContentCustomizableView.calculateHeight())")
