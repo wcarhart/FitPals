@@ -79,11 +79,40 @@ class LoginViewController: UIViewController {
     let gradientSix = FlatYellowDark().cgColor
     let gradientSeven = FlatPowderBlue().cgColor
     
+    var loadingScreen: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        loginBubbleView.backgroundColor = FlatWhite()
-        prepareTextFields()
-        updateUI()
+        
+        let loadingView = UIView()
+        parentView.addSubview(loadingView)
+        loadingView.backgroundColor = .white
+        loadingView.translatesAutoresizingMaskIntoConstraints = false
+        loadingView.centerXAnchor.constraint(equalTo: parentView.centerXAnchor, constant: 0).isActive = true
+        loadingView.centerYAnchor.constraint(equalTo: parentView.centerYAnchor, constant: 0).isActive = true
+        loadingView.heightAnchor.constraint(equalTo: parentView.heightAnchor, constant: 0).isActive = true
+        loadingView.widthAnchor.constraint(equalTo: parentView.widthAnchor, constant: 0).isActive = true
+        
+        let logoImage = UIImageView()
+        logoImage.image = #imageLiteral(resourceName: "logo_demo")
+        loadingView.addSubview(logoImage)
+        logoImage.translatesAutoresizingMaskIntoConstraints = false
+        logoImage.contentMode = UIViewContentMode.scaleAspectFit
+        logoImage.centerXAnchor.constraint(equalTo: loadingView.centerXAnchor, constant: 0).isActive = true
+        logoImage.centerYAnchor.constraint(equalTo: loadingView.centerYAnchor, constant: 0).isActive = true
+        
+        loadingScreen = loadingView
+    }
+    
+    func load(view: UIView) {
+        let transitionOptions: UIViewAnimationOptions = [.transitionFlipFromLeft]
+        
+        UIView.transition(with: self.parentView, duration: 1.0, options: transitionOptions, animations: {
+            view.removeFromSuperview()
+            
+        }, completion: { (_) in
+            
+        })
     }
     
     func prepareTextFields() {
@@ -104,6 +133,12 @@ class LoginViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
+        load(view: self.loadingScreen)
+        
+        loginBubbleView.backgroundColor = FlatWhite()
+        prepareTextFields()
+        updateUI()
         
         gradientSet.append([gradientOne, gradientTwo])
         gradientSet.append([gradientTwo, gradientThree])

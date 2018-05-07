@@ -62,7 +62,7 @@ class FeedViewController: UIViewController, ComposeMenuDelegate {
                     
                     print("Count = \(count)");
                 }
-                self.tableView.reloadData()
+                self.animateCells()
                 HUD.hide()
             }
         }
@@ -96,6 +96,27 @@ class FeedViewController: UIViewController, ComposeMenuDelegate {
 }
 
 extension FeedViewController: UITableViewDataSource, UITableViewDelegate, PostTableViewCellDelegate {
+    
+    func animateCells() {
+        self.tableView.reloadData()
+        
+        let cells = self.tableView.visibleCells
+        let tableHeight: CGFloat = self.tableView.bounds.size.height
+        
+        for cellAtIndex in cells {
+            let cell: UITableViewCell = cellAtIndex as UITableViewCell
+            cell.transform = CGAffineTransform(translationX: 0, y: tableHeight)
+        }
+        
+        var index = 0
+        for cellAtIndex in cells {
+            let cell: UITableViewCell = cellAtIndex as UITableViewCell
+            UIView.animate(withDuration: 1.5, delay: 0.05 * Double(index), usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: [], animations: {
+                cell.transform = CGAffineTransform(translationX: 0, y: 0);
+            }, completion: nil)
+            index += 1
+        }
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //return TestUserSingleton.shared.user.posts.count

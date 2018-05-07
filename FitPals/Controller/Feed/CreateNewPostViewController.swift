@@ -134,7 +134,7 @@ class CreateNewPostViewController: UIViewController, ImagePickerDelegate {
             self.imagePostTextView.textColor = FlatGray()
             configureImagePicker()
         default:
-            print("ERROR: couldn't detect post type")
+            print("ERROR: could not determine post type")
         }
     }
 
@@ -147,6 +147,19 @@ class CreateNewPostViewController: UIViewController, ImagePickerDelegate {
         print("LOG: submit post button pressed")
         
         // TODO: need to upload new post to Firestore
+        switch self.postType {
+        case .text:
+            print("LOG: attempting to upload new post of type 'text'")
+        case .workout:
+            print("LOG: attempting to upload new post of type 'workout'")
+        case .diet:
+            print("LOG: attempting to upload new post of type 'diet'")
+        case .image:
+            // TODO: uploading from imageBuffer until imageAssets issue is resolved
+            print("LOG: attempting to upload new post of type 'image'")
+        default:
+            print("ERROR: could not determine post type")
+        }
         
         performSegue(withIdentifier: "unwindToFeed", sender: nil)
     }
