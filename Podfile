@@ -9,6 +9,7 @@ target 'FitPals' do
   # database
   pod 'Firebase/Database'
   pod 'Firebase/Core'
+  pod 'Firebase/Storage'
   
   # Date/Time Management
   pod 'SwiftDate', '~> 4.5.1'
