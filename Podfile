@@ -6,35 +6,31 @@ target 'FitPals' do
   use_frameworks!
 
   # Pods for FitPals
-  # database
-  pod 'Firebase/Database'
+  # Firebase (database, cloud storage, authentication)
   pod 'Firebase/Core'
   pod 'Firebase/Storage'
+  pod 'Firebase/Firestore'
+  pod 'Firebase/Auth'
   
   # Date/Time Management
-  pod 'SwiftDate', '~> 4.5.1'
+  #pod 'SwiftDate', '~> 4.5.1'
   
   # Progress HUD
-  pod 'SVProgressHUD'
+  pod 'PKHUD', '~> 5.0'
   
-  # Networking & Parsing
-  pod 'SwiftyJSON'
-  pod 'Alamofire'
+  # Networking
+  #pod 'SwiftyJSON'
+  #pod 'Alamofire'
   
   # Map Annotations
-  pod 'MapViewPlus'
+  #pod 'MapViewPlus'
   
-  # Colors
+  # Image Management
+  pod 'ImagePicker'
+  pod 'SwiftPhotoGallery'
+  
+  # Color Management + UI
   pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
-
-  target 'FitPalsTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'FitPalsUITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
+  pod 'TextFieldEffects'
 
 end

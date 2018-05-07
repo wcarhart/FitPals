@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ChameleonFramework
 
 protocol PostTableViewCellDelegate {
     func upvote(postId: Int32)
@@ -25,6 +26,7 @@ class PostTableViewCell: UITableViewCell {
     
     // post content view (middle)
     @IBOutlet weak var postContentView: UIView!
+    @IBOutlet weak var postContentCustomizableView: PostContent!
     
     // post details view (bottom)
     @IBOutlet weak var upvoteButton: UIButton!
@@ -33,9 +35,15 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var commentButton: UIButton!
     @IBOutlet weak var shareButton: UIButton!
     
+    // views (for coloring)
+    @IBOutlet weak var paddingView: UIView!
+    @IBOutlet weak var contentContainer: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        //self.contentView.backgroundColor = FlatWhiteDark()
+        paddingView.backgroundColor = FlatWhite()
+        contentContainer.backgroundColor = FlatWhite()
     }
     
     override func layoutSubviews() {
@@ -45,7 +53,7 @@ class PostTableViewCell: UITableViewCell {
     }
 
     @IBAction func profileTapped(_ sender: UIButton) {
-        print("LOG: profile")
+        print("LOG: profile button tapped")
     }
     
     @IBAction func upvoteButtonPressed(_ sender: UIButton) {
@@ -125,7 +133,7 @@ class PostTableViewCell: UITableViewCell {
     }
     
     @IBAction func commentButtonPressed(_ sender: UIButton) {
-        print("LOG: comment")
+        print("LOG: comment button tapped")
     }
     
     @IBAction func shareButtonDown(_ sender: UIButton) {
@@ -137,7 +145,7 @@ class PostTableViewCell: UITableViewCell {
     }
     
     @IBAction func shareButtonPressed(_ sender: UIButton) {
-        print("LOG: share")
+        print("LOG: share button tapped")
     }
     
     

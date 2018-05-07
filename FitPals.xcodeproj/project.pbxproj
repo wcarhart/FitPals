@@ -7,11 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0406C7B8879BEC302D23C137 /* Pods_FitPalsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2F1D484409F20666FBF3B68 /* Pods_FitPalsTests.framework */; };
 		20C2C425209A602600FBE88E /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C2C423209A602600FBE88E /* ProfileTableViewCell.swift */; };
 		20C2C426209A602600FBE88E /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20C2C424209A602600FBE88E /* ProfileTableViewCell.xib */; };
 		20C2C429209A62DD00FBE88E /* AboutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C2C427209A62DD00FBE88E /* AboutTableViewCell.swift */; };
 		20C2C42A209A62DD00FBE88E /* AboutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20C2C428209A62DD00FBE88E /* AboutTableViewCell.xib */; };
+		721C75C1209EA7FD0025606A /* ComposeMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 721C75C0209EA7FD0025606A /* ComposeMenu.xib */; };
+		721C75C5209EAFBF0025606A /* ComposeMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721C75C4209EAFBF0025606A /* ComposeMenuController.swift */; };
+		721C75C7209EB01F0025606A /* ComposeMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721C75C6209EB01F0025606A /* ComposeMenu.swift */; };
+		721C75C9209EBD560025606A /* CreateNewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721C75C8209EBD560025606A /* CreateNewPostViewController.swift */; };
+		721C75CD209EBD8F0025606A /* SelectedPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721C75CC209EBD8F0025606A /* SelectedPostViewController.swift */; };
+		723C94FA209F56E200DBFDE1 /* ImageDisplayer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 723C94F9209F56E200DBFDE1 /* ImageDisplayer.xib */; };
+		723C94FC209F611700DBFDE1 /* ImageDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723C94FB209F611700DBFDE1 /* ImageDisplayer.swift */; };
 		725FD391208152D8001F0337 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725FD390208152D8001F0337 /* AppDelegate.swift */; };
 		725FD396208152D8001F0337 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 725FD394208152D8001F0337 /* Main.storyboard */; };
 		725FD398208152DB001F0337 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 725FD397208152DB001F0337 /* Assets.xcassets */; };
@@ -21,12 +27,15 @@
 		72659B38209CDCD30057C3B0 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72659B36209CDCD30057C3B0 /* PostTableViewCell.swift */; };
 		72659B39209CDCD30057C3B0 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72659B37209CDCD30057C3B0 /* PostTableViewCell.xib */; };
 		72659B3B209CE3600057C3B0 /* Credits.txt in Resources */ = {isa = PBXBuildFile; fileRef = 72659B3A209CE3600057C3B0 /* Credits.txt */; };
+		727D83E1209E4DC700DB020E /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727D83E0209E4DC700DB020E /* FeedViewController.swift */; };
+		72BF4C05209FE9B200F6F709 /* PostContent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72BF4C04209FE9B200F6F709 /* PostContent.xib */; };
+		72BF4C07209FE9C400F6F709 /* PostContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BF4C06209FE9C400F6F709 /* PostContent.swift */; };
 		72E122E3209D34FE00060AB8 /* TestUserSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E122E2209D34FE00060AB8 /* TestUserSingleton.swift */; };
 		72E122E5209D9A0400060AB8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 72E122E4209D9A0400060AB8 /* GoogleService-Info.plist */; };
+		72E122E7209E201200060AB8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E122E6209E201200060AB8 /* LoginViewController.swift */; };
 		72FE2F62208F98E300EC0064 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FE2F61208F98E300EC0064 /* ProfileTableViewController.swift */; };
 		72FE2F64208F992200EC0064 /* MarketCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FE2F63208F992200EC0064 /* MarketCollectionViewController.swift */; };
 		72FE2F66208F998800EC0064 /* DiscoverCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FE2F65208F998800EC0064 /* DiscoverCollectionViewController.swift */; };
-		72FE2F68208F99C000EC0064 /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FE2F67208F99C000EC0064 /* FeedTableViewController.swift */; };
 		72FE2F6A208F99FA00EC0064 /* GroupsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FE2F69208F99FA00EC0064 /* GroupsCollectionViewController.swift */; };
 		72FE2F6D208F9A6C00EC0064 /* GroupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FE2F6C208F9A6C00EC0064 /* GroupTableViewController.swift */; };
 		72FE2F6F208F9AD600EC0064 /* ProductTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FE2F6E208F9AD600EC0064 /* ProductTableViewController.swift */; };
@@ -37,9 +46,7 @@
 		72FE2F7E208F9F2000EC0064 /* DietPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FE2F7D208F9F2000EC0064 /* DietPlan.swift */; };
 		72FE2F80208F9F4400EC0064 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FE2F7F208F9F4400EC0064 /* Product.swift */; };
 		72FE2F82208F9F6F00EC0064 /* GroupEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FE2F81208F9F6F00EC0064 /* GroupEntity.swift */; };
-		7F826A7F857F967321D9F54A /* Pods_FitPals.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E150C3C2C99BE8D75824991F /* Pods_FitPals.framework */; };
-		8BB2D5B4209CF3B700ED5855 /* MarketCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB2D5B3209CF3B700ED5855 /* MarketCollectionViewCell.swift */; };
-		E16DB9572ED7285F71BB2FE6 /* Pods_FitPalsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C841B8893FDD1733BA3285E /* Pods_FitPalsUITests.framework */; };
+		D65F966E0291EA496D4A4C41 /* Pods_FitPals.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E09B0B2460188526A09F3DB /* Pods_FitPals.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,12 +67,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		18B74369EB9CDC1DAA619699 /* Pods-FitPals.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitPals.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FitPals/Pods-FitPals.debug.xcconfig"; sourceTree = "<group>"; };
+		124AE7D365A45DDE18598079 /* Pods-FitPals.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitPals.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FitPals/Pods-FitPals.debug.xcconfig"; sourceTree = "<group>"; };
 		20C2C423209A602600FBE88E /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		20C2C424209A602600FBE88E /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
 		20C2C427209A62DD00FBE88E /* AboutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTableViewCell.swift; sourceTree = "<group>"; };
 		20C2C428209A62DD00FBE88E /* AboutTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutTableViewCell.xib; sourceTree = "<group>"; };
-		5C841B8893FDD1733BA3285E /* Pods_FitPalsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FitPalsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E09B0B2460188526A09F3DB /* Pods_FitPals.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FitPals.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		721C75C0209EA7FD0025606A /* ComposeMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ComposeMenu.xib; sourceTree = "<group>"; };
+		721C75C4209EAFBF0025606A /* ComposeMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeMenuController.swift; sourceTree = "<group>"; };
+		721C75C6209EB01F0025606A /* ComposeMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeMenu.swift; sourceTree = "<group>"; };
+		721C75C8209EBD560025606A /* CreateNewPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewPostViewController.swift; sourceTree = "<group>"; };
+		721C75CC209EBD8F0025606A /* SelectedPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedPostViewController.swift; sourceTree = "<group>"; };
+		723C94F9209F56E200DBFDE1 /* ImageDisplayer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageDisplayer.xib; sourceTree = "<group>"; };
+		723C94FB209F611700DBFDE1 /* ImageDisplayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDisplayer.swift; sourceTree = "<group>"; };
 		725FD38D208152D8001F0337 /* FitPals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitPals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		725FD390208152D8001F0337 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		725FD395208152D8001F0337 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -81,12 +95,15 @@
 		72659B36209CDCD30057C3B0 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		72659B37209CDCD30057C3B0 /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
 		72659B3A209CE3600057C3B0 /* Credits.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Credits.txt; sourceTree = "<group>"; };
+		727D83E0209E4DC700DB020E /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		72BF4C04209FE9B200F6F709 /* PostContent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostContent.xib; sourceTree = "<group>"; };
+		72BF4C06209FE9C400F6F709 /* PostContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostContent.swift; sourceTree = "<group>"; };
 		72E122E2209D34FE00060AB8 /* TestUserSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUserSingleton.swift; sourceTree = "<group>"; };
 		72E122E4209D9A0400060AB8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		72E122E6209E201200060AB8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		72FE2F61208F98E300EC0064 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		72FE2F63208F992200EC0064 /* MarketCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketCollectionViewController.swift; sourceTree = "<group>"; };
 		72FE2F65208F998800EC0064 /* DiscoverCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverCollectionViewController.swift; sourceTree = "<group>"; };
-		72FE2F67208F99C000EC0064 /* FeedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewController.swift; sourceTree = "<group>"; };
 		72FE2F69208F99FA00EC0064 /* GroupsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsCollectionViewController.swift; sourceTree = "<group>"; };
 		72FE2F6C208F9A6C00EC0064 /* GroupTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTableViewController.swift; sourceTree = "<group>"; };
 		72FE2F6E208F9AD600EC0064 /* ProductTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewController.swift; sourceTree = "<group>"; };
@@ -97,14 +114,7 @@
 		72FE2F7D208F9F2000EC0064 /* DietPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietPlan.swift; sourceTree = "<group>"; };
 		72FE2F7F208F9F4400EC0064 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		72FE2F81208F9F6F00EC0064 /* GroupEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupEntity.swift; sourceTree = "<group>"; };
-		8039330BBBFD1CE644FD9C0E /* Pods-FitPalsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitPalsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FitPalsUITests/Pods-FitPalsUITests.release.xcconfig"; sourceTree = "<group>"; };
-		83626786B005C8FA74DB8081 /* Pods-FitPalsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitPalsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FitPalsTests/Pods-FitPalsTests.debug.xcconfig"; sourceTree = "<group>"; };
-		8BB2D5B3209CF3B700ED5855 /* MarketCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketCollectionViewCell.swift; sourceTree = "<group>"; };
-		C014FAE07FDA541679013BCD /* Pods-FitPalsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitPalsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FitPalsTests/Pods-FitPalsTests.release.xcconfig"; sourceTree = "<group>"; };
-		E150C3C2C99BE8D75824991F /* Pods_FitPals.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FitPals.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E2F1D484409F20666FBF3B68 /* Pods_FitPalsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FitPalsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E8E8A02D14F49A1538761B15 /* Pods-FitPals.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitPals.release.xcconfig"; path = "Pods/Target Support Files/Pods-FitPals/Pods-FitPals.release.xcconfig"; sourceTree = "<group>"; };
-		F6012AE9C82F549EFB76F545 /* Pods-FitPalsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitPalsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FitPalsUITests/Pods-FitPalsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E62E1254B276F434921F4D6B /* Pods-FitPals.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitPals.release.xcconfig"; path = "Pods/Target Support Files/Pods-FitPals/Pods-FitPals.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F826A7F857F967321D9F54A /* Pods_FitPals.framework in Frameworks */,
+				D65F966E0291EA496D4A4C41 /* Pods_FitPals.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,7 +130,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0406C7B8879BEC302D23C137 /* Pods_FitPalsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,32 +137,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E16DB9572ED7285F71BB2FE6 /* Pods_FitPalsUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4A6F2C13206640C35D8621AA /* Frameworks */ = {
+		59A8818F0A32CBB7E3CA3DA3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E150C3C2C99BE8D75824991F /* Pods_FitPals.framework */,
-				E2F1D484409F20666FBF3B68 /* Pods_FitPalsTests.framework */,
-				5C841B8893FDD1733BA3285E /* Pods_FitPalsUITests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		55565A44D1E27EBB0E6B29E8 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				18B74369EB9CDC1DAA619699 /* Pods-FitPals.debug.xcconfig */,
-				E8E8A02D14F49A1538761B15 /* Pods-FitPals.release.xcconfig */,
-				83626786B005C8FA74DB8081 /* Pods-FitPalsTests.debug.xcconfig */,
-				C014FAE07FDA541679013BCD /* Pods-FitPalsTests.release.xcconfig */,
-				F6012AE9C82F549EFB76F545 /* Pods-FitPalsUITests.debug.xcconfig */,
-				8039330BBBFD1CE644FD9C0E /* Pods-FitPalsUITests.release.xcconfig */,
+				124AE7D365A45DDE18598079 /* Pods-FitPals.debug.xcconfig */,
+				E62E1254B276F434921F4D6B /* Pods-FitPals.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -165,8 +159,8 @@
 				725FD3A4208152DB001F0337 /* FitPalsTests */,
 				725FD3AF208152DB001F0337 /* FitPalsUITests */,
 				725FD38E208152D8001F0337 /* Products */,
-				55565A44D1E27EBB0E6B29E8 /* Pods */,
-				4A6F2C13206640C35D8621AA /* Frameworks */,
+				59A8818F0A32CBB7E3CA3DA3 /* Pods */,
+				EAF5350C4B6A913E79B2792B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -231,8 +225,12 @@
 			children = (
 				725FD394208152D8001F0337 /* Main.storyboard */,
 				725FD399208152DB001F0337 /* LaunchScreen.storyboard */,
-				72659B36209CDCD30057C3B0 /* PostTableViewCell.swift */,
 				72659B37209CDCD30057C3B0 /* PostTableViewCell.xib */,
+				721C75C0209EA7FD0025606A /* ComposeMenu.xib */,
+				723C94F9209F56E200DBFDE1 /* ImageDisplayer.xib */,
+				20C2C428209A62DD00FBE88E /* AboutTableViewCell.xib */,
+				20C2C424209A602600FBE88E /* ProfileTableViewCell.xib */,
+				72BF4C04209FE9B200F6F709 /* PostContent.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -241,6 +239,9 @@
 			isa = PBXGroup;
 			children = (
 				725FD390208152D8001F0337 /* AppDelegate.swift */,
+				72E122E6209E201200060AB8 /* LoginViewController.swift */,
+				72659B36209CDCD30057C3B0 /* PostTableViewCell.swift */,
+				72BF4C06209FE9C400F6F709 /* PostContent.swift */,
 				72FE2F76208F9CFB00EC0064 /* Feed */,
 				72FE2F72208F9C7D00EC0064 /* Market */,
 				72FE2F75208F9CD300EC0064 /* ExploreDiscover */,
@@ -275,9 +276,7 @@
 			children = (
 				72FE2F61208F98E300EC0064 /* ProfileTableViewController.swift */,
 				20C2C427209A62DD00FBE88E /* AboutTableViewCell.swift */,
-				20C2C428209A62DD00FBE88E /* AboutTableViewCell.xib */,
 				20C2C423209A602600FBE88E /* ProfileTableViewCell.swift */,
-				20C2C424209A602600FBE88E /* ProfileTableViewCell.xib */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -293,9 +292,22 @@
 		72FE2F76208F9CFB00EC0064 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
-				72FE2F67208F99C000EC0064 /* FeedTableViewController.swift */,
+				727D83E0209E4DC700DB020E /* FeedViewController.swift */,
+				721C75C4209EAFBF0025606A /* ComposeMenuController.swift */,
+				721C75C6209EB01F0025606A /* ComposeMenu.swift */,
+				721C75C8209EBD560025606A /* CreateNewPostViewController.swift */,
+				721C75CC209EBD8F0025606A /* SelectedPostViewController.swift */,
+				723C94FB209F611700DBFDE1 /* ImageDisplayer.swift */,
 			);
 			path = Feed;
+			sourceTree = "<group>";
+		};
+		EAF5350C4B6A913E79B2792B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E09B0B2460188526A09F3DB /* Pods_FitPals.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,12 +317,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 725FD3B5208152DB001F0337 /* Build configuration list for PBXNativeTarget "FitPals" */;
 			buildPhases = (
-				5D92636A651F2DF133A82130 /* [CP] Check Pods Manifest.lock */,
+				1CDAD4B4637C4DB85E7DFCF5 /* [CP] Check Pods Manifest.lock */,
 				725FD389208152D8001F0337 /* Sources */,
 				725FD38A208152D8001F0337 /* Frameworks */,
 				725FD38B208152D8001F0337 /* Resources */,
 				72FE2F83208FA13100EC0064 /* ShellScript */,
-				7C0798CC970722E809809010 /* [CP] Embed Pods Frameworks */,
+				6D454AC5E2B9C71568955F5B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -325,7 +337,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 725FD3B8208152DB001F0337 /* Build configuration list for PBXNativeTarget "FitPalsTests" */;
 			buildPhases = (
-				63A822029CD4FB08F4D92D8B /* [CP] Check Pods Manifest.lock */,
 				725FD39D208152DB001F0337 /* Sources */,
 				725FD39E208152DB001F0337 /* Frameworks */,
 				725FD39F208152DB001F0337 /* Resources */,
@@ -344,7 +355,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 725FD3BB208152DB001F0337 /* Build configuration list for PBXNativeTarget "FitPalsUITests" */;
 			buildPhases = (
-				BFDE75E12683A20803BCC1DA /* [CP] Check Pods Manifest.lock */,
 				725FD3A8208152DB001F0337 /* Sources */,
 				725FD3A9208152DB001F0337 /* Frameworks */,
 				725FD3AA208152DB001F0337 /* Resources */,
@@ -410,10 +420,13 @@
 				725FD39B208152DB001F0337 /* LaunchScreen.storyboard in Resources */,
 				72E122E5209D9A0400060AB8 /* GoogleService-Info.plist in Resources */,
 				725FD398208152DB001F0337 /* Assets.xcassets in Resources */,
+				723C94FA209F56E200DBFDE1 /* ImageDisplayer.xib in Resources */,
 				20C2C42A209A62DD00FBE88E /* AboutTableViewCell.xib in Resources */,
 				72659B39209CDCD30057C3B0 /* PostTableViewCell.xib in Resources */,
+				72BF4C05209FE9B200F6F709 /* PostContent.xib in Resources */,
 				725FD396208152D8001F0337 /* Main.storyboard in Resources */,
 				72659B3B209CE3600057C3B0 /* Credits.txt in Resources */,
+				721C75C1209EA7FD0025606A /* ComposeMenu.xib in Resources */,
 				20C2C426209A602600FBE88E /* ProfileTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -435,7 +448,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5D92636A651F2DF133A82130 /* [CP] Check Pods Manifest.lock */ = {
+		1CDAD4B4637C4DB85E7DFCF5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -453,22 +466,50 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		63A822029CD4FB08F4D92D8B /* [CP] Check Pods Manifest.lock */ = {
+		6D454AC5E2B9C71568955F5B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
+				"${SRCROOT}/Pods/Target Support Files/Pods-FitPals/Pods-FitPals-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/ImagePicker/ImagePicker.framework",
+				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftPhotoGallery/SwiftPhotoGallery.framework",
+				"${BUILT_PRODUCTS_DIR}/TextFieldEffects/TextFieldEffects.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FitPalsTests-checkManifestLockResult.txt",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImagePicker.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftPhotoGallery.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TextFieldEffects.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FitPals/Pods-FitPals-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		72FE2F83208FA13100EC0064 /* ShellScript */ = {
@@ -484,62 +525,6 @@
 			shellPath = /bin/sh;
 			shellScript = "TAGS=\"TODO:|FIXME:|DEBUG:\"\necho \"searching ${SRCROOT} for ${TAGS}\"\nfind \"${SRCROOT}\" \\( -name \"*.swift\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\"";
 		};
-		7C0798CC970722E809809010 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-FitPals/Pods-FitPals-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
-				"${BUILT_PRODUCTS_DIR}/MapViewPlus/MapViewPlus.framework",
-				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftDate/SwiftDate.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
-				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MapViewPlus.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftDate.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FitPals/Pods-FitPals-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BFDE75E12683A20803BCC1DA /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FitPalsUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -548,24 +533,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				72FE2F6D208F9A6C00EC0064 /* GroupTableViewController.swift in Sources */,
+				72BF4C07209FE9C400F6F709 /* PostContent.swift in Sources */,
 				72FE2F7A208F9E2500EC0064 /* Post.swift in Sources */,
+				721C75CD209EBD8F0025606A /* SelectedPostViewController.swift in Sources */,
 				72FE2F62208F98E300EC0064 /* ProfileTableViewController.swift in Sources */,
+				721C75C7209EB01F0025606A /* ComposeMenu.swift in Sources */,
 				725FD391208152D8001F0337 /* AppDelegate.swift in Sources */,
 				8BB2D5B4209CF3B700ED5855 /* MarketCollectionViewCell.swift in Sources */,
 				72FE2F6A208F99FA00EC0064 /* GroupsCollectionViewController.swift in Sources */,
-				72FE2F68208F99C000EC0064 /* FeedTableViewController.swift in Sources */,
 				72FE2F64208F992200EC0064 /* MarketCollectionViewController.swift in Sources */,
 				72FE2F82208F9F6F00EC0064 /* GroupEntity.swift in Sources */,
+				72E122E7209E201200060AB8 /* LoginViewController.swift in Sources */,
 				72FE2F6F208F9AD600EC0064 /* ProductTableViewController.swift in Sources */,
+				723C94FC209F611700DBFDE1 /* ImageDisplayer.swift in Sources */,
+				721C75C9209EBD560025606A /* CreateNewPostViewController.swift in Sources */,
 				20C2C429209A62DD00FBE88E /* AboutTableViewCell.swift in Sources */,
 				20C2C425209A602600FBE88E /* ProfileTableViewCell.swift in Sources */,
 				72FE2F66208F998800EC0064 /* DiscoverCollectionViewController.swift in Sources */,
+				727D83E1209E4DC700DB020E /* FeedViewController.swift in Sources */,
 				72FE2F78208F9D8500EC0064 /* User.swift in Sources */,
 				72FE2F7E208F9F2000EC0064 /* DietPlan.swift in Sources */,
 				72FE2F71208F9C5900EC0064 /* PurchaseTableViewController.swift in Sources */,
 				72E122E3209D34FE00060AB8 /* TestUserSingleton.swift in Sources */,
 				72FE2F7C208F9EF000EC0064 /* Workout.swift in Sources */,
 				72FE2F80208F9F4400EC0064 /* Product.swift in Sources */,
+				721C75C5209EAFBF0025606A /* ComposeMenuController.swift in Sources */,
 				72659B38209CDCD30057C3B0 /* PostTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -737,13 +729,16 @@
 		};
 		725FD3B6208152DB001F0337 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 18B74369EB9CDC1DAA619699 /* Pods-FitPals.debug.xcconfig */;
+			baseConfigurationReference = 124AE7D365A45DDE18598079 /* Pods-FitPals.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FitPals/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = edu.sandiego.FitPals;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -753,13 +748,16 @@
 		};
 		725FD3B7208152DB001F0337 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E8E8A02D14F49A1538761B15 /* Pods-FitPals.release.xcconfig */;
+			baseConfigurationReference = E62E1254B276F434921F4D6B /* Pods-FitPals.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FitPals/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = edu.sandiego.FitPals;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -769,14 +767,17 @@
 		};
 		725FD3B9208152DB001F0337 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 83626786B005C8FA74DB8081 /* Pods-FitPalsTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E255S56V67;
 				INFOPLIST_FILE = FitPalsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = edu.sandiego.FitPalsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -787,14 +788,17 @@
 		};
 		725FD3BA208152DB001F0337 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C014FAE07FDA541679013BCD /* Pods-FitPalsTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E255S56V67;
 				INFOPLIST_FILE = FitPalsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = edu.sandiego.FitPalsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -805,13 +809,16 @@
 		};
 		725FD3BC208152DB001F0337 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F6012AE9C82F549EFB76F545 /* Pods-FitPalsUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E255S56V67;
 				INFOPLIST_FILE = FitPalsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = edu.sandiego.FitPalsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -822,13 +829,16 @@
 		};
 		725FD3BD208152DB001F0337 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8039330BBBFD1CE644FD9C0E /* Pods-FitPalsUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E255S56V67;
 				INFOPLIST_FILE = FitPalsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = edu.sandiego.FitPalsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
