@@ -28,7 +28,15 @@ class FeedViewController: UIViewController, ComposeMenuDelegate {
     
     var newPostType: PostType!
     
+    var transitionStyle: UIModalTransitionStyle?
+    
     override func viewDidLoad() {
+        
+        // TODO: get this flip segue actually working, will need a custom animation controller (see SO)
+        if self.transitionStyle != nil {
+            modalTransitionStyle = .flipHorizontal
+        }
+        
         HUD.show(.progress)
         super.viewDidLoad()
         self.tableView.delegate = self
@@ -79,6 +87,26 @@ class FeedViewController: UIViewController, ComposeMenuDelegate {
         composeMenuController.showComposeMenu()
     }
     
+    @IBAction func settingsButtonPressed(_ sender: Any) {
+        print("LOG: settings button pressed")
+        let alertController = UIAlertController(title: "Would you like to log out?", message: "More settings comming soon...", preferredStyle: .actionSheet)
+        let confirmAction = UIAlertAction(title: "Yes", style: .default, handler: handleLogOut)
+        let cancelAction = UIAlertAction(title: "No", style: .cancel, handler: handleCancel)
+        alertController.addAction(confirmAction)
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    func handleCancel(_ alert: UIAlertAction) {
+        print("LOG: settings cancelled")
+    }
+    
+    func handleLogOut(_ alert: UIAlertAction) {
+        print("LOG: logging out user \(Auth.auth().currentUser?.displayName ?? "<NO NAME>")")
+        try! Auth.auth().signOut()
+        performSegue(withIdentifier: "unwindToLoginScreen", sender: nil)
+    }
+    
     func updateParent(with postType: PostType) {
         self.newPostType = postType
         performSegue(withIdentifier: "createNewPost", sender: nil)
@@ -95,29 +123,7 @@ class FeedViewController: UIViewController, ComposeMenuDelegate {
     
 }
 
-extension FeedViewController: UITableViewDataSource, UITableViewDelegate, PostTableViewCellDelegate {
-    
-    func animateCells() {
-        self.tableView.reloadData()
-        
-        let cells = self.tableView.visibleCells
-        let tableHeight: CGFloat = self.tableView.bounds.size.height
-        
-        for cellAtIndex in cells {
-            let cell: UITableViewCell = cellAtIndex as UITableViewCell
-            cell.transform = CGAffineTransform(translationX: 0, y: tableHeight)
-        }
-        
-        var index = 0
-        for cellAtIndex in cells {
-            let cell: UITableViewCell = cellAtIndex as UITableViewCell
-            UIView.animate(withDuration: 1.5, delay: 0.05 * Double(index), usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: [], animations: {
-                cell.transform = CGAffineTransform(translationX: 0, y: 0);
-            }, completion: nil)
-            index += 1
-        }
-    }
-    
+extension FeedViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //return TestUserSingleton.shared.user.posts.count
         return self.numberOfPosts
@@ -156,83 +162,6 @@ extension FeedViewController: UITableViewDataSource, UITableViewDelegate, PostTa
         cell.selectionStyle = .none
         
         return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: false)
-    }
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let scrollDiff = scrollView.contentOffset.y - self.previousScrollOffset
-        
-        let absoluteTop: CGFloat = 0;
-        let absoluteBottom: CGFloat = scrollView.contentSize.height - scrollView.frame.size.height;
-        
-        let isScrollingDown = scrollDiff > 0 && scrollView.contentOffset.y > absoluteTop
-        let isScrollingUp = scrollDiff < 0 && scrollView.contentOffset.y < absoluteBottom
-        
-        var newHeight = self.headerHeightConstraint.constant
-        if isScrollingDown {
-            newHeight = max(self.minHeaderHeight, self.headerHeightConstraint.constant - abs(scrollDiff))
-        } else if isScrollingUp {
-            newHeight = min(self.maxHeaderHeight, self.headerHeightConstraint.constant + abs(scrollDiff))
-        }
-        
-        if newHeight != self.headerHeightConstraint.constant {
-            self.headerHeightConstraint.constant = newHeight
-            self.setScrollPosition(position: self.previousScrollOffset)
-        }
-        
-        
-        self.previousScrollOffset = scrollView.contentOffset.y
-    }
-    
-    func setScrollPosition(position: CGFloat) {
-        self.tableView.contentOffset = CGPoint(x: self.tableView.contentOffset.x, y: position)
-    }
-    
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        scrollViewDidStopScrolling()
-    }
-    
-    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        // TODO: this is buggy, maybe it's only like this on the simulator?
-        
-        switch scrollView.panGestureRecognizer.state {
-        case .ended:
-            scrollViewDidStopScrolling()
-        default:
-            break
-        }
-    }
-    
-    func scrollViewDidStopScrolling() {
-        let range = self.maxHeaderHeight - self.minHeaderHeight
-        let midPoint = self.minHeaderHeight + (range / 2)
-        
-        if self.headerHeightConstraint.constant > midPoint {
-            expandHeader()
-        } else {
-            collapseHeader()
-        }
-    }
-    
-    func collapseHeader() {
-        self.view.layoutIfNeeded()
-        UIView.animate(withDuration: 0.2, animations: {
-            self.headerHeightConstraint.constant = self.minHeaderHeight
-            // Manipulate UI elements within the header here
-            self.view.layoutIfNeeded()
-        })
-    }
-    
-    func expandHeader() {
-        self.view.layoutIfNeeded()
-        UIView.animate(withDuration: 0.2, animations: {
-            self.headerHeightConstraint.constant = self.maxHeaderHeight
-            // Manipulate UI elements within the header here
-            self.view.layoutIfNeeded()
-        })
     }
     
     func configureContent(for post: Post) -> CGFloat {
@@ -309,6 +238,128 @@ extension FeedViewController: UITableViewDataSource, UITableViewDelegate, PostTa
         for post in TestUserSingleton.shared.user.votes {
             print("  Post #\(post.key): \(post.value ? "upvote" : "downvote")")
         }
+    }
+}
+
+extension FeedViewController: UITableViewDelegate, PostTableViewCellDelegate {
+    
+    func animateCells() {
+        self.tableView.reloadData()
+        
+        let cells = self.tableView.visibleCells
+        let tableHeight: CGFloat = self.tableView.bounds.size.height
+        
+        for cellAtIndex in cells {
+            let cell: UITableViewCell = cellAtIndex as UITableViewCell
+            cell.transform = CGAffineTransform(translationX: 0, y: tableHeight)
+        }
+        
+        var index = 0
+        for cellAtIndex in cells {
+            let cell: UITableViewCell = cellAtIndex as UITableViewCell
+            UIView.animate(withDuration: 1.5, delay: 0.05 * Double(index), usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: [], animations: {
+                cell.transform = CGAffineTransform(translationX: 0, y: 0);
+            }, completion: nil)
+            index += 1
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let scrollDiff = scrollView.contentOffset.y - self.previousScrollOffset
+        
+        let absoluteTop: CGFloat = 0;
+        let absoluteBottom: CGFloat = scrollView.contentSize.height - scrollView.frame.size.height;
+        
+        let isScrollingDown = scrollDiff > 0 && scrollView.contentOffset.y > absoluteTop
+        let isScrollingUp = scrollDiff < 0 && scrollView.contentOffset.y < absoluteBottom
+        
+        if canAnimateHeader(scrollView) {
+            
+            // calculate new header height
+            var newHeight = self.headerHeightConstraint.constant
+            if isScrollingDown {
+                newHeight = max(self.minHeaderHeight, self.headerHeightConstraint.constant - abs(scrollDiff))
+            } else if isScrollingUp {
+                newHeight = min(self.maxHeaderHeight, self.headerHeightConstraint.constant + abs(scrollDiff))
+            }
+            
+            // header needs to animate
+            if newHeight != self.headerHeightConstraint.constant {
+                self.headerHeightConstraint.constant = newHeight
+                self.updateHeader()
+                self.setScrollPosition(self.previousScrollOffset)
+            }
+            
+            self.previousScrollOffset = scrollView.contentOffset.y
+        }
+    }
+    
+    func setScrollPosition(_ position: CGFloat) {
+        self.tableView.contentOffset = CGPoint(x: self.tableView.contentOffset.x, y: position)
+    }
+    
+    func updateHeader() {
+        let range = self.maxHeaderHeight - self.minHeaderHeight
+        let openAmount = self.headerHeightConstraint.constant - self.minHeaderHeight
+        let percentage = openAmount / range
+        
+        // TODO: finalize top bar, then uncomment this for animations
+        //self.titleTopConstraint.constant = -openAmount + 10
+        //self.logoImageView.alpha = percentage
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        self.scrollViewDidStopScrolling()
+    }
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        if !decelerate {
+            self.scrollViewDidStopScrolling()
+        }
+    }
+    
+    func canAnimateHeader(_ scrollView: UIScrollView) -> Bool {
+        // calculate the size of the scrollView when header is collapsed
+        let scrollViewMaxHeight = scrollView.frame.height + self.headerHeightConstraint.constant - minHeaderHeight
+        
+        // make sure that when header is collapsed, there is still room to scroll
+        //return scrollView.contentSize.height > scrollViewMaxHeight
+        
+        // TODO: defaults true to show functionality, need to update when non-static content is implemented
+        return true
+    }
+    
+    func scrollViewDidStopScrolling() {
+        let range = self.maxHeaderHeight - self.minHeaderHeight
+        let midPoint = self.minHeaderHeight + (range / 2)
+        
+        if self.headerHeightConstraint.constant > midPoint {
+            self.expandHeader()
+        } else {
+            self.collapseHeader()
+        }
+    }
+    
+    func collapseHeader() {
+        self.view.layoutIfNeeded()
+        UIView.animate(withDuration: 0.2, animations: {
+            self.headerHeightConstraint.constant = self.minHeaderHeight
+            self.updateHeader()
+            self.view.layoutIfNeeded()
+        })
+    }
+    
+    func expandHeader() {
+        self.view.layoutIfNeeded()
+        UIView.animate(withDuration: 0.2, animations: {
+            self.headerHeightConstraint.constant = self.maxHeaderHeight
+            self.updateHeader()
+            self.view.layoutIfNeeded()
+        })
     }
     
 }

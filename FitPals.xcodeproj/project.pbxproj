@@ -28,6 +28,8 @@
 		72659B39209CDCD30057C3B0 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72659B37209CDCD30057C3B0 /* PostTableViewCell.xib */; };
 		72659B3B209CE3600057C3B0 /* Credits.txt in Resources */ = {isa = PBXBuildFile; fileRef = 72659B3A209CE3600057C3B0 /* Credits.txt */; };
 		727D83E1209E4DC700DB020E /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727D83E0209E4DC700DB020E /* FeedViewController.swift */; };
+		72BF4C05209FE9B200F6F709 /* PostContent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72BF4C04209FE9B200F6F709 /* PostContent.xib */; };
+		72BF4C07209FE9C400F6F709 /* PostContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BF4C06209FE9C400F6F709 /* PostContent.swift */; };
 		72E122E3209D34FE00060AB8 /* TestUserSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E122E2209D34FE00060AB8 /* TestUserSingleton.swift */; };
 		72E122E5209D9A0400060AB8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 72E122E4209D9A0400060AB8 /* GoogleService-Info.plist */; };
 		72E122E7209E201200060AB8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E122E6209E201200060AB8 /* LoginViewController.swift */; };
@@ -94,6 +96,8 @@
 		72659B37209CDCD30057C3B0 /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
 		72659B3A209CE3600057C3B0 /* Credits.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Credits.txt; sourceTree = "<group>"; };
 		727D83E0209E4DC700DB020E /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		72BF4C04209FE9B200F6F709 /* PostContent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostContent.xib; sourceTree = "<group>"; };
+		72BF4C06209FE9C400F6F709 /* PostContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostContent.swift; sourceTree = "<group>"; };
 		72E122E2209D34FE00060AB8 /* TestUserSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUserSingleton.swift; sourceTree = "<group>"; };
 		72E122E4209D9A0400060AB8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		72E122E6209E201200060AB8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -221,8 +225,12 @@
 			children = (
 				725FD394208152D8001F0337 /* Main.storyboard */,
 				725FD399208152DB001F0337 /* LaunchScreen.storyboard */,
-				72659B36209CDCD30057C3B0 /* PostTableViewCell.swift */,
 				72659B37209CDCD30057C3B0 /* PostTableViewCell.xib */,
+				721C75C0209EA7FD0025606A /* ComposeMenu.xib */,
+				723C94F9209F56E200DBFDE1 /* ImageDisplayer.xib */,
+				20C2C428209A62DD00FBE88E /* AboutTableViewCell.xib */,
+				20C2C424209A602600FBE88E /* ProfileTableViewCell.xib */,
+				72BF4C04209FE9B200F6F709 /* PostContent.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -232,6 +240,8 @@
 			children = (
 				725FD390208152D8001F0337 /* AppDelegate.swift */,
 				72E122E6209E201200060AB8 /* LoginViewController.swift */,
+				72659B36209CDCD30057C3B0 /* PostTableViewCell.swift */,
+				72BF4C06209FE9C400F6F709 /* PostContent.swift */,
 				72FE2F76208F9CFB00EC0064 /* Feed */,
 				72FE2F72208F9C7D00EC0064 /* Market */,
 				72FE2F75208F9CD300EC0064 /* ExploreDiscover */,
@@ -265,9 +275,7 @@
 			children = (
 				72FE2F61208F98E300EC0064 /* ProfileTableViewController.swift */,
 				20C2C427209A62DD00FBE88E /* AboutTableViewCell.swift */,
-				20C2C428209A62DD00FBE88E /* AboutTableViewCell.xib */,
 				20C2C423209A602600FBE88E /* ProfileTableViewCell.swift */,
-				20C2C424209A602600FBE88E /* ProfileTableViewCell.xib */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -284,12 +292,10 @@
 			isa = PBXGroup;
 			children = (
 				727D83E0209E4DC700DB020E /* FeedViewController.swift */,
-				721C75C0209EA7FD0025606A /* ComposeMenu.xib */,
 				721C75C4209EAFBF0025606A /* ComposeMenuController.swift */,
 				721C75C6209EB01F0025606A /* ComposeMenu.swift */,
 				721C75C8209EBD560025606A /* CreateNewPostViewController.swift */,
 				721C75CC209EBD8F0025606A /* SelectedPostViewController.swift */,
-				723C94F9209F56E200DBFDE1 /* ImageDisplayer.xib */,
 				723C94FB209F611700DBFDE1 /* ImageDisplayer.swift */,
 			);
 			path = Feed;
@@ -416,6 +422,7 @@
 				723C94FA209F56E200DBFDE1 /* ImageDisplayer.xib in Resources */,
 				20C2C42A209A62DD00FBE88E /* AboutTableViewCell.xib in Resources */,
 				72659B39209CDCD30057C3B0 /* PostTableViewCell.xib in Resources */,
+				72BF4C05209FE9B200F6F709 /* PostContent.xib in Resources */,
 				725FD396208152D8001F0337 /* Main.storyboard in Resources */,
 				72659B3B209CE3600057C3B0 /* Credits.txt in Resources */,
 				721C75C1209EA7FD0025606A /* ComposeMenu.xib in Resources */,
@@ -525,6 +532,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				72FE2F6D208F9A6C00EC0064 /* GroupTableViewController.swift in Sources */,
+				72BF4C07209FE9C400F6F709 /* PostContent.swift in Sources */,
 				72FE2F7A208F9E2500EC0064 /* Post.swift in Sources */,
 				721C75CD209EBD8F0025606A /* SelectedPostViewController.swift in Sources */,
 				72FE2F62208F98E300EC0064 /* ProfileTableViewController.swift in Sources */,

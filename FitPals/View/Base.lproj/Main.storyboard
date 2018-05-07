@@ -22,7 +22,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jIG-gq-aa8" userLabel="Header">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="88"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4b7-Nc-bTk" userLabel="Header Action View">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4b7-Nc-bTk" userLabel="Header Action Right View">
                                         <rect key="frame" x="281.5" y="0.0" width="93.5" height="88"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B4g-dt-mhO">
@@ -42,8 +42,38 @@
                                             <constraint firstItem="B4g-dt-mhO" firstAttribute="leading" secondItem="4b7-Nc-bTk" secondAttribute="leading" id="rdW-Sg-iJ1"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4CF-YC-sN0" userLabel="Header Action Left View">
+                                        <rect key="frame" x="0.0" y="0.0" width="94" height="88"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="settings" translatesAutoresizingMaskIntoConstraints="NO" id="DUr-nP-ihz">
+                                                <rect key="frame" x="31" y="38" width="32" height="32"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="32" id="a4E-ai-mhG"/>
+                                                    <constraint firstAttribute="height" constant="32" id="xfG-4V-3c2"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jzh-Ev-ZIx">
+                                                <rect key="frame" x="0.0" y="20" width="94" height="68"/>
+                                                <connections>
+                                                    <action selector="settingsButtonPressed:" destination="sBQ-Vk-qPw" eventType="touchUpInside" id="jpR-4z-y5t"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="DUr-nP-ihz" firstAttribute="centerY" secondItem="jzh-Ev-ZIx" secondAttribute="centerY" id="80E-A3-eO2"/>
+                                            <constraint firstItem="jzh-Ev-ZIx" firstAttribute="top" secondItem="4CF-YC-sN0" secondAttribute="top" constant="20" id="I4w-Le-Cpu"/>
+                                            <constraint firstAttribute="bottom" secondItem="jzh-Ev-ZIx" secondAttribute="bottom" id="I9R-CS-GF6"/>
+                                            <constraint firstItem="DUr-nP-ihz" firstAttribute="centerX" secondItem="jzh-Ev-ZIx" secondAttribute="centerX" id="OoX-r5-6fL"/>
+                                            <constraint firstItem="jzh-Ev-ZIx" firstAttribute="leading" secondItem="4CF-YC-sN0" secondAttribute="leading" id="pBB-1m-fw4"/>
+                                            <constraint firstAttribute="trailing" secondItem="jzh-Ev-ZIx" secondAttribute="trailing" id="yd2-0g-b6v"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="4CF-YC-sN0" firstAttribute="width" secondItem="jIG-gq-aa8" secondAttribute="width" multiplier="1:4" id="5IW-ib-6RK"/>
+                                    <constraint firstAttribute="bottom" secondItem="4CF-YC-sN0" secondAttribute="bottom" id="6GB-HN-X52"/>
+                                    <constraint firstItem="4CF-YC-sN0" firstAttribute="leading" secondItem="jIG-gq-aa8" secondAttribute="leading" id="8W8-BK-udB"/>
+                                    <constraint firstItem="4CF-YC-sN0" firstAttribute="top" secondItem="jIG-gq-aa8" secondAttribute="top" id="Fyo-kt-vmb"/>
                                     <constraint firstItem="4b7-Nc-bTk" firstAttribute="width" secondItem="jIG-gq-aa8" secondAttribute="width" multiplier="1:4" id="Nrx-v5-IvI"/>
                                     <constraint firstAttribute="height" constant="88" id="bMn-61-AAa"/>
                                     <constraint firstItem="4b7-Nc-bTk" firstAttribute="top" secondItem="jIG-gq-aa8" secondAttribute="top" id="iiJ-bR-VcU"/>
@@ -87,9 +117,11 @@
                         <outlet property="tableView" destination="EVM-ic-mjX" id="h7u-SP-kw8"/>
                         <segue destination="34t-li-LaT" kind="show" identifier="showSelectedPost" id="8oz-yC-Nn2"/>
                         <segue destination="uQu-hT-mN5" kind="presentation" identifier="createNewPost" id="7eF-zl-hSj"/>
+                        <segue destination="xeq-ay-tub" kind="unwind" identifier="unwindToLoginScreen" unwindAction="unwindToLoginScreenWithSegue:" id="oEL-sU-AEc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vLK-MQ-S54" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="xeq-ay-tub" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-1511" y="519"/>
         </scene>
@@ -875,5 +907,6 @@
         <image name="login" width="64" height="64"/>
         <image name="market" width="24" height="24"/>
         <image name="profile" width="24" height="24"/>
+        <image name="settings" width="64" height="64"/>
     </resources>
 </document>

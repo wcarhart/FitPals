@@ -23,6 +23,8 @@ import Firebase
 class LoginViewController: UIViewController {
     
     var showLogin: Bool = true
+    var wasAlreadyLoggedIn: Bool = false
+    var cameFromLogOut: Bool = false
     
     // login Bools
     var validLoginEmail: Bool = false
@@ -84,24 +86,27 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let loadingView = UIView()
-        parentView.addSubview(loadingView)
-        loadingView.backgroundColor = .white
-        loadingView.translatesAutoresizingMaskIntoConstraints = false
-        loadingView.centerXAnchor.constraint(equalTo: parentView.centerXAnchor, constant: 0).isActive = true
-        loadingView.centerYAnchor.constraint(equalTo: parentView.centerYAnchor, constant: 0).isActive = true
-        loadingView.heightAnchor.constraint(equalTo: parentView.heightAnchor, constant: 0).isActive = true
-        loadingView.widthAnchor.constraint(equalTo: parentView.widthAnchor, constant: 0).isActive = true
+        if !cameFromLogOut {
+            let loadingView = UIView()
+            parentView.addSubview(loadingView)
+            loadingView.backgroundColor = .white
+            loadingView.translatesAutoresizingMaskIntoConstraints = false
+            loadingView.centerXAnchor.constraint(equalTo: parentView.centerXAnchor, constant: 0).isActive = true
+            loadingView.centerYAnchor.constraint(equalTo: parentView.centerYAnchor, constant: 0).isActive = true
+            loadingView.heightAnchor.constraint(equalTo: parentView.heightAnchor, constant: 0).isActive = true
+            loadingView.widthAnchor.constraint(equalTo: parentView.widthAnchor, constant: 0).isActive = true
+            
+            let logoImage = UIImageView()
+            logoImage.image = #imageLiteral(resourceName: "logo_demo")
+            loadingView.addSubview(logoImage)
+            logoImage.translatesAutoresizingMaskIntoConstraints = false
+            logoImage.contentMode = UIViewContentMode.scaleAspectFit
+            logoImage.centerXAnchor.constraint(equalTo: loadingView.centerXAnchor, constant: 0).isActive = true
+            logoImage.centerYAnchor.constraint(equalTo: loadingView.centerYAnchor, constant: 0).isActive = true
+            
+            loadingScreen = loadingView
+        }
         
-        let logoImage = UIImageView()
-        logoImage.image = #imageLiteral(resourceName: "logo_demo")
-        loadingView.addSubview(logoImage)
-        logoImage.translatesAutoresizingMaskIntoConstraints = false
-        logoImage.contentMode = UIViewContentMode.scaleAspectFit
-        logoImage.centerXAnchor.constraint(equalTo: loadingView.centerXAnchor, constant: 0).isActive = true
-        logoImage.centerYAnchor.constraint(equalTo: loadingView.centerYAnchor, constant: 0).isActive = true
-        
-        loadingScreen = loadingView
     }
     
     func load(view: UIView) {
@@ -134,32 +139,53 @@ class LoginViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        load(view: self.loadingScreen)
-        
-        loginBubbleView.backgroundColor = FlatWhite()
-        prepareTextFields()
-        updateUI()
-        
-        gradientSet.append([gradientOne, gradientTwo])
-        gradientSet.append([gradientTwo, gradientThree])
-        gradientSet.append([gradientThree, gradientFour])
-        gradientSet.append([gradientFour, gradientFive])
-        gradientSet.append([gradientFive, gradientSix])
-        gradientSet.append([gradientSix, gradientSeven])
-        gradientSet.append([gradientSeven, gradientOne])
-        
-        gradient.frame = parentView.bounds
-        gradient.colors = gradientSet[currentGradient]
-        gradient.startPoint = CGPoint(x: 0, y: 0)
-        gradient.endPoint = CGPoint(x: 1, y: 1)
-        gradient.drawsAsynchronously = true
-        
-        contentView.layer.addSublayer(gradient)
-        contentView.addSubview(loginBubbleView)
-        
-        animateGradient()
-        
-        // TODO: need to turn off animation when view disappears
+        Auth.auth().addStateDidChangeListener { auth, user in
+            if let user = user {
+                // valid user is signed in
+                print("LOG: \(user.displayName ?? "<NO NAME>") logged in")
+                self.wasAlreadyLoggedIn = true
+                self.performSegue(withIdentifier: "authenticationSuccessful", sender: nil)
+            } else {
+                if !self.cameFromLogOut {
+                    print("LOG: could not authenticate session, proceeding to login screen")
+                    self.load(view: self.loadingScreen)
+                } else {
+                    print("LOG: loading login screen after successful logout")
+                    self.loginEmailTextField.text = ""
+                    self.loginPasswordTextField.text = ""
+                    self.registerFirstNameTextField.text = ""
+                    self.registerLastNameTextField.text = ""
+                    self.registerEmailTextField.text = ""
+                    self.registerPasswordTextField.text = ""
+                    self.registerConfirmPasswordTextField.text = ""
+                }
+                
+                self.loginBubbleView.backgroundColor = FlatWhite()
+                self.prepareTextFields()
+                self.updateUI()
+                
+                self.gradientSet.append([self.gradientOne, self.gradientTwo])
+                self.gradientSet.append([self.gradientTwo, self.gradientThree])
+                self.gradientSet.append([self.gradientThree, self.gradientFour])
+                self.gradientSet.append([self.gradientFour, self.gradientFive])
+                self.gradientSet.append([self.gradientFive, self.gradientSix])
+                self.gradientSet.append([self.gradientSix, self.gradientSeven])
+                self.gradientSet.append([self.gradientSeven, self.gradientOne])
+                
+                self.gradient.frame = self.parentView.bounds
+                self.gradient.colors = self.gradientSet[self.currentGradient]
+                self.gradient.startPoint = CGPoint(x: 0, y: 0)
+                self.gradient.endPoint = CGPoint(x: 1, y: 1)
+                self.gradient.drawsAsynchronously = true
+                
+                self.contentView.layer.addSublayer(self.gradient)
+                self.contentView.addSubview(self.loginBubbleView)
+                
+                self.animateGradient()
+                
+                // TODO: need to turn off animation when view disappears
+            }
+        }
     }
     
     func animateGradient() {
@@ -287,12 +313,13 @@ class LoginViewController: UIViewController {
             Auth.auth().signIn(withEmail: loginEmailTextField.text!, password: loginPasswordTextField.text!) { (user, error) in
                 if let user = user {
                     print("LOG: \(user.displayName!) successfully authenticated")
+                    // TODO: why is it skipping this animation?
                     HUD.flash(.success, delay: 1.0) { finished in
                         self.performSegue(withIdentifier: "authenticationSuccessful", sender: nil)
                     }
                 } else {
                     HUD.flash(.error, delay: 1.0)
-                    print(error?.localizedDescription)
+                    print(error?.localizedDescription ?? "ERROR: Could not print the error! See LoginViewController, after user could not be authenticated")
                 }
             }
             
@@ -472,8 +499,9 @@ class LoginViewController: UIViewController {
                     
                     print("LOG: Account for \(fullName) created successfully")
                     
+                    // TODO: why tf is it skipping this animation
                     HUD.flash(.success, delay: 1.0) { finished in
-                        //self.performSegue(withIdentifier: "authenticationSuccessful", sender: nil)
+                        self.performSegue(withIdentifier: "authenticationSuccessful", sender: nil)
                         print("LOG: would perform segue here")
                     }
                 } else {
@@ -484,6 +512,19 @@ class LoginViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if wasAlreadyLoggedIn {
+            if let destination = segue.destination as? FeedViewController {
+                destination.transitionStyle = .flipHorizontal
+            }
+        }
+    }
+    
+    @IBAction func unwindToLoginScreen(segue: UIStoryboardSegue) {
+        print("LOG: logout successful")
+        self.cameFromLogOut = true
     }
 }
 
