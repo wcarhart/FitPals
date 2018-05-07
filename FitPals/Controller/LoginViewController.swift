@@ -81,10 +81,27 @@ class LoginViewController: UIViewController {
     let gradientSix = FlatYellowDark().cgColor
     let gradientSeven = FlatPowderBlue().cgColor
     
-    var loadingScreen: UIView!
+    var loadingScreen: UIView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.gradientSet.append([self.gradientOne, self.gradientTwo])
+        self.gradientSet.append([self.gradientTwo, self.gradientThree])
+        self.gradientSet.append([self.gradientThree, self.gradientFour])
+        self.gradientSet.append([self.gradientFour, self.gradientFive])
+        self.gradientSet.append([self.gradientFive, self.gradientSix])
+        self.gradientSet.append([self.gradientSix, self.gradientSeven])
+        self.gradientSet.append([self.gradientSeven, self.gradientOne])
+        
+        self.gradient.frame = self.parentView.bounds
+        self.gradient.colors = self.gradientSet[self.currentGradient]
+        self.gradient.startPoint = CGPoint(x: 0, y: 0)
+        self.gradient.endPoint = CGPoint(x: 1, y: 1)
+        self.gradient.drawsAsynchronously = true
+        
+        self.contentView.layer.addSublayer(self.gradient)
+        self.contentView.addSubview(self.loginBubbleView)
         
         if !cameFromLogOut {
             let loadingView = UIView()
@@ -113,7 +130,7 @@ class LoginViewController: UIViewController {
         let transitionOptions: UIViewAnimationOptions = [.transitionFlipFromLeft]
         
         UIView.transition(with: self.parentView, duration: 1.0, options: transitionOptions, animations: {
-            view.removeFromSuperview()
+            self.loadingScreen?.removeFromSuperview()
             
         }, completion: { (_) in
             
@@ -148,38 +165,31 @@ class LoginViewController: UIViewController {
             } else {
                 if !self.cameFromLogOut {
                     print("LOG: could not authenticate session, proceeding to login screen")
-                    self.load(view: self.loadingScreen)
+                    self.load(view: self.loadingScreen!)
                 } else {
+                    if let loadingScreen = self.loadingScreen {
+                        loadingScreen.removeFromSuperview()
+                    }
                     print("LOG: loading login screen after successful logout")
                     self.loginEmailTextField.text = ""
                     self.loginPasswordTextField.text = ""
+                    self.validLoginEmail = false
+                    self.validLoginPassword = false
                     self.registerFirstNameTextField.text = ""
                     self.registerLastNameTextField.text = ""
                     self.registerEmailTextField.text = ""
                     self.registerPasswordTextField.text = ""
                     self.registerConfirmPasswordTextField.text = ""
+                    self.validRegisterFirstName = false
+                    self.validRegisterLastName = false
+                    self.validRegisterEmail = false
+                    self.validRegisterPassword = false
+                    self.validRegisterConfirmPassword = false
                 }
                 
                 self.loginBubbleView.backgroundColor = FlatWhite()
                 self.prepareTextFields()
                 self.updateUI()
-                
-                self.gradientSet.append([self.gradientOne, self.gradientTwo])
-                self.gradientSet.append([self.gradientTwo, self.gradientThree])
-                self.gradientSet.append([self.gradientThree, self.gradientFour])
-                self.gradientSet.append([self.gradientFour, self.gradientFive])
-                self.gradientSet.append([self.gradientFive, self.gradientSix])
-                self.gradientSet.append([self.gradientSix, self.gradientSeven])
-                self.gradientSet.append([self.gradientSeven, self.gradientOne])
-                
-                self.gradient.frame = self.parentView.bounds
-                self.gradient.colors = self.gradientSet[self.currentGradient]
-                self.gradient.startPoint = CGPoint(x: 0, y: 0)
-                self.gradient.endPoint = CGPoint(x: 1, y: 1)
-                self.gradient.drawsAsynchronously = true
-                
-                self.contentView.layer.addSublayer(self.gradient)
-                self.contentView.addSubview(self.loginBubbleView)
                 
                 self.animateGradient()
                 
@@ -189,6 +199,7 @@ class LoginViewController: UIViewController {
     }
     
     func animateGradient() {
+        print("LOG: animating gradient")
         if currentGradient < gradientSet.count - 1 {
             currentGradient += 1
         } else {
@@ -309,13 +320,30 @@ class LoginViewController: UIViewController {
                 }
             }
         } else {
+            print(self.loginEmailTextField.text ?? "nil")
             HUD.show(.progress)
             Auth.auth().signIn(withEmail: loginEmailTextField.text!, password: loginPasswordTextField.text!) { (user, error) in
                 if let user = user {
                     print("LOG: \(user.displayName!) successfully authenticated")
                     // TODO: why is it skipping this animation?
-                    HUD.flash(.success, delay: 1.0) { finished in
-                        self.performSegue(withIdentifier: "authenticationSuccessful", sender: nil)
+                    DispatchQueue.main.async {
+                        HUD.flash(.success, delay: 1.0) { finished in
+                            self.loginEmailTextField.text = ""
+                            self.loginPasswordTextField.text = ""
+                            self.validLoginEmail = false
+                            self.validLoginPassword = false
+                            self.registerFirstNameTextField.text = ""
+                            self.registerLastNameTextField.text = ""
+                            self.registerEmailTextField.text = ""
+                            self.registerPasswordTextField.text = ""
+                            self.registerConfirmPasswordTextField.text = ""
+                            self.validRegisterFirstName = false
+                            self.validRegisterLastName = false
+                            self.validRegisterEmail = false
+                            self.validRegisterPassword = false
+                            self.validRegisterConfirmPassword = false
+                            self.performSegue(withIdentifier: "authenticationSuccessful", sender: nil)
+                        }
                     }
                 } else {
                     HUD.flash(.error, delay: 1.0)
@@ -499,8 +527,22 @@ class LoginViewController: UIViewController {
                     
                     print("LOG: Account for \(fullName) created successfully")
                     
-                    // TODO: why tf is it skipping this animation
+                    // TODO: why tf is it skipping this animation?
                     HUD.flash(.success, delay: 1.0) { finished in
+                        self.loginEmailTextField.text = ""
+                        self.loginPasswordTextField.text = ""
+                        self.validLoginEmail = false
+                        self.validLoginPassword = false
+                        self.registerFirstNameTextField.text = ""
+                        self.registerLastNameTextField.text = ""
+                        self.registerEmailTextField.text = ""
+                        self.registerPasswordTextField.text = ""
+                        self.registerConfirmPasswordTextField.text = ""
+                        self.validRegisterFirstName = false
+                        self.validRegisterLastName = false
+                        self.validRegisterEmail = false
+                        self.validRegisterPassword = false
+                        self.validRegisterConfirmPassword = false
                         self.performSegue(withIdentifier: "authenticationSuccessful", sender: nil)
                         print("LOG: would perform segue here")
                     }
