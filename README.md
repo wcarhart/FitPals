@@ -15,7 +15,7 @@ pod install
 
 
 ### Accessing the database
-The Firebase database can be accessed [here](firebase.google.com).
+The Firebase database can be accessed [here](https://www.firebase.google.com).
 
 Login credentials:
 
