@@ -63,11 +63,16 @@ class MarketCollectionViewController: UICollectionViewController {
     
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! MarketCollectionViewCell
+        
+        // TODO: fix this
+        //let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! MarketCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
     
         // Configure the cell
         cell.backgroundColor = UIColor.white
-        cell.marketImageView.image = UIImage(named: "WheyProtein")
+        
+        // TODO: fix this (same as above)
+        //cell.marketImageView.image = UIImage(named: "WheyProtein")
         
         return cell
     }

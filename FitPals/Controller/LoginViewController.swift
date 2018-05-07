@@ -204,6 +204,7 @@ class LoginViewController: UIViewController {
         if currentGradient < gradientSet.count - 1 {
             currentGradient += 1
         } else {
+            print("DEBUG: reseting gradient index")
             currentGradient = 0
         }
         
