@@ -237,7 +237,11 @@ extension FeedViewController: UITableViewDataSource, UITableViewDelegate, PostTa
     
     func configureContent(for post: Post) -> CGFloat {
         
-        // need to return the height of the content
+        // TODO: will need to be implemented for non-static content
+        // TODO: make multiple different .xib files for post prototypes
+        // i.e. text only, pictures only, pictures + text, workouts only, etc.
+        
+        // TODO: need to return the height of the content
         // this will be used to draw the cell height
         return 600.0
     }
