@@ -132,11 +132,28 @@
                     <view key="view" contentMode="scaleToFill" id="GYs-iz-qnR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w1J-ae-36N">
+                                <rect key="frame" x="170" y="318" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="34t-li-LaT" eventType="touchUpInside" id="PhR-pv-cXB"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="w1J-ae-36N" firstAttribute="centerX" secondItem="GYs-iz-qnR" secondAttribute="centerX" id="hIi-JJ-6sq"/>
+                            <constraint firstItem="w1J-ae-36N" firstAttribute="centerY" secondItem="GYs-iz-qnR" secondAttribute="centerY" id="rKb-fU-u2X"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="FND-ir-WWV"/>
                     </view>
+                    <connections>
+                        <segue destination="2Vc-Fp-ItM" kind="unwind" identifier="unwindToFeed" unwindAction="unwindToFeedWithSegue:" id="Dgo-3c-Iy9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rv8-Ul-Cxg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="2Vc-Fp-ItM" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-2319" y="1262"/>
         </scene>

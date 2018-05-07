@@ -199,7 +199,8 @@ class LoginViewController: UIViewController {
     }
     
     func animateGradient() {
-        print("LOG: animating gradient")
+        // DEBUG:
+        //print("LOG: animating gradient")
         if currentGradient < gradientSet.count - 1 {
             currentGradient += 1
         } else {

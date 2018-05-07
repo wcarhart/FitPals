@@ -30,6 +30,8 @@ class FeedViewController: UIViewController, ComposeMenuDelegate {
     
     var transitionStyle: UIModalTransitionStyle?
     
+    var selectedPost: Post?
+    
     override func viewDidLoad() {
         
         // TODO: get this flip segue actually working, will need a custom animation controller (see SO)
@@ -117,8 +119,11 @@ class FeedViewController: UIViewController, ComposeMenuDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let destination = segue.destination as? CreateNewPostViewController else { return }
-        destination.postType = self.newPostType
+        if let destination = segue.destination as? CreateNewPostViewController {
+            destination.postType = self.newPostType
+        } else if let destination = segue.destination as? SelectedPostViewController {
+            destination.post = self.selectedPost
+        }
     }
     
 }
@@ -151,7 +156,7 @@ extension FeedViewController: UITableViewDataSource {
         cell.postDateLabel?.text = dateFormatter.string(from: post.date)
         
         // set content for post...
-        let contentHeight = configureContent(for: post)
+        let contentHeight = configureContent(for: post, onCell: cell)
         cell.contentView.heightAnchor.constraint(equalToConstant: contentHeight).isActive = true
         
         cell.postScoreLabel?.text = String(post.score)
@@ -164,15 +169,36 @@ extension FeedViewController: UITableViewDataSource {
         return cell
     }
     
-    func configureContent(for post: Post) -> CGFloat {
+    func configureContent(for post: Post, onCell cell: PostTableViewCell) -> CGFloat {
+        /*
+         * post content is configured into the PostContent.xib format:
+         *  - text
+         *  - workout
+         *  - diet
+         *  - image
+         *  -- 4 image display (large thumbnails
+         *  -- 8 image display (small thumbnails)
+         *
+         *  YOU MUST CALL THE setPostType(to:) METHOD WHEN CONFIGURING THE CELL
+         *  YOU MUST ALSO CALL THE setNumberOfImages(to:) METHOD IF IMAGE POST
+         *      -> this must be done BEFORE call to setPostType(to:)
+         */
+        
+        // here is a simple example of how to use this implementation:
+        cell.postContentCustomizableView.setNumberOfImages(to: 4)
+        cell.postContentCustomizableView.setPostType(to: .image)
+        cell.postContentCustomizableView.fourImagesTopLeftImage.image = #imageLiteral(resourceName: "workout_demo_1")
+        cell.postContentCustomizableView.fourImagesTopRightImage.image = #imageLiteral(resourceName: "workout_demo_2")
+        cell.postContentCustomizableView.fourImagesBottomLeftImage.image = #imageLiteral(resourceName: "workout_demo_3")
+        cell.postContentCustomizableView.fourImagesBottomRightImage.image = #imageLiteral(resourceName: "workout_demo_4")
+        cell.postContentCustomizableView.fourImagesLabel.text = "Check out these cool pictures from my workout!"
         
         // TODO: will need to be implemented for non-static content
-        // TODO: make multiple different .xib files for post prototypes
         // i.e. text only, pictures only, pictures + text, workouts only, etc.
         
-        // TODO: need to return the height of the content
         // this will be used to draw the cell height
-        return 600.0
+        print("LOG: returned cell height of \(cell.postContentCustomizableView.calculateHeight())")
+        return cell.postContentCustomizableView.calculateHeight()
     }
     
     func upvote(postId: Int32) {
@@ -266,6 +292,12 @@ extension FeedViewController: UITableViewDelegate, PostTableViewCellDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
+        print("LOG: user selected post at row \(indexPath.row)")
+        
+        // TODO: pull this from Firestore, currently incomplete
+        self.selectedPost = nil
+        
+        performSegue(withIdentifier: "showSelectedPost", sender: nil)
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

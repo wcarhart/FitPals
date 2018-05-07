@@ -97,6 +97,17 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O8I-xJ-YQ2" userLabel="Post Content View (mid)">
                                         <rect key="frame" x="0.0" y="50" width="288" height="130.5"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mEd-SW-4Dq" userLabel="PostContent" customClass="PostContent" customModule="FitPals" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="288" height="130.5"/>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="mEd-SW-4Dq" secondAttribute="trailing" id="5d9-mP-5Qz"/>
+                                            <constraint firstItem="mEd-SW-4Dq" firstAttribute="leading" secondItem="O8I-xJ-YQ2" secondAttribute="leading" id="FW0-Lf-Tk8"/>
+                                            <constraint firstItem="mEd-SW-4Dq" firstAttribute="top" secondItem="O8I-xJ-YQ2" secondAttribute="top" id="heh-zJ-b7e"/>
+                                            <constraint firstAttribute="bottom" secondItem="mEd-SW-4Dq" secondAttribute="bottom" id="rtv-Yz-bJ6"/>
+                                        </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7vH-DX-CbW" userLabel="Post Details View (bot)">
                                         <rect key="frame" x="0.0" y="180.5" width="288" height="50"/>
@@ -291,6 +302,7 @@
                 <outlet property="contentContainer" destination="t1c-uS-PqI" id="ovN-mA-BOb"/>
                 <outlet property="downvoteButton" destination="yTZ-nb-mgt" id="yhx-Q7-Rb6"/>
                 <outlet property="paddingView" destination="z8x-Ni-wcS" id="Eyd-mk-m0x"/>
+                <outlet property="postContentCustomizableView" destination="mEd-SW-4Dq" id="1Wx-WZ-sVK"/>
                 <outlet property="postContentView" destination="O8I-xJ-YQ2" id="VFV-xf-smw"/>
                 <outlet property="postDateLabel" destination="e7R-hL-B1J" id="pAb-da-dLu"/>
                 <outlet property="postScoreLabel" destination="nOK-6j-4GK" id="PW8-rF-fKk"/>

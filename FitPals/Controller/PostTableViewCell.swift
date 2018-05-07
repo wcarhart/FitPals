@@ -26,6 +26,7 @@ class PostTableViewCell: UITableViewCell {
     
     // post content view (middle)
     @IBOutlet weak var postContentView: UIView!
+    @IBOutlet weak var postContentCustomizableView: PostContent!
     
     // post details view (bottom)
     @IBOutlet weak var upvoteButton: UIButton!
@@ -52,7 +53,7 @@ class PostTableViewCell: UITableViewCell {
     }
 
     @IBAction func profileTapped(_ sender: UIButton) {
-        print("LOG: profile")
+        print("LOG: profile button tapped")
     }
     
     @IBAction func upvoteButtonPressed(_ sender: UIButton) {
@@ -132,7 +133,7 @@ class PostTableViewCell: UITableViewCell {
     }
     
     @IBAction func commentButtonPressed(_ sender: UIButton) {
-        print("LOG: comment")
+        print("LOG: comment button tapped")
     }
     
     @IBAction func shareButtonDown(_ sender: UIButton) {
@@ -144,7 +145,7 @@ class PostTableViewCell: UITableViewCell {
     }
     
     @IBAction func shareButtonPressed(_ sender: UIButton) {
-        print("LOG: share")
+        print("LOG: share button tapped")
     }
     
     
