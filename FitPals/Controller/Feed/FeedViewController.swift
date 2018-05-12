@@ -211,7 +211,8 @@ extension FeedViewController: UITableViewDataSource {
         
         // this will be used to draw the cell height
         print("LOG: returned cell height of \(cell.postContentCustomizableView.calculateHeight())")
-        return cell.postContentCustomizableView.calculateHeight()
+        //return cell.postContentCustomizableView.calculateHeight()
+        return 600.0
     }
     
     func upvote(postId: Int32) {
