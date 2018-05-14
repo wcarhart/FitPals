@@ -1,14 +1,16 @@
 //
-//  Product.swift
+//  Review.swift
 //  FitPals
 //
-//  Created by Will Carhart on 4/24/18.
+//  Created by Gautam Daryanani on 5/12/18.
 //  Copyright © 2018 Will Carhart. All rights reserved.
 //
 
 import Foundation
 
-struct Product {
+
+struct Review {
     // TODO: define instance variables for this data structure
     var temp : String
 }
+

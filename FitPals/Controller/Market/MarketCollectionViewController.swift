@@ -67,7 +67,7 @@ class MarketCollectionViewController: UICollectionViewController {
     
         // Configure the cell
         cell.backgroundColor = UIColor.white
-        cell.marketImageView.image = UIImage(named: "WheyProtein")
+        cell.marketImageView.image = UIImage(named: "profile")
         
         return cell
     }
