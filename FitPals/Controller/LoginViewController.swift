@@ -199,8 +199,7 @@ class LoginViewController: UIViewController {
     }
     
     func animateGradient() {
-        // DEBUG:
-        //print("LOG: animating gradient")
+        print("LOG: animating gradient")
         if currentGradient < gradientSet.count - 1 {
             currentGradient += 1
         } else {
@@ -321,7 +320,6 @@ class LoginViewController: UIViewController {
                 }
             }
         } else {
-            print(self.loginEmailTextField.text ?? "nil")
             HUD.show(.progress)
             Auth.auth().signIn(withEmail: loginEmailTextField.text!, password: loginPasswordTextField.text!) { (user, error) in
                 if let user = user {
@@ -573,7 +571,9 @@ class LoginViewController: UIViewController {
 
 extension LoginViewController: CAAnimationDelegate {
     func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
-        gradient.colors = gradientSet[currentGradient]
-        animateGradient()
+        if flag {
+            gradient.colors = gradientSet[currentGradient]
+            animateGradient()
+        }
     }
 }
